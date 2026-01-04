@@ -1,66 +1,255 @@
-import type { BirthDate, ZodiacSign } from '../types/astrology';
+import type { BirthDate, ZodiacSign } from "../types/astrology";
+import { KABBALISTIC_ANGELS } from "../data/kabbalisticAngels";
+
+/**
+ * Utilitaires
+ */
+const birthDateToDate = (date: BirthDate): Date => {
+  return new Date(date.year, date.month - 1, date.day);
+};
+
+const getDayOfYear = (date: BirthDate): number => {
+  const jsDate = birthDateToDate(date);
+  const start = new Date(jsDate.getFullYear(), 0, 0);
+  const diff =
+    jsDate.getTime() -
+    start.getTime() +
+    (start.getTimezoneOffset() - jsDate.getTimezoneOffset()) * 60000;
+  return Math.floor(diff / 86400000);
+};
 
 /**
  * Calcule le signe astrologique occidental (zodiaque tropical)
  */
 export function calculateWesternZodiac(date: BirthDate): ZodiacSign {
   const { day, month } = date;
-  
-  if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
-    return { name: 'Bélier', system: 'Occidental', dateRange: '21 mars - 19 avril' };
+
+  const signs = [
+    { sign: "Capricorne", from: [12, 22] },
+    { sign: "Verseau", from: [1, 20] },
+    { sign: "Poissons", from: [2, 19] },
+    { sign: "Bélier", from: [3, 21] },
+    { sign: "Taureau", from: [4, 20] },
+    { sign: "Gémeaux", from: [5, 21] },
+    { sign: "Cancer", from: [6, 21] },
+    { sign: "Lion", from: [7, 23] },
+    { sign: "Vierge", from: [8, 23] },
+    { sign: "Balance", from: [9, 23] },
+    { sign: "Scorpion", from: [10, 23] },
+    { sign: "Sagittaire", from: [11, 22] },
+  ];
+
+  for (let i = signs.length - 1; i >= 0; i--) {
+    const [m, d] = signs[i].from;
+    if (month > m || (month === m && day >= d)) {
+      return { name: signs[i].sign, system: "Occidental" };
+    }
   }
-  if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
-    return { name: 'Taureau', system: 'Occidental', dateRange: '20 avril - 20 mai' };
-  }
-  if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) {
-    return { name: 'Gémeaux', system: 'Occidental', dateRange: '21 mai - 20 juin' };
-  }
-  if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) {
-    return { name: 'Cancer', system: 'Occidental', dateRange: '21 juin - 22 juillet' };
-  }
-  if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
-    return { name: 'Lion', system: 'Occidental', dateRange: '23 juillet - 22 août' };
-  }
-  if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
-    return { name: 'Vierge', system: 'Occidental', dateRange: '23 août - 22 septembre' };
-  }
-  if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) {
-    return { name: 'Balance', system: 'Occidental', dateRange: '23 septembre - 22 octobre' };
-  }
-  if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) {
-    return { name: 'Scorpion', system: 'Occidental', dateRange: '23 octobre - 21 novembre' };
-  }
-  if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
-    return { name: 'Sagittaire', system: 'Occidental', dateRange: '22 novembre - 21 décembre' };
-  }
-  if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
-    return { name: 'Capricorne', system: 'Occidental', dateRange: '22 décembre - 19 janvier' };
-  }
-  if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
-    return { name: 'Verseau', system: 'Occidental', dateRange: '20 janvier - 18 février' };
-  }
-  // Poissons
-  return { name: 'Poissons', system: 'Occidental', dateRange: '19 février - 20 mars' };
+
+  return { name: "Capricorne", system: "Occidental" };
 }
 
 /**
  * Calcule le signe astrologique chinois
  */
 export function calculateChineseZodiac(date: BirthDate): ZodiacSign {
-  const { year } = date;
-  const chineseSigns = [
-    'Singe', 'Coq', 'Chien', 'Cochon', 'Rat', 'Bœuf',
-    'Tigre', 'Lapin', 'Dragon', 'Serpent', 'Cheval', 'Chèvre'
+  const animals = [
+    "Rat",
+    "Bœuf",
+    "Tigre",
+    "Lapin",
+    "Dragon",
+    "Serpent",
+    "Cheval",
+    "Chèvre",
+    "Singe",
+    "Coq",
+    "Chien",
+    "Cochon",
   ];
-  
-  // Le zodiaque chinois commence en 1900 (année du Rat)
-  const index = (year - 1900) % 12;
-  const signName = chineseSigns[index];
-  
-  return { 
-    name: signName, 
-    system: 'Chinois',
-    description: `Année ${year} - ${signName}`
+  const sign = animals[(date.year - 4) % 12];
+  return {
+    name: sign,
+    system: "Chinois",
+    description: `${date.year}`,
+  };
+}
+
+/**
+ * Calcule le signe astrologique tibétain
+ */
+export function calculateTibetanZodiac(date: BirthDate): ZodiacSign {
+  const animals = [
+    "Lièvre",
+    "Dragon",
+    "Serpent",
+    "Cheval",
+    "Mouton",
+    "Singe",
+    "Oiseau",
+    "Chien",
+    "Cochon",
+    "Souris",
+    "Bœuf",
+    "Tigre",
+  ];
+  return {
+    name: animals[(date.year - 4) % 12],
+    system: "Tibétain",
+  };
+}
+
+/**
+ * Calcule le signe astrologique kabbalistique (72 anges gardiens)
+ */
+export function calculateKabbalisticZodiac(date: BirthDate): ZodiacSign {
+  const dayOfYear = getDayOfYear(date);
+  const angelIndex = (dayOfYear - 1) % 72;
+  const angel = KABBALISTIC_ANGELS[angelIndex];
+
+  return {
+    name: angel.name,
+    system: "Kabbalistique",
+    description: angel.hebrew,
+  };
+}
+
+/**
+ * Calcule le signe astrologique perse
+ */
+export function calculatePersianZodiac(date: BirthDate): ZodiacSign {
+  const western = calculateWesternZodiac(date);
+
+  const PERSE_SIGNS: Record<string, { name: string; fa: string }> = {
+    Bélier: { name: "Hamal", fa: "حمل" },
+    Taureau: { name: "Sawr", fa: "ثور" },
+    Gémeaux: { name: "Jawzā", fa: "جوزا" },
+    Cancer: { name: "Saratan", fa: "سرطان" },
+    Lion: { name: "Asad", fa: "اسد" },
+    Vierge: { name: "Sonbola", fa: "سنبله" },
+    Balance: { name: "Mizān", fa: "میزان" },
+    Scorpion: { name: "Aqrab", fa: "عقرب" },
+    Sagittaire: { name: "Qaws", fa: "قوس" },
+    Capricorne: { name: "Jadi", fa: "جدی" },
+    Verseau: { name: "Dalw", fa: "دلو" },
+    Poissons: { name: "Hūt", fa: "حوت" },
+  };
+
+  const perseSign = PERSE_SIGNS[western.name];
+  if (perseSign) {
+    return {
+      name: perseSign.name,
+      system: "Perse",
+      description: perseSign.fa,
+    };
+  }
+
+  return {
+    name: western.name,
+    system: "Perse",
+  };
+}
+
+/**
+ * Calcule le signe astrologique maya (Tzolkin)
+ */
+export function calculateMayanZodiac(date: BirthDate): ZodiacSign {
+  const signs = [
+    "Imix",
+    "Ik",
+    "Akbal",
+    "Kan",
+    "Chicchan",
+    "Cimi",
+    "Manik",
+    "Lamat",
+    "Muluc",
+    "Oc",
+    "Chuen",
+    "Eb",
+    "Ben",
+    "Ix",
+    "Men",
+    "Cib",
+    "Caban",
+    "Etznab",
+    "Cauac",
+    "Ahau",
+  ];
+  return {
+    name: signs[getDayOfYear(date) % 20],
+    system: "Maya",
+  };
+}
+
+/**
+ * Calcule le signe astrologique aztèque (Tonalpohualli)
+ */
+export function calculateAztecZodiac(date: BirthDate): ZodiacSign {
+  const signs = [
+    "Crocodile",
+    "Vent",
+    "Maison",
+    "Lézard",
+    "Serpent",
+    "Mort",
+    "Cerf",
+    "Lapin",
+    "Eau",
+    "Chien",
+    "Singe",
+    "Herbe",
+    "Roseau",
+    "Jaguar",
+    "Aigle",
+    "Vautour",
+    "Mouvement",
+    "Silex",
+    "Pluie",
+    "Fleur",
+  ];
+  return {
+    name: signs[getDayOfYear(date) % 20],
+    system: "Aztèque",
+  };
+}
+
+/**
+ * Calcule le signe astrologique druidique
+ */
+export function calculateDruidicZodiac(date: BirthDate): ZodiacSign {
+  const { month } = date;
+  if (month <= 3) return { name: "Bouleau", system: "Druidique" };
+  if (month <= 6) return { name: "Chêne", system: "Druidique" };
+  if (month <= 9) return { name: "Noisetier", system: "Druidique" };
+  return { name: "Noyer", system: "Druidique" };
+}
+
+/**
+ * Calcule le signe astrologique amérindien
+ */
+export function calculateNativeAmericanZodiac(date: BirthDate): ZodiacSign {
+  const { month } = date;
+  if (month <= 3) return { name: "Loutre", system: "Amérindien" };
+  if (month <= 6) return { name: "Loup", system: "Amérindien" };
+  if (month <= 9) return { name: "Saumon", system: "Amérindien" };
+  return { name: "Serpent", system: "Amérindien" };
+}
+
+/**
+ * Calcule le signe astrologique africain
+ */
+export function calculateAfricanZodiac(date: BirthDate): ZodiacSign {
+  const signs = [
+    "Baobab",
+    "La Distance",
+    "Le Marché",
+    "La Famille",
+    "L'Enfant de la Terre",
+  ];
+  return {
+    name: signs[getDayOfYear(date) % signs.length],
+    system: "Africain",
   };
 }
 
@@ -68,67 +257,177 @@ export function calculateChineseZodiac(date: BirthDate): ZodiacSign {
  * Calcule le signe astrologique égyptien
  */
 export function calculateEgyptianZodiac(date: BirthDate): ZodiacSign {
+  const { month } = date;
+  if (month <= 2) return { name: "Anubis", system: "Égyptien" };
+  if (month <= 4) return { name: "Isis", system: "Égyptien" };
+  if (month <= 6) return { name: "Thot", system: "Égyptien" };
+  if (month <= 8) return { name: "Sekhmet", system: "Égyptien" };
+  if (month <= 10) return { name: "Serket", system: "Égyptien" };
+  return { name: "Osiris", system: "Égyptien" };
+}
+
+/**
+ * Calcule le signe astrologique arabe
+ */
+export function calculateArabicZodiac(date: BirthDate): ZodiacSign {
+  return calculateWesternZodiac(date);
+}
+
+/**
+ * Calcule le signe astrologique védique (Jyotish)
+ */
+export function calculateVedicZodiac(date: BirthDate): ZodiacSign {
   const { day, month } = date;
-  
-  if ((month === 1 && day >= 1) || (month === 1 && day <= 7)) {
-    return { name: 'Bastet', system: 'Égyptien', dateRange: '1-7 janvier' };
+
+  const signs = [
+    { sign: "Makara", from: [12, 22] },
+    { sign: "Kumbha", from: [1, 20] },
+    { sign: "Meena", from: [2, 19] },
+    { sign: "Mesha", from: [3, 21] },
+    { sign: "Vrishabha", from: [4, 20] },
+    { sign: "Mithuna", from: [5, 21] },
+    { sign: "Karka", from: [6, 21] },
+    { sign: "Simha", from: [7, 23] },
+    { sign: "Kanya", from: [8, 23] },
+    { sign: "Tula", from: [9, 23] },
+    { sign: "Vrishchika", from: [10, 23] },
+    { sign: "Dhanu", from: [11, 22] },
+  ];
+
+  for (let i = signs.length - 1; i >= 0; i--) {
+    const [m, d] = signs[i].from;
+    if (month > m || (month === m && day >= d)) {
+      return { name: signs[i].sign, system: "Védique" };
+    }
   }
-  if ((month === 1 && day >= 8) || (month === 1 && day <= 21)) {
-    return { name: 'Sekhmet', system: 'Égyptien', dateRange: '8-21 janvier' };
+
+  return { name: "Makara", system: "Védique" };
+}
+
+/**
+ * Calcule le signe astrologique alchimique (7 phases)
+ */
+export function calculateAlchemicalZodiac(date: BirthDate): ZodiacSign {
+  const dayOfYear = getDayOfYear(date);
+  const daysPerPhase = 365 / 7;
+
+  if (dayOfYear <= Math.floor(daysPerPhase * 1)) {
+    return {
+      name: "Calcination",
+      system: "Alchimique",
+      description: "Nigredo",
+    };
   }
-  if ((month === 1 && day >= 22) || (month === 2 && day <= 1)) {
-    return { name: 'Geb', system: 'Égyptien', dateRange: '22 janvier - 1 février' };
+  if (dayOfYear <= Math.floor(daysPerPhase * 2)) {
+    return {
+      name: "Dissolution",
+      system: "Alchimique",
+      description: "Nigredo",
+    };
   }
-  if ((month === 2 && day >= 2) || (month === 2 && day <= 15)) {
-    return { name: 'Isis', system: 'Égyptien', dateRange: '2-15 février' };
+  if (dayOfYear <= Math.floor(daysPerPhase * 3)) {
+    return { name: "Séparation", system: "Alchimique", description: "Albedo" };
   }
-  if ((month === 2 && day >= 16) || (month === 2 && day <= 29)) {
-    return { name: 'Thot', system: 'Égyptien', dateRange: '16-29 février' };
+  if (dayOfYear <= Math.floor(daysPerPhase * 4)) {
+    return { name: "Conjonction", system: "Alchimique", description: "Albedo" };
   }
-  if ((month === 3 && day >= 1) || (month === 3 && day <= 10)) {
-    return { name: 'Horus', system: 'Égyptien', dateRange: '1-10 mars' };
+  if (dayOfYear <= Math.floor(daysPerPhase * 5)) {
+    return {
+      name: "Fermentation",
+      system: "Alchimique",
+      description: "Rubedo",
+    };
   }
-  if ((month === 3 && day >= 11) || (month === 3 && day <= 31)) {
-    return { name: 'Anubis', system: 'Égyptien', dateRange: '11-31 mars' };
+  if (dayOfYear <= Math.floor(daysPerPhase * 6)) {
+    return {
+      name: "Distillation",
+      system: "Alchimique",
+      description: "Rubedo",
+    };
   }
-  if ((month === 4 && day >= 1) || (month === 4 && day <= 19)) {
-    return { name: 'Seth', system: 'Égyptien', dateRange: '1-19 avril' };
+  return { name: "Coagulation", system: "Alchimique", description: "Rubedo" };
+}
+
+/**
+ * Calcule le signe astrologique viking (6 périodes mythiques)
+ */
+export function calculateVikingZodiac(date: BirthDate): ZodiacSign {
+  const { month } = date;
+
+  if (month <= 2) {
+    return { name: "Bjorn (Ours)", system: "Viking" };
   }
-  if ((month === 4 && day >= 20) || (month === 5 && day <= 8)) {
-    return { name: 'Ptah', system: 'Égyptien', dateRange: '20 avril - 8 mai' };
+  if (month <= 4) {
+    return { name: "Jormungand", system: "Viking" };
   }
-  if ((month === 5 && day >= 9) || (month === 5 && day <= 27)) {
-    return { name: 'Atoum', system: 'Égyptien', dateRange: '9-27 mai' };
+  if (month <= 6) {
+    return { name: "Thor", system: "Viking" };
   }
-  if ((month === 5 && day >= 28) || (month === 6 && day <= 18)) {
-    return { name: 'Bes', system: 'Égyptien', dateRange: '28 mai - 18 juin' };
+  if (month <= 8) {
+    return { name: "Fenrir", system: "Viking" };
   }
-  if ((month === 6 && day >= 19) || (month === 7 && day <= 28)) {
-    return { name: 'Sekhmet', system: 'Égyptien', dateRange: '19 juin - 28 juillet' };
+  if (month <= 10) {
+    return { name: "Odin", system: "Viking" };
   }
-  if ((month === 7 && day >= 29) || (month === 8 && day <= 11)) {
-    return { name: 'Néfertoum', system: 'Égyptien', dateRange: '29 juillet - 11 août' };
+  return { name: "Loki", system: "Viking" };
+}
+
+/**
+ * Calcule le signe astrologique celtique (13 arbres sacrés)
+ */
+export function calculateCelticZodiac(date: BirthDate): ZodiacSign {
+  const { day, month } = date;
+
+  // Bouleau (24 déc - 20 jan)
+  if ((month === 12 && day >= 24) || (month === 1 && day <= 20)) {
+    return { name: "Bouleau", system: "Celtique" };
   }
-  if ((month === 8 && day >= 12) || (month === 8 && day <= 29)) {
-    return { name: 'Rê', system: 'Égyptien', dateRange: '12-29 août' };
+  // Sorbier (21 jan - 17 fév)
+  if ((month === 1 && day >= 21) || (month === 2 && day <= 17)) {
+    return { name: "Sorbier", system: "Celtique" };
   }
-  if ((month === 8 && day >= 30) || (month === 9 && day <= 17)) {
-    return { name: 'Osiris', system: 'Égyptien', dateRange: '30 août - 17 septembre' };
+  // Frêne (18 fév - 17 mars)
+  if ((month === 2 && day >= 18) || (month === 3 && day <= 17)) {
+    return { name: "Frêne", system: "Celtique" };
   }
-  if ((month === 9 && day >= 18) || (month === 10 && day <= 2)) {
-    return { name: 'Maât', system: 'Égyptien', dateRange: '18 septembre - 2 octobre' };
+  // Aulne (18 mars - 14 avr)
+  if ((month === 3 && day >= 18) || (month === 4 && day <= 14)) {
+    return { name: "Aulne", system: "Celtique" };
   }
-  if ((month === 10 && day >= 3) || (month === 10 && day <= 22)) {
-    return { name: 'Hathor', system: 'Égyptien', dateRange: '3-22 octobre' };
+  // Saule (15 avr - 12 mai)
+  if ((month === 4 && day >= 15) || (month === 5 && day <= 12)) {
+    return { name: "Saule", system: "Celtique" };
   }
-  if ((month === 10 && day >= 23) || (month === 11 && day <= 11)) {
-    return { name: 'Nout', system: 'Égyptien', dateRange: '23 octobre - 11 novembre' };
+  // Aubépine (13 mai - 9 juin)
+  if ((month === 5 && day >= 13) || (month === 6 && day <= 9)) {
+    return { name: "Aubépine", system: "Celtique" };
   }
-  if ((month === 11 && day >= 12) || (month === 11 && day <= 29)) {
-    return { name: 'Hapi', system: 'Égyptien', dateRange: '12-29 novembre' };
+  // Chêne (10 juin - 7 juil)
+  if ((month === 6 && day >= 10) || (month === 7 && day <= 7)) {
+    return { name: "Chêne", system: "Celtique" };
   }
-  // Décembre
-  return { name: 'Amon-Rê', system: 'Égyptien', dateRange: '1-31 décembre' };
+  // Houx (8 juil - 4 août)
+  if ((month === 7 && day >= 8) || (month === 8 && day <= 4)) {
+    return { name: "Houx", system: "Celtique" };
+  }
+  // Noisetier (5 août - 1 sept)
+  if ((month === 8 && day >= 5) || (month === 9 && day <= 1)) {
+    return { name: "Noisetier", system: "Celtique" };
+  }
+  // Vigne (2 sept - 29 sept)
+  if ((month === 9 && day >= 2) || (month === 9 && day <= 29)) {
+    return { name: "Vigne", system: "Celtique" };
+  }
+  // Lierre (30 sept - 27 oct)
+  if ((month === 9 && day >= 30) || (month === 10 && day <= 27)) {
+    return { name: "Lierre", system: "Celtique" };
+  }
+  // Roseau (28 oct - 24 nov)
+  if ((month === 10 && day >= 28) || (month === 11 && day <= 24)) {
+    return { name: "Roseau", system: "Celtique" };
+  }
+  // Sureau (25 nov - 23 déc)
+  return { name: "Sureau", system: "Celtique" };
 }
 
 /**
@@ -138,7 +437,19 @@ export function calculateAllSigns(date: BirthDate): Record<string, ZodiacSign> {
   return {
     occidental: calculateWesternZodiac(date),
     chinois: calculateChineseZodiac(date),
+    tibetain: calculateTibetanZodiac(date),
+    kabbalistique: calculateKabbalisticZodiac(date),
+    perse: calculatePersianZodiac(date),
+    maya: calculateMayanZodiac(date),
+    azteque: calculateAztecZodiac(date),
+    druidique: calculateDruidicZodiac(date),
+    amerindien: calculateNativeAmericanZodiac(date),
+    africain: calculateAfricanZodiac(date),
     egyptien: calculateEgyptianZodiac(date),
-    // TODO: Ajouter d'autres systèmes (maya, druidique, arabe, aztèque, etc.)
+    arabe: calculateArabicZodiac(date),
+    vedique: calculateVedicZodiac(date),
+    alchimique: calculateAlchemicalZodiac(date),
+    viking: calculateVikingZodiac(date),
+    celtique: calculateCelticZodiac(date),
   };
 }

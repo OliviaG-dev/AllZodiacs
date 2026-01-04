@@ -16,14 +16,28 @@ export default function ResultsDisplay({ signs, birthDate }: ResultsDisplayProps
     });
   };
 
+  const handleViewMore = (key: string, sign: ZodiacSign) => {
+    // TODO: Implémenter l'action du bouton (modal, page détaillée, etc.)
+    console.log('Voir plus pour:', key, sign);
+  };
+
   const systemNames: Record<string, string> = {
     occidental: 'Occidental',
     chinois: 'Chinois',
-    egyptien: 'Égyptien',
+    tibetain: 'Tibétain',
+    kabbalistique: 'Kabbalistique',
+    perse: 'Perse',
     maya: 'Maya',
+    azteque: 'Aztèque',
     druidique: 'Druidique',
+    amerindien: 'Amérindien',
+    africain: 'Africain',
+    egyptien: 'Égyptien',
     arabe: 'Arabe',
-    aztèque: 'Aztèque',
+    vedique: 'Védique',
+    alchimique: 'Alchimique',
+    viking: 'Viking',
+    celtique: 'Celtique',
   };
 
   return (
@@ -46,10 +60,10 @@ export default function ResultsDisplay({ signs, birthDate }: ResultsDisplayProps
               {sign.dateRange && (
                 <p className="sign-date-range">{sign.dateRange}</p>
               )}
-              {sign.description && (
-                <p className="sign-description">{sign.description}</p>
-              )}
             </div>
+            <button className="sign-card-button" onClick={() => handleViewMore(key, sign)}>
+              Voir plus
+            </button>
           </div>
         ))}
       </div>

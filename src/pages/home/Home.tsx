@@ -1,18 +1,20 @@
-import { useState } from "react";
-import type { BirthDate, ZodiacSign } from "../../types/astrology";
+import { useNavigate } from "react-router-dom";
+import type { BirthDate } from "../../types/astrology";
 import { calculateAllSigns } from "../../utils/astrologyCalculators";
 import DateInput from "../../components/DateInput/DateInput";
-import ResultsDisplay from "../../components/ResultsDisplay/ResultsDisplay";
 import "./Home.css";
 
 export default function Home() {
-  const [signs, setSigns] = useState<Record<string, ZodiacSign>>({});
-  const [birthDate, setBirthDate] = useState<BirthDate | null>(null);
+  const navigate = useNavigate();
 
   const handleDateSubmit = (date: BirthDate) => {
-    setBirthDate(date);
     const calculatedSigns = calculateAllSigns(date);
-    setSigns(calculatedSigns);
+    navigate("/results", {
+      state: {
+        signs: calculatedSigns,
+        birthDate: date,
+      },
+    });
   };
 
   return (
@@ -33,10 +35,6 @@ export default function Home() {
 
       <main className="home-main">
         <DateInput onDateSubmit={handleDateSubmit} />
-
-        {birthDate && Object.keys(signs).length > 0 && (
-          <ResultsDisplay signs={signs} birthDate={birthDate} />
-        )}
       </main>
 
       <footer className="home-footer">

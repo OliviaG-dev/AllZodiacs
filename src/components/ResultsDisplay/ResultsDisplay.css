@@ -13,10 +13,22 @@
 .results-title {
   font-size: 2.5rem;
   margin: 0 0 1rem 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
+  background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .results-date {
@@ -32,7 +44,7 @@
 
 .results-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -49,8 +61,8 @@
 
 .sign-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
-  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+  border-color: rgba(212, 175, 55, 0.5);
 }
 
 .sign-card-header {
@@ -60,8 +72,8 @@
 .sign-system {
   display: inline-block;
   padding: 0.4rem 0.8rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
+  color: #0a0e27;
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 600;
@@ -69,10 +81,16 @@
   letter-spacing: 0.5px;
 }
 
+.sign-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .sign-card-body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex: 1;
 }
 
 .sign-name {
@@ -80,6 +98,8 @@
   margin: 0;
   color: white;
   font-weight: 700;
+  text-align: center;
+  font-family: "Merriweather", "Lora", serif;
 }
 
 .sign-date-range {
@@ -89,10 +109,31 @@
 }
 
 .sign-description {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
   margin: 0.5rem 0 0 0;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+.sign-card-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(10, 14, 39, 0.8);
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: flex-end;
+}
+
+.sign-card-button:hover {
+  background: rgba(10, 14, 39, 0.95);
+  border-color: rgba(212, 175, 55, 0.6);
+  color: #f4d03f;
+  transform: translateY(-2px);
 }
 
 .results-empty {
@@ -102,6 +143,18 @@
   font-size: 1.1rem;
 }
 
+@media (max-width: 1400px) {
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .results-grid {
     grid-template-columns: 1fr;
@@ -109,5 +162,11 @@
 
   .results-title {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-grid {
+    grid-template-columns: 1fr;
   }
 }
