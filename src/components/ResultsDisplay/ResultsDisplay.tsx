@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import type { ZodiacSign } from '../../types/astrology';
 import './ResultsDisplay.css';
 
@@ -7,6 +8,7 @@ interface ResultsDisplayProps {
 }
 
 export default function ResultsDisplay({ signs, birthDate }: ResultsDisplayProps) {
+  const navigate = useNavigate();
   const formatDate = (day: number, month: number, year: number) => {
     const date = new Date(year, month - 1, day);
     return date.toLocaleDateString('fr-FR', { 
@@ -14,11 +16,6 @@ export default function ResultsDisplay({ signs, birthDate }: ResultsDisplayProps
       month: 'long', 
       year: 'numeric' 
     });
-  };
-
-  const handleViewMore = (key: string, sign: ZodiacSign) => {
-    // TODO: Implémenter l'action du bouton (modal, page détaillée, etc.)
-    console.log('Voir plus pour:', key, sign);
   };
 
   const systemNames: Record<string, string> = {
@@ -29,11 +26,11 @@ export default function ResultsDisplay({ signs, birthDate }: ResultsDisplayProps
     perse: 'Perse',
     maya: 'Maya',
     azteque: 'Aztèque',
-    druidique: 'Druidique',
+    grec: 'Grec',
     amerindien: 'Amérindien',
     africain: 'Africain',
     egyptien: 'Égyptien',
-    arabe: 'Arabe',
+    inuit: 'Inuit',
     vedique: 'Védique',
     alchimique: 'Alchimique',
     viking: 'Viking',
@@ -51,19 +48,27 @@ export default function ResultsDisplay({ signs, birthDate }: ResultsDisplayProps
 
       <div className="results-grid">
         {Object.entries(signs).map(([key, sign]) => (
-          <div key={key} className="sign-card">
+          <div 
+            key={key} 
+            className={`sign-card sign-card-${key}`}
+            onClick={() => navigate('/describe', {
+              state: {
+                systemKey: key,
+                sign: sign,
+                birthDate: birthDate
+              }
+            })}
+          >
             <div className="sign-card-header">
-              <span className="sign-system">{systemNames[key] || sign.system}</span>
+              <span className={`sign-system sign-system-${key}`}>{systemNames[key] || sign.system}</span>
             </div>
             <div className="sign-card-body">
               <h3 className="sign-name">{sign.name}</h3>
               {sign.dateRange && (
                 <p className="sign-date-range">{sign.dateRange}</p>
               )}
+              <p className="sign-discover-text">(clique pour découvrir)</p>
             </div>
-            <button className="sign-card-button" onClick={() => handleViewMore(key, sign)}>
-              Voir plus
-            </button>
           </div>
         ))}
       </div>

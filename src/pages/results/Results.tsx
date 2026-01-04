@@ -32,7 +32,7 @@ export default function Results() {
       </main>
 
       <button onClick={handleBack} className="results-back-button">
-        ← Retour
+        Retour
       </button>
     </div>
   );

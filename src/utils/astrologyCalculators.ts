@@ -215,14 +215,38 @@ export function calculateAztecZodiac(date: BirthDate): ZodiacSign {
 }
 
 /**
- * Calcule le signe astrologique druidique
+ * Calcule le signe astrologique grec (basé sur la mythologie grecque)
  */
-export function calculateDruidicZodiac(date: BirthDate): ZodiacSign {
-  const { month } = date;
-  if (month <= 3) return { name: "Bouleau", system: "Druidique" };
-  if (month <= 6) return { name: "Chêne", system: "Druidique" };
-  if (month <= 9) return { name: "Noisetier", system: "Druidique" };
-  return { name: "Noyer", system: "Druidique" };
+export function calculateGreekZodiac(date: BirthDate): ZodiacSign {
+  const western = calculateWesternZodiac(date);
+
+  const GREEK_SIGNS: Record<string, string> = {
+    Bélier: "Ares",
+    Taureau: "Demeter",
+    Gémeaux: "Hermes",
+    Cancer: "Hestia",
+    Lion: "Aphrodite",
+    Vierge: "Demeter",
+    Balance: "Hebe",
+    Scorpion: "Persephone",
+    Sagittaire: "Chiron",
+    Capricorne: "Pan",
+    Verseau: "Asteria",
+    Poissons: "Poseidon",
+  };
+
+  const deityName = GREEK_SIGNS[western.name];
+  if (deityName) {
+    return {
+      name: deityName,
+      system: "Grec",
+    };
+  }
+
+  return {
+    name: western.name,
+    system: "Grec",
+  };
 }
 
 /**
@@ -267,10 +291,57 @@ export function calculateEgyptianZodiac(date: BirthDate): ZodiacSign {
 }
 
 /**
- * Calcule le signe astrologique arabe
+ * Calcule le signe astrologique inuit (12 animaux arctiques)
  */
-export function calculateArabicZodiac(date: BirthDate): ZodiacSign {
-  return calculateWesternZodiac(date);
+export function calculateInuitZodiac(date: BirthDate): ZodiacSign {
+  const { day, month } = date;
+
+  // Polar Bear (22 déc - 19 jan)
+  if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
+    return { name: "Ours Polaire", system: "Inuit" };
+  }
+  // Raven (20 jan - 18 fév)
+  if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
+    return { name: "Corbeau", system: "Inuit" };
+  }
+  // Arctic Wolf (19 fév - 20 mars)
+  if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
+    return { name: "Loup Arctique", system: "Inuit" };
+  }
+  // Seal (21 mars - 19 avr)
+  if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
+    return { name: "Phoque", system: "Inuit" };
+  }
+  // Caribou (20 avr - 20 mai)
+  if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
+    return { name: "Caribou", system: "Inuit" };
+  }
+  // Snowy Owl (21 mai - 20 juin)
+  if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) {
+    return { name: "Harfang des neiges", system: "Inuit" };
+  }
+  // Walrus (21 juin - 22 juil)
+  if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) {
+    return { name: "Morse", system: "Inuit" };
+  }
+  // Salmon (23 juil - 22 août)
+  if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
+    return { name: "Saumon", system: "Inuit" };
+  }
+  // Orca (23 août - 22 sept)
+  if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
+    return { name: "Orque", system: "Inuit" };
+  }
+  // Snowy Owl (23 sept - 22 oct) - Note: il y a deux périodes pour Snowy Owl, je garde la première occurrence
+  if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) {
+    return { name: "Harfang des neiges", system: "Inuit" };
+  }
+  // Beluga Whale (23 oct - 21 nov)
+  if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) {
+    return { name: "Béluga", system: "Inuit" };
+  }
+  // Lone Wolf (22 nov - 21 déc)
+  return { name: "Loup Solitaire", system: "Inuit" };
 }
 
 /**
@@ -442,11 +513,11 @@ export function calculateAllSigns(date: BirthDate): Record<string, ZodiacSign> {
     perse: calculatePersianZodiac(date),
     maya: calculateMayanZodiac(date),
     azteque: calculateAztecZodiac(date),
-    druidique: calculateDruidicZodiac(date),
+    grec: calculateGreekZodiac(date),
     amerindien: calculateNativeAmericanZodiac(date),
     africain: calculateAfricanZodiac(date),
     egyptien: calculateEgyptianZodiac(date),
-    arabe: calculateArabicZodiac(date),
+    inuit: calculateInuitZodiac(date),
     vedique: calculateVedicZodiac(date),
     alchimique: calculateAlchemicalZodiac(date),
     viking: calculateVikingZodiac(date),

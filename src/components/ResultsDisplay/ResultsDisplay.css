@@ -57,28 +57,265 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sign-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.3),
+    rgba(244, 208, 63, 0.5),
+    rgba(212, 175, 55, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .sign-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
-  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25), 0 0 25px rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.sign-card:hover::before {
+  left: 100%;
 }
 
 .sign-card-header {
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .sign-system {
   display: inline-block;
-  padding: 0.4rem 0.8rem;
-  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
-  color: #0a0e27;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+/* Occidental - Bleu */
+.sign-system-occidental {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.sign-card-occidental:hover .sign-system-occidental {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #bfdbfe;
+}
+
+/* Chinois - Rouge */
+.sign-system-chinois {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.sign-card-chinois:hover .sign-system-chinois {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fecaca;
+}
+
+/* Tibétain - Violet */
+.sign-system-tibetain {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.sign-card-tibetain:hover .sign-system-tibetain {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: #ddd6fe;
+}
+
+/* Kabbalistique - Or */
+.sign-system-kabbalistique {
+  background: rgba(212, 175, 55, 0.15);
+  color: #fcd34d;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.sign-card-kabbalistique:hover .sign-system-kabbalistique {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #fde047;
+}
+
+/* Perse - Cyan */
+.sign-system-perse {
+  background: rgba(34, 211, 238, 0.15);
+  color: #67e8f9;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+.sign-card-perse:hover .sign-system-perse {
+  background: rgba(34, 211, 238, 0.2);
+  border-color: rgba(34, 211, 238, 0.4);
+  color: #a5f3fc;
+}
+
+/* Maya - Vert */
+.sign-system-maya {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.sign-card-maya:hover .sign-system-maya {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #bbf7d0;
+}
+
+/* Aztèque - Orange */
+.sign-system-azteque {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fdba74;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.sign-card-azteque:hover .sign-system-azteque {
+  background: rgba(249, 115, 22, 0.2);
+  border-color: rgba(249, 115, 22, 0.4);
+  color: #fed7aa;
+}
+
+/* Grec - Or olive */
+.sign-system-grec {
+  background: rgba(196, 181, 53, 0.15);
+  color: #d4d089;
+  border: 1px solid rgba(196, 181, 53, 0.3);
+}
+
+.sign-card-grec:hover .sign-system-grec {
+  background: rgba(196, 181, 53, 0.2);
+  border-color: rgba(196, 181, 53, 0.4);
+  color: #e4dfa5;
+}
+
+/* Amérindien - Rose */
+.sign-system-amerindien {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f9a8d4;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.sign-card-amerindien:hover .sign-system-amerindien {
+  background: rgba(236, 72, 153, 0.2);
+  border-color: rgba(236, 72, 153, 0.4);
+  color: #fbcfe8;
+}
+
+/* Africain - Jaune */
+.sign-system-africain {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde047;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.sign-card-africain:hover .sign-system-africain {
+  background: rgba(234, 179, 8, 0.2);
+  border-color: rgba(234, 179, 8, 0.4);
+  color: #fef08a;
+}
+
+/* Égyptien - Turquoise */
+.sign-system-egyptien {
+  background: rgba(20, 184, 166, 0.15);
+  color: #5eead4;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.sign-card-egyptien:hover .sign-system-egyptien {
+  background: rgba(20, 184, 166, 0.2);
+  border-color: rgba(20, 184, 166, 0.4);
+  color: #99f6e4;
+}
+
+/* Inuit - Bleu glacial */
+.sign-system-inuit {
+  background: rgba(147, 197, 253, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+}
+
+.sign-card-inuit:hover .sign-system-inuit {
+  background: rgba(147, 197, 253, 0.2);
+  border-color: rgba(147, 197, 253, 0.4);
+  color: #bfdbfe;
+}
+
+/* Védique - Rose foncé */
+.sign-system-vedique {
+  background: rgba(219, 39, 119, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(219, 39, 119, 0.3);
+}
+
+.sign-card-vedique:hover .sign-system-vedique {
+  background: rgba(219, 39, 119, 0.2);
+  border-color: rgba(219, 39, 119, 0.4);
+  color: #f9a8d4;
+}
+
+/* Alchimique - Violet foncé */
+.sign-system-alchimique {
+  background: rgba(124, 58, 237, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.sign-card-alchimique:hover .sign-system-alchimique {
+  background: rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.4);
+  color: #ddd6fe;
+}
+
+/* Viking - Bleu foncé */
+.sign-system-viking {
+  background: rgba(37, 99, 235, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.sign-card-viking:hover .sign-system-viking {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: rgba(37, 99, 235, 0.4);
+  color: #bfdbfe;
+}
+
+/* Celtique - Vert forêt */
+.sign-system-celtique {
+  background: rgba(5, 150, 105, 0.15);
+  color: #6ee7b7;
+  border: 1px solid rgba(5, 150, 105, 0.3);
+}
+
+.sign-card-celtique:hover .sign-system-celtique {
+  background: rgba(5, 150, 105, 0.2);
+  border-color: rgba(5, 150, 105, 0.4);
+  color: #a7f3d0;
 }
 
 .sign-card {
@@ -91,21 +328,34 @@
   flex-direction: column;
   gap: 0.5rem;
   flex: 1;
+  position: relative;
+  z-index: 2;
 }
 
 .sign-name {
   font-size: 1.8rem;
   margin: 0;
-  color: white;
   font-weight: 700;
   text-align: center;
   font-family: "Merriweather", "Lora", serif;
+  background: linear-gradient(135deg, #d4af37 0%, #f4d03f 25%, #fff8dc 50%, #f4d03f 75%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .sign-date-range {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
+}
+
+.sign-discover-text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0.5rem 0 0 0;
+  font-style: italic;
+  text-align: center;
 }
 
 .sign-description {
@@ -116,24 +366,51 @@
 }
 
 .sign-card-button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background: rgba(10, 14, 39, 0.8);
-  color: #d4af37;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  border-radius: 8px;
+  margin-top: auto;
+  padding: 0.65rem 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   align-self: flex-end;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  overflow: hidden;
+}
+
+.sign-card-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
 }
 
 .sign-card-button:hover {
-  background: rgba(10, 14, 39, 0.95);
-  border-color: rgba(212, 175, 55, 0.6);
-  color: #f4d03f;
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sign-card-button:hover::before {
+  left: 100%;
 }
 
 .results-empty {
