@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import type { BirthDate } from '../../types/astrology';
-import './DateInput.css';
+import { useState } from "react";
+import type { BirthDate } from "../../types/astrology";
+import "./DateInput.css";
 
 interface DateInputProps {
   onDateSubmit: (date: BirthDate) => void;
@@ -13,10 +13,17 @@ export default function DateInput({ onDateSubmit }: DateInputProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validation basique
-    if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2100) {
-      alert('Veuillez entrer une date valide');
+    if (
+      day < 1 ||
+      day > 31 ||
+      month < 1 ||
+      month > 12 ||
+      year < 1900 ||
+      year > 2100
+    ) {
+      alert("Veuillez entrer une date valide");
       return;
     }
 
@@ -27,8 +34,10 @@ export default function DateInput({ onDateSubmit }: DateInputProps) {
     <form className="date-input-form" onSubmit={handleSubmit}>
       <div className="date-input-container">
         <h2 className="date-input-title">Entrez votre date de naissance</h2>
-        <p className="date-input-subtitle">Découvrez tous vos signes astrologiques</p>
-        
+        <p className="date-input-subtitle">
+          Découvrez tous vos signes astrologiques
+        </p>
+
         <div className="date-input-fields">
           <div className="date-input-field">
             <label htmlFor="day">Jour</label>
@@ -53,7 +62,9 @@ export default function DateInput({ onDateSubmit }: DateInputProps) {
             >
               {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
                 <option key={m} value={m}>
-                  {new Date(2000, m - 1, 1).toLocaleDateString('fr-FR', { month: 'long' })}
+                  {new Date(2000, m - 1, 1).toLocaleDateString("fr-FR", {
+                    month: "long",
+                  })}
                 </option>
               ))}
             </select>
@@ -71,11 +82,13 @@ export default function DateInput({ onDateSubmit }: DateInputProps) {
               required
             />
           </div>
-        </div>
 
-        <button type="submit" className="date-input-button">
-          Découvrir mes signes 🪐
-        </button>
+          <div className="date-input-button-wrapper">
+            <button type="submit" className="date-input-button">
+              Révéler mes signes astrologiques
+            </button>
+          </div>
+        </div>
       </div>
     </form>
   );
