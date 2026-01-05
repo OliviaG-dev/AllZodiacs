@@ -26,7 +26,7 @@ export default function ResultsDisplay({ signs, birthDate }: ResultsDisplayProps
     perse: 'Perse',
     maya: 'Maya',
     azteque: 'Aztèque',
-    grec: 'Grec',
+    druidique: 'Druidique',
     amerindien: 'Amérindien',
     africain: 'Africain',
     egyptien: 'Égyptien',

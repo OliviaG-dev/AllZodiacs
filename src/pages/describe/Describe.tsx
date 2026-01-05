@@ -3,7 +3,6 @@ import type { ZodiacSign, BirthDate } from "../../types/astrology";
 import "./Describe.css";
 
 interface LocationState {
-  systemKey: string;
   sign: ZodiacSign;
   birthDate: BirthDate;
 }
@@ -19,7 +18,7 @@ export default function Describe() {
     return null;
   }
 
-  const { systemKey, sign, birthDate } = state;
+  const { sign, birthDate } = state;
 
   const handleBack = () => {
     navigate(-1);
@@ -27,10 +26,10 @@ export default function Describe() {
 
   const formatDate = (day: number, month: number, year: number) => {
     const date = new Date(year, month - 1, day);
-    return date.toLocaleDateString('fr-FR', { 
-      day: 'numeric', 
-      month: 'long', 
-      year: 'numeric' 
+    return date.toLocaleDateString("fr-FR", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
     });
   };
 
@@ -44,7 +43,10 @@ export default function Describe() {
             <p className="describe-date-range">{sign.dateRange}</p>
           )}
           <p className="describe-birth-date">
-            Date de naissance : <strong>{formatDate(birthDate.day, birthDate.month, birthDate.year)}</strong>
+            Date de naissance :{" "}
+            <strong>
+              {formatDate(birthDate.day, birthDate.month, birthDate.year)}
+            </strong>
           </p>
           {sign.description && (
             <p className="describe-text">{sign.description}</p>

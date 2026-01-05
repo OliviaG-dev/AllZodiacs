@@ -50,7 +50,160 @@ export function calculateWesternZodiac(date: BirthDate): ZodiacSign {
 }
 
 /**
- * Calcule le signe astrologique chinois
+ * Calcule la date approximative du Nouvel An chinois pour une année donnée
+ * Le Nouvel An chinois tombe généralement entre le 21 janvier et le 20 février
+ */
+function getChineseNewYearDate(year: number): { month: number; day: number } {
+  // Table des dates du Nouvel An chinois pour les années récentes (approximation)
+  // Pour une précision absolue, il faudrait utiliser un calcul lunaire complexe
+  const newYearDates: Record<number, { month: number; day: number }> = {
+    1900: { month: 1, day: 31 },
+    1901: { month: 2, day: 19 },
+    1902: { month: 2, day: 8 },
+    1903: { month: 1, day: 29 },
+    1904: { month: 2, day: 16 },
+    1905: { month: 2, day: 4 },
+    1906: { month: 1, day: 25 },
+    1907: { month: 2, day: 13 },
+    1908: { month: 2, day: 2 },
+    1909: { month: 1, day: 22 },
+    1910: { month: 2, day: 10 },
+    1911: { month: 1, day: 30 },
+    1912: { month: 2, day: 18 },
+    1913: { month: 2, day: 6 },
+    1914: { month: 1, day: 26 },
+    1915: { month: 2, day: 14 },
+    1916: { month: 2, day: 3 },
+    1917: { month: 1, day: 23 },
+    1918: { month: 2, day: 11 },
+    1919: { month: 2, day: 1 },
+    1920: { month: 2, day: 20 },
+    1921: { month: 2, day: 8 },
+    1922: { month: 1, day: 28 },
+    1923: { month: 2, day: 16 },
+    1924: { month: 2, day: 5 },
+    1925: { month: 1, day: 24 },
+    1926: { month: 2, day: 13 },
+    1927: { month: 2, day: 2 },
+    1928: { month: 1, day: 23 },
+    1929: { month: 2, day: 10 },
+    1930: { month: 1, day: 30 },
+    1931: { month: 2, day: 17 },
+    1932: { month: 2, day: 6 },
+    1933: { month: 1, day: 26 },
+    1934: { month: 2, day: 14 },
+    1935: { month: 2, day: 4 },
+    1936: { month: 1, day: 24 },
+    1937: { month: 2, day: 11 },
+    1938: { month: 1, day: 31 },
+    1939: { month: 2, day: 19 },
+    1940: { month: 2, day: 8 },
+    1941: { month: 1, day: 27 },
+    1942: { month: 2, day: 15 },
+    1943: { month: 2, day: 5 },
+    1944: { month: 1, day: 25 },
+    1945: { month: 2, day: 13 },
+    1946: { month: 2, day: 2 },
+    1947: { month: 1, day: 22 },
+    1948: { month: 2, day: 10 },
+    1949: { month: 1, day: 29 },
+    1950: { month: 2, day: 17 },
+    1951: { month: 2, day: 6 },
+    1952: { month: 1, day: 27 },
+    1953: { month: 2, day: 14 },
+    1954: { month: 2, day: 3 },
+    1955: { month: 1, day: 24 },
+    1956: { month: 2, day: 12 },
+    1957: { month: 1, day: 31 },
+    1958: { month: 2, day: 18 },
+    1959: { month: 2, day: 8 },
+    1960: { month: 1, day: 28 },
+    1961: { month: 2, day: 15 },
+    1962: { month: 2, day: 5 },
+    1963: { month: 1, day: 25 },
+    1964: { month: 2, day: 13 },
+    1965: { month: 2, day: 2 },
+    1966: { month: 1, day: 21 },
+    1967: { month: 2, day: 9 },
+    1968: { month: 1, day: 30 },
+    1969: { month: 2, day: 17 },
+    1970: { month: 2, day: 6 },
+    1971: { month: 1, day: 27 },
+    1972: { month: 2, day: 15 },
+    1973: { month: 2, day: 3 },
+    1974: { month: 1, day: 23 },
+    1975: { month: 2, day: 11 },
+    1976: { month: 1, day: 31 },
+    1977: { month: 2, day: 18 },
+    1978: { month: 2, day: 7 },
+    1979: { month: 1, day: 28 },
+    1980: { month: 2, day: 16 },
+    1981: { month: 2, day: 5 },
+    1982: { month: 1, day: 25 },
+    1983: { month: 2, day: 13 },
+    1984: { month: 2, day: 2 },
+    1985: { month: 2, day: 20 },
+    1986: { month: 2, day: 9 },
+    1987: { month: 1, day: 29 },
+    1988: { month: 2, day: 17 },
+    1989: { month: 2, day: 6 },
+    1990: { month: 1, day: 27 },
+    1991: { month: 2, day: 15 },
+    1992: { month: 2, day: 4 },
+    1993: { month: 1, day: 23 },
+    1994: { month: 2, day: 10 },
+    1995: { month: 1, day: 31 },
+    1996: { month: 2, day: 19 },
+    1997: { month: 2, day: 7 },
+    1998: { month: 1, day: 28 },
+    1999: { month: 2, day: 16 },
+    2000: { month: 2, day: 5 },
+    2001: { month: 1, day: 24 },
+    2002: { month: 2, day: 12 },
+    2003: { month: 2, day: 1 },
+    2004: { month: 1, day: 22 },
+    2005: { month: 2, day: 9 },
+    2006: { month: 1, day: 29 },
+    2007: { month: 2, day: 18 },
+    2008: { month: 2, day: 7 },
+    2009: { month: 1, day: 26 },
+    2010: { month: 2, day: 14 },
+    2011: { month: 2, day: 3 },
+    2012: { month: 1, day: 23 },
+    2013: { month: 2, day: 10 },
+    2014: { month: 1, day: 31 },
+    2015: { month: 2, day: 19 },
+    2016: { month: 2, day: 8 },
+    2017: { month: 1, day: 28 },
+    2018: { month: 2, day: 16 },
+    2019: { month: 2, day: 5 },
+    2020: { month: 1, day: 25 },
+    2021: { month: 2, day: 12 },
+    2022: { month: 2, day: 1 },
+    2023: { month: 1, day: 22 },
+    2024: { month: 2, day: 10 },
+    2025: { month: 1, day: 29 },
+    2026: { month: 2, day: 17 },
+    2027: { month: 2, day: 6 },
+    2028: { month: 1, day: 26 },
+    2029: { month: 2, day: 13 },
+    2030: { month: 2, day: 3 },
+  };
+
+  // Si on a la date exacte, on l'utilise
+  if (newYearDates[year]) {
+    return newYearDates[year];
+  }
+
+  // Sinon, approximation : généralement entre le 21 janvier et le 20 février
+  // On utilise une approximation basée sur le cycle de 19 ans (cycle métonique)
+  // Pour simplifier, on utilise le 1er février comme approximation
+  return { month: 2, day: 1 };
+}
+
+/**
+ * Calcule le signe astrologique chinois avec son élément
+ * L'année chinoise commence au Nouvel An chinois (entre le 21 janvier et le 20 février)
  */
 export function calculateChineseZodiac(date: BirthDate): ZodiacSign {
   const animals = [
@@ -67,9 +220,40 @@ export function calculateChineseZodiac(date: BirthDate): ZodiacSign {
     "Chien",
     "Cochon",
   ];
-  const sign = animals[(date.year - 4) % 12];
+
+  // Déterminer l'année chinoise effective
+  let chineseYear = date.year;
+  const newYearDate = getChineseNewYearDate(date.year);
+
+  // Si la date est avant le Nouvel An chinois, on utilise l'année précédente
+  if (
+    date.month < newYearDate.month ||
+    (date.month === newYearDate.month && date.day < newYearDate.day)
+  ) {
+    chineseYear = date.year - 1;
+  }
+
+  const animal = animals[(chineseYear - 4) % 12];
+
+  // Détermination de l'élément selon le dernier chiffre de l'année chinoise
+  const lastDigit = chineseYear % 10;
+  let element: string;
+
+  if (lastDigit === 4 || lastDigit === 5) {
+    element = "Bois";
+  } else if (lastDigit === 6 || lastDigit === 7) {
+    element = "Feu";
+  } else if (lastDigit === 8 || lastDigit === 9) {
+    element = "Terre";
+  } else if (lastDigit === 0 || lastDigit === 1) {
+    element = "Métal";
+  } else {
+    // lastDigit === 2 || lastDigit === 3
+    element = "Eau";
+  }
+
   return {
-    name: sign,
+    name: `${animal} (${element})`,
     system: "Chinois",
     description: `${date.year}`,
   };
@@ -215,38 +399,178 @@ export function calculateAztecZodiac(date: BirthDate): ZodiacSign {
 }
 
 /**
- * Calcule le signe astrologique grec (basé sur la mythologie grecque)
+ * Calcule le signe astrologique druidique (21 arbres du calendrier druidique)
+ * Système authentique basé sur le calendrier des arbres druidique
  */
-export function calculateGreekZodiac(date: BirthDate): ZodiacSign {
-  const western = calculateWesternZodiac(date);
+export function calculateDruidicZodiac(date: BirthDate): ZodiacSign {
+  const { day, month } = date;
 
-  const GREEK_SIGNS: Record<string, string> = {
-    Bélier: "Ares",
-    Taureau: "Demeter",
-    Gémeaux: "Hermes",
-    Cancer: "Hestia",
-    Lion: "Aphrodite",
-    Vierge: "Demeter",
-    Balance: "Hebe",
-    Scorpion: "Persephone",
-    Sagittaire: "Chiron",
-    Capricorne: "Pan",
-    Verseau: "Asteria",
-    Poissons: "Poseidon",
-  };
+  // Calendrier druidique complet avec 21 arbres
+  // Certains arbres ont deux périodes dans l'année
 
-  const deityName = GREEK_SIGNS[western.name];
-  if (deityName) {
-    return {
-      name: deityName,
-      system: "Grec",
-    };
+  // Pommier (23 déc - 1 jan et 25 juin - 4 juil)
+  if (
+    (month === 12 && day >= 23) ||
+    (month === 1 && day <= 1) ||
+    (month === 6 && day >= 25) ||
+    (month === 7 && day <= 4)
+  ) {
+    return { name: "Pommier", system: "Druidique" };
   }
 
-  return {
-    name: western.name,
-    system: "Grec",
-  };
+  // Sapin (2-11 jan et 5-14 juil)
+  if (
+    (month === 1 && day >= 2 && day <= 11) ||
+    (month === 7 && day >= 5 && day <= 14)
+  ) {
+    return { name: "Sapin", system: "Druidique" };
+  }
+
+  // Orme (12-24 jan et 15-25 juil)
+  if (
+    (month === 1 && day >= 12 && day <= 24) ||
+    (month === 7 && day >= 15 && day <= 25)
+  ) {
+    return { name: "Orme", system: "Druidique" };
+  }
+
+  // Cyprès (25 jan - 3 fév et 26 juil - 4 août)
+  if (
+    (month === 1 && day >= 25) ||
+    (month === 2 && day <= 3) ||
+    (month === 7 && day >= 26) ||
+    (month === 8 && day <= 4)
+  ) {
+    return { name: "Cyprès", system: "Druidique" };
+  }
+
+  // Peuplier (4-8 fév, 5-13 août, 1-14 mai)
+  if (
+    (month === 2 && day >= 4 && day <= 8) ||
+    (month === 8 && day >= 5 && day <= 13) ||
+    (month === 5 && day >= 1 && day <= 14)
+  ) {
+    return { name: "Peuplier", system: "Druidique" };
+  }
+
+  // Cèdre (9-18 fév et 14-23 août)
+  if (
+    (month === 2 && day >= 9 && day <= 18) ||
+    (month === 8 && day >= 14 && day <= 23)
+  ) {
+    return { name: "Cèdre", system: "Druidique" };
+  }
+
+  // Pin (19-28 fév et 24 août - 2 sept)
+  if (
+    (month === 2 && day >= 19 && day <= 28) ||
+    (month === 8 && day >= 24) ||
+    (month === 9 && day <= 2)
+  ) {
+    return { name: "Pin", system: "Druidique" };
+  }
+
+  // Saule pleureur (1-10 mars et 3-12 sept)
+  if (
+    (month === 3 && day >= 1 && day <= 10) ||
+    (month === 9 && day >= 3 && day <= 12)
+  ) {
+    return { name: "Saule pleureur", system: "Druidique" };
+  }
+
+  // Tilleul (11-20 mars et 13-22 sept)
+  if (
+    (month === 3 && day >= 11 && day <= 20) ||
+    (month === 9 && day >= 13 && day <= 22)
+  ) {
+    return { name: "Tilleul", system: "Druidique" };
+  }
+
+  // Chêne (21 mars - équinoxe de printemps)
+  if (month === 3 && day === 21) {
+    return { name: "Chêne", system: "Druidique" };
+  }
+
+  // Noisetier (22-31 mars et 24 sept - 3 oct)
+  if (
+    (month === 3 && day >= 22 && day <= 31) ||
+    (month === 9 && day >= 24) ||
+    (month === 10 && day <= 3)
+  ) {
+    return { name: "Noisetier", system: "Druidique" };
+  }
+
+  // Sorbier (1-10 avr et 4-13 oct)
+  if (
+    (month === 4 && day >= 1 && day <= 10) ||
+    (month === 10 && day >= 4 && day <= 13)
+  ) {
+    return { name: "Sorbier", system: "Druidique" };
+  }
+
+  // Érable (11-20 avr et 14-23 oct)
+  if (
+    (month === 4 && day >= 11 && day <= 20) ||
+    (month === 10 && day >= 14 && day <= 23)
+  ) {
+    return { name: "Érable", system: "Druidique" };
+  }
+
+  // Noyer (21-30 avr et 24 oct - 2 nov)
+  if (
+    (month === 4 && day >= 21 && day <= 30) ||
+    (month === 10 && day >= 24) ||
+    (month === 11 && day <= 2)
+  ) {
+    return { name: "Noyer", system: "Druidique" };
+  }
+
+  // Châtaignier (15-24 mai et 12-21 nov)
+  if (
+    (month === 5 && day >= 15 && day <= 24) ||
+    (month === 11 && day >= 12 && day <= 21)
+  ) {
+    return { name: "Châtaignier", system: "Druidique" };
+  }
+
+  // Frêne (25 mai - 3 juin et 22 nov - 1 déc)
+  if (
+    (month === 5 && day >= 25 && day <= 31) ||
+    (month === 6 && day <= 3) ||
+    (month === 11 && day >= 22) ||
+    (month === 12 && day <= 1)
+  ) {
+    return { name: "Frêne", system: "Druidique" };
+  }
+
+  // Charme (4-13 juin et 2-11 déc)
+  if (
+    (month === 6 && day >= 4 && day <= 13) ||
+    (month === 12 && day >= 2 && day <= 11)
+  ) {
+    return { name: "Charme", system: "Druidique" };
+  }
+
+  // Figuier (14-23 juin et 12-21 déc)
+  if (
+    (month === 6 && day >= 14 && day <= 23) ||
+    (month === 12 && day >= 12 && day <= 21)
+  ) {
+    return { name: "Figuier", system: "Druidique" };
+  }
+
+  // Bouleau (24 juin - solstice d'été)
+  if (month === 6 && day === 24) {
+    return { name: "Bouleau", system: "Druidique" };
+  }
+
+  // Olivier (23 sept - équinoxe d'automne)
+  if (month === 9 && day === 23) {
+    return { name: "Olivier", system: "Druidique" };
+  }
+
+  // Par défaut (dates non couvertes par les arbres spéciaux)
+  return { name: "Chêne", system: "Druidique" };
 }
 
 /**
@@ -513,7 +837,7 @@ export function calculateAllSigns(date: BirthDate): Record<string, ZodiacSign> {
     perse: calculatePersianZodiac(date),
     maya: calculateMayanZodiac(date),
     azteque: calculateAztecZodiac(date),
-    grec: calculateGreekZodiac(date),
+    druidique: calculateDruidicZodiac(date),
     amerindien: calculateNativeAmericanZodiac(date),
     africain: calculateAfricanZodiac(date),
     egyptien: calculateEgyptianZodiac(date),

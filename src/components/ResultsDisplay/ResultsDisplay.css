@@ -201,17 +201,17 @@
   color: #fed7aa;
 }
 
-/* Grec - Or olive */
-.sign-system-grec {
-  background: rgba(196, 181, 53, 0.15);
-  color: #d4d089;
-  border: 1px solid rgba(196, 181, 53, 0.3);
+/* Druidique - Vert forêt */
+.sign-system-druidique {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
-.sign-card-grec:hover .sign-system-grec {
-  background: rgba(196, 181, 53, 0.2);
-  border-color: rgba(196, 181, 53, 0.4);
-  color: #e4dfa5;
+.sign-card-druidique:hover .sign-system-druidique {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #86efac;
 }
 
 /* Amérindien - Rose */
