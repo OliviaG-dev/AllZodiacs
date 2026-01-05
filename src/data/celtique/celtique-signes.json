@@ -1,0 +1,135 @@
+[
+    {
+      "id": "bouleau",
+      "name": "Bouleau",
+      "keywords": ["renouveau", "début", "énergie"],
+      "traits": { "positive": ["Déterminé", "Énergique", "Optimiste"], "negative": ["Impulsif", "Têtu"] },
+      "description": "Le Bouleau symbolise le renouveau et l’initiative. Il apporte énergie et courage pour commencer de nouveaux projets.",
+      "compatibility": ["Aulne", "Chêne"],
+      "advice": { "daily": "Lancez vos projets avec confiance.", "love": "Soyez ouvert et sincère.", "work": "Agissez avec détermination.", "health": "Activité physique régulière." },
+      "colors": ["Blanc", "Vert clair"],
+      "stones": ["Quartz", "Jade"]
+    },
+    {
+      "id": "aulne",
+      "name": "Aulne",
+      "keywords": ["courage", "protection", "intuition"],
+      "traits": { "positive": ["Courageux", "Protecteur", "Intuitif"], "negative": ["Méfiant", "Têtu"] },
+      "description": "L’Aulne représente la protection et la sagesse. Il encourage l’intuition et la prudence dans les décisions.",
+      "compatibility": ["Bouleau", "Chêne"],
+      "advice": { "daily": "Écoutez votre intuition.", "love": "Protégez vos proches.", "work": "Agissez avec sagesse.", "health": "Repos et méditation." },
+      "colors": ["Rouge", "Vert"],
+      "stones": ["Grenat", "Jade"]
+    },
+    {
+      "id": "orme",
+      "name": "Orme",
+      "keywords": ["justice", "équilibre", "diplomatie"],
+      "traits": { "positive": ["Équilibré", "Juste", "Diplomate"], "negative": ["Indécis", "Réservé"] },
+      "description": "L’Orme symbolise l’équilibre et la justice. Il guide vers la diplomatie et la sagesse sociale.",
+      "compatibility": ["Hêtre", "Chêne"],
+      "advice": { "daily": "Cherchez l’équilibre et la justice dans vos actions.", "love": "Soyez juste et compréhensif.", "work": "Favorisez la diplomatie.", "health": "Méditation et équilibre mental." },
+      "colors": ["Gris", "Vert"],
+      "stones": ["Agate", "Quartz"]
+    },
+    {
+      "id": "chene",
+      "name": "Chêne",
+      "keywords": ["force", "stabilité", "courage"],
+      "traits": { "positive": ["Fort", "Stable", "Courageux"], "negative": ["Têtu", "Autoritaire"] },
+      "description": "Le Chêne est symbole de force et de stabilité. Il encourage la persévérance et le courage face aux défis.",
+      "compatibility": ["Bouleau", "Aulne"],
+      "advice": { "daily": "Restez fort et persévérant.", "love": "Soyez loyal et protecteur.", "work": "Agissez avec courage et détermination.", "health": "Exercice physique et repos." },
+      "colors": ["Marron", "Vert foncé"],
+      "stones": ["Hématite", "Jaspe"]
+    },
+    {
+      "id": "charme",
+      "name": "Charme",
+      "keywords": ["communication", "souplesse", "adaptabilité"],
+      "traits": { "positive": ["Communicatif", "Flexible", "Curieux"], "negative": ["Superficiel", "Inconstant"] },
+      "description": "Le Charme symbolise la communication et l’adaptabilité. Il encourage la souplesse dans les relations et le travail.",
+      "compatibility": ["Orme", "Hêtre"],
+      "advice": { "daily": "Communiquez et adaptez-vous.", "love": "Soyez flexible et attentif.", "work": "Cherchez des solutions créatives.", "health": "Exercices respiratoires et relaxation." },
+      "colors": ["Vert clair", "Jaune"],
+      "stones": ["Citrine", "Quartz"]
+    },
+    {
+      "id": "hêtre",
+      "name": "Hêtre",
+      "keywords": ["sagesse", "connaissance", "méditation"],
+      "traits": { "positive": ["Sage", "Intelligent", "Réfléchi"], "negative": ["Réservé", "Rêveur"] },
+      "description": "Le Hêtre symbolise la connaissance et la sagesse. Il inspire la réflexion et la méditation.",
+      "compatibility": ["Orme", "Charme"],
+      "advice": { "daily": "Cherchez la connaissance et la clarté.", "love": "Soyez compréhensif et attentif.", "work": "Analysez avant d’agir.", "health": "Lecture et méditation." },
+      "colors": ["Marron clair", "Vert pâle"],
+      "stones": ["Lapis-lazuli", "Jade"]
+    },
+    {
+      "id": "frêne",
+      "name": "Frêne",
+      "keywords": ["énergie", "protection", "équilibre"],
+      "traits": { "positive": ["Énergique", "Protecteur", "Équilibré"], "negative": ["Impulsif", "Méfiant"] },
+      "description": "Le Frêne symbolise la protection et l’énergie vitale. Il favorise l’équilibre et la force intérieure.",
+      "compatibility": ["Chêne", "Hêtre"],
+      "advice": { "daily": "Équilibrez énergie et prudence.", "love": "Protégez ceux que vous aimez.", "work": "Agissez avec force et constance.", "health": "Activité physique et repos." },
+      "colors": ["Vert foncé", "Marron"],
+      "stones": ["Jade", "Agate"]
+    },
+    {
+      "id": "saule",
+      "name": "Saule",
+      "keywords": ["émotion", "intuition", "souplesse"],
+      "traits": { "positive": ["Intuitif", "Émotionnel", "Souple"], "negative": ["Changeant", "Indécis"] },
+      "description": "Le Saule symbolise l’intuition et la sensibilité. Il favorise la souplesse émotionnelle et l’adaptation.",
+      "compatibility": ["Frêne", "Charme"],
+      "advice": { "daily": "Faites confiance à vos émotions.", "love": "Soyez attentif et tendre.", "work": "Adaptez-vous aux situations.", "health": "Méditation et repos." },
+      "colors": ["Bleu clair", "Vert"],
+      "stones": ["Aigue-marine", "Perle"]
+    },
+    {
+      "id": "noisetier",
+      "name": "Noisetier",
+      "keywords": ["intuition", "créativité", "connaissance"],
+      "traits": { "positive": ["Créatif", "Sage", "Observateur"], "negative": ["Rêveur", "Mystérieux"] },
+      "description": "Le Noisetier symbolise la sagesse et la créativité. Il guide vers la connaissance et l’ingéniosité.",
+      "compatibility": ["Hêtre", "Charme"],
+      "advice": { "daily": "Explorez votre créativité et vos idées.", "love": "Soyez attentif et imaginatif.", "work": "Trouvez des solutions originales.", "health": "Lecture et méditation." },
+      "colors": ["Jaune pâle", "Brun clair"],
+      "stones": ["Ambre", "Citrine"]
+    },
+    {
+      "id": "châtaignier",
+      "name": "Châtaignier",
+      "keywords": ["persévérance", "force", "stabilité"],
+      "traits": { "positive": ["Travailleur", "Stable", "Fort"], "negative": ["Têtu", "Possessif"] },
+      "description": "Le Châtaignier symbolise la persévérance et la force. Il enseigne la stabilité et la patience.",
+      "compatibility": ["Chêne", "Frêne"],
+      "advice": { "daily": "Persévérez dans vos efforts.", "love": "Soyez loyal et stable.", "work": "Travaillez avec constance et discipline.", "health": "Activité physique et repos." },
+      "colors": ["Brun", "Vert"],
+      "stones": ["Jaspe", "Hématite"]
+    },
+    {
+      "id": "poirier",
+      "name": "Poirier",
+      "keywords": ["amitié", "générosité", "partage"],
+      "traits": { "positive": ["Généreux", "Sociable", "Bienveillant"], "negative": ["Naïf", "Indécis"] },
+      "description": "Le Poirier représente l’amitié et la générosité. Il favorise le partage et les relations harmonieuses.",
+      "compatibility": ["Bouleau", "Noisetier"],
+      "advice": { "daily": "Soyez généreux et partagez.", "love": "Cultivez les relations sincères.", "work": "Travaillez en équipe.", "health": "Relations sociales et relaxation." },
+      "colors": ["Vert clair", "Blanc"],
+      "stones": ["Quartz rose", "Perle"]
+    },
+    {
+      "id": "viorne",
+      "name": "Viorne",
+      "keywords": ["mystère", "intuition", "protection"],
+      "traits": { "positive": ["Intuitif", "Protecteur", "Sensible"], "negative": ["Secret", "Méfiant"] },
+      "description": "La Viorne symbolise l’intuition et la protection spirituelle. Elle guide vers la prudence et la clairvoyance.",
+      "compatibility": ["Saule", "Noisetier"],
+      "advice": { "daily": "Fiez-vous à votre intuition et soyez prudent.", "love": "Soyez attentif et protecteur.", "work": "Analysez et agissez avec prudence.", "health": "Méditation et repos." },
+      "colors": ["Blanc", "Bleu"],
+      "stones": ["Quartz", "Saphir"]
+    }
+  ]
+  

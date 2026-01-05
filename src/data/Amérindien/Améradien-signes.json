@@ -1,0 +1,134 @@
+[
+    {
+      "id": "castor",
+      "name": "Castor",
+      "keywords": ["travail", "organisation", "construction"],
+      "traits": { "positive": ["Organisé", "Travailleur", "Prévoyant"], "negative": ["Rigide", "Obstiné"] },
+      "description": "Le Castor représente la construction et l’organisation. Il enseigne la patience et la persévérance.",
+      "compatibility": ["Cerf", "Ours"],
+      "advice": { "daily": "Planifiez et organisez vos projets avec soin.", "love": "Construisez une relation solide et stable.", "work": "Soyez méthodique et persévérant.", "health": "Équilibre entre travail et repos." },
+      "colors": ["Brun", "Beige"],
+      "stones": ["Jaspe", "Quartz"]
+    },
+    {
+      "id": "cerf",
+      "name": "Cerf",
+      "keywords": ["grâce", "sensibilité", "agilité"],
+      "traits": { "positive": ["Gracieux", "Réceptif", "Rapide"], "negative": ["Timide", "Émotif"] },
+      "description": "Le Cerf symbolise la grâce, la sensibilité et la rapidité. Il favorise l’écoute et la délicatesse.",
+      "compatibility": ["Castor", "Loup"],
+      "advice": { "daily": "Soyez attentif à votre environnement et aux autres.", "love": "Montrez douceur et compréhension.", "work": "Agissez avec finesse et adaptabilité.", "health": "Pratiquez des activités douces et relaxantes." },
+      "colors": ["Vert", "Blanc"],
+      "stones": ["Jade", "Saphir"]
+    },
+    {
+      "id": "loup",
+      "name": "Loup",
+      "keywords": ["loyauté", "esprit de meute", "intelligence"],
+      "traits": { "positive": ["Loyal", "Intuitif", "Protecteur"], "negative": ["Méfiant", "Solitaire"] },
+      "description": "Le Loup incarne la loyauté, la sagesse et l’esprit de communauté. Il enseigne la coopération et la stratégie.",
+      "compatibility": ["Cerf", "Ours"],
+      "advice": { "daily": "Travaillez en équipe et faites confiance à vos instincts.", "love": "Soyez fidèle et attentif.", "work": "Collaborez et partagez vos connaissances.", "health": "Équilibre entre action et repos." },
+      "colors": ["Gris", "Bleu"],
+      "stones": ["Onyx", "Lapis-lazuli"]
+    },
+    {
+      "id": "ours",
+      "name": "Ours",
+      "keywords": ["force", "courage", "protection"],
+      "traits": { "positive": ["Fort", "Protecteur", "Stable"], "negative": ["Têtu", "Possessif"] },
+      "description": "L’Ours représente la force, le courage et la protection. Il enseigne la résilience et la stabilité.",
+      "compatibility": ["Castor", "Loup"],
+      "advice": { "daily": "Faites preuve de force et de patience.", "love": "Soyez protecteur et fiable.", "work": "Agissez avec constance et courage.", "health": "Repos et renforcement physique." },
+      "colors": ["Marron", "Noir"],
+      "stones": ["Hématite", "Obsidienne"]
+    },
+    {
+      "id": "aigle",
+      "name": "Aigle",
+      "keywords": ["vision", "liberté", "spiritualité"],
+      "traits": { "positive": ["Visionnaire", "Libre", "Spirituel"], "negative": ["Distant", "Égoïste"] },
+      "description": "L’Aigle symbolise la vision et la liberté, guidant vers l’élévation spirituelle et la perspective globale.",
+      "compatibility": ["Ours", "Cerf"],
+      "advice": { "daily": "Élevez votre regard et analysez les situations avec sagesse.", "love": "Soyez attentif mais indépendant.", "work": "Planifiez avec vision.", "health": "Méditation et respiration profonde." },
+      "colors": ["Bleu ciel", "Blanc"],
+      "stones": ["Saphir", "Améthyste"]
+    },
+    {
+      "id": "hibou",
+      "name": "Hibou",
+      "keywords": ["sagesse", "intuition", "mystère"],
+      "traits": { "positive": ["Intuitif", "Perspicace", "Observateur"], "negative": ["Mystérieux", "Solitaire"] },
+      "description": "Le Hibou incarne la sagesse, l’intuition et la clairvoyance. Il enseigne l’observation et la patience.",
+      "compatibility": ["Loup", "Aigle"],
+      "advice": { "daily": "Faites confiance à votre intuition et observez avant d’agir.", "love": "Soyez attentif et patient.", "work": "Analysez et prenez des décisions réfléchies.", "health": "Repos mental et méditation." },
+      "colors": ["Gris", "Blanc"],
+      "stones": ["Quartz", "Obsidienne"]
+    },
+    {
+      "id": "serpent",
+      "name": "Serpent",
+      "keywords": ["transformation", "guérison", "sagesse"],
+      "traits": { "positive": ["Intuitif", "Guérisseur", "Adaptable"], "negative": ["Méfiant", "Manipulateur"] },
+      "description": "Le Serpent symbolise la transformation et la guérison, favorisant l’adaptabilité et la sagesse.",
+      "compatibility": ["Hibou", "Castor"],
+      "advice": { "daily": "Acceptez le changement et la transformation.", "love": "Soyez patient et sincère.", "work": "Transformez les obstacles en opportunités.", "health": "Soins corporels et purification." },
+      "colors": ["Vert", "Marron"],
+      "stones": ["Jade", "Ambre"]
+    },
+    {
+      "id": "belette",
+      "name": "Belette",
+      "keywords": ["agilité", "curiosité", "esprit"],
+      "traits": { "positive": ["Curieux", "Rapide", "Ingénieux"], "negative": ["Inconstant", "Impatient"] },
+      "description": "La Belette incarne l’agilité, la curiosité et la vivacité d’esprit.",
+      "compatibility": ["Castor", "Loup"],
+      "advice": { "daily": "Soyez rapide et flexible dans vos décisions.", "love": "Amusez-vous et restez léger.", "work": "Adaptez-vous rapidement aux situations.", "health": "Exercices de coordination et vigilance." },
+      "colors": ["Orange", "Brun"],
+      "stones": ["Cornaline", "Ambre"]
+    },
+    {
+      "id": "cheval",
+      "name": "Cheval",
+      "keywords": ["liberté", "vitalité", "énergie"],
+      "traits": { "positive": ["Libre", "Énergique", "Courageux"], "negative": ["Impulsif", "Têtu"] },
+      "description": "Le Cheval représente la liberté, la vitalité et la force physique. Il inspire l’indépendance et l’action.",
+      "compatibility": ["Aigle", "Castor"],
+      "advice": { "daily": "Agissez avec énergie et indépendance.", "love": "Soyez passionné et loyal.", "work": "Prenez des initiatives audacieuses.", "health": "Activité physique régulière." },
+      "colors": ["Brun", "Noir"],
+      "stones": ["Onyx", "Hématite"]
+    },
+    {
+      "id": "loutre",
+      "name": "Loutre",
+      "keywords": ["joie", "créativité", "jeu"],
+      "traits": { "positive": ["Joyeux", "Créatif", "Curieux"], "negative": ["Dispersé", "Inconstant"] },
+      "description": "La Loutre symbolise la joie et la créativité. Elle favorise le jeu et l’expression légère.",
+      "compatibility": ["Belette", "Cheval"],
+      "advice": { "daily": "Exprimez votre créativité et amusez-vous.", "love": "Soyez joueur et tendre.", "work": "Faites preuve d’inventivité.", "health": "Activité ludique et détente." },
+      "colors": ["Bleu clair", "Jaune"],
+      "stones": ["Citrine", "Quartz rose"]
+    },
+    {
+      "id": "corbeau",
+      "name": "Corbeau",
+      "keywords": ["magie", "intelligence", "transformation"],
+      "traits": { "positive": ["Intelligent", "Observateur", "Adaptable"], "negative": ["Secret", "Mystérieux"] },
+      "description": "Le Corbeau symbolise la magie et l’intelligence. Il guide vers la transformation et l’adaptation.",
+      "compatibility": ["Hibou", "Serpent"],
+      "advice": { "daily": "Soyez attentif et adaptable.", "love": "Partagez vos idées et émotions.", "work": "Utilisez votre esprit stratégique.", "health": "Équilibre mental et repos." },
+      "colors": ["Noir", "Bleu"],
+      "stones": ["Obsidienne", "Lapis-lazuli"]
+    },
+    {
+      "id": "ours-blanc",
+      "name": "Ours Blanc",
+      "keywords": ["intuition", "force intérieure", "protection"],
+      "traits": { "positive": ["Protecteur", "Sage", "Patient"], "negative": ["Isolé", "Rétractif"] },
+      "description": "L’Ours Blanc représente la force intérieure et la protection. Il enseigne la patience et la prudence.",
+      "compatibility": ["Ours", "Loup"],
+      "advice": { "daily": "Concentrez-vous sur votre force intérieure.", "love": "Soyez patient et protecteur.", "work": "Agissez avec prudence et persévérance.", "health": "Repos et renforcement physique." },
+      "colors": ["Blanc", "Gris"],
+      "stones": ["Quartz", "Perle"]
+    }
+  ]

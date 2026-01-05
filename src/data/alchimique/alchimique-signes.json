@@ -1,0 +1,86 @@
+[
+    {
+      "id": "nigredo",
+      "name": "Nigredo",
+      "translation": "Noircissement",
+      "keywords": ["chaos", "dissolution", "ombre"],
+      "traits": { "positive": ["Introspection", "Prise de conscience", "Force intérieure"], "negative": ["Confusion", "Doute", "Découragement"] },
+      "description": "Phase de déconstruction, mort symbolique et confusion nécessaire.",
+      "compatibility": ["Albedo", "Coagulatio"],
+      "advice": { "daily": "Affrontez vos ombres et acceptez le changement.", "love": "Acceptez les hauts et bas relationnels.", "work": "Dépassez les obstacles avec patience.", "health": "Prenez soin de votre équilibre mental." },
+      "colors": ["Noir", "Gris"],
+      "stones": ["Obsidienne", "Onyx"]
+    },
+    {
+      "id": "albedo",
+      "name": "Albedo",
+      "translation": "Blanchiment",
+      "keywords": ["purification", "clarification", "renaissance"],
+      "traits": { "positive": ["Clarté", "Purification", "Sérénité"], "negative": ["Naïveté", "Passivité"] },
+      "description": "Nettoyage intérieur et retour à l’essentiel.",
+      "compatibility": ["Nigredo", "Citrinitas"],
+      "advice": { "daily": "Cherchez la pureté et la clarté dans vos actions.", "love": "Soyez honnête et clair avec vos sentiments.", "work": "Simplifiez et clarifiez vos objectifs.", "health": "Méditation et purification du corps." },
+      "colors": ["Blanc", "Argent"],
+      "stones": ["Quartz", "Perle"]
+    },
+    {
+      "id": "citrinitas",
+      "name": "Citrinitas",
+      "translation": "Jaunissement",
+      "keywords": ["éveil", "conscience", "lumière"],
+      "traits": { "positive": ["Lucidité", "Sagesse", "Éveil"], "negative": ["Impatience", "Excès d’analyse"] },
+      "description": "Émergence de la connaissance et de la lucidité.",
+      "compatibility": ["Albedo", "Rubedo"],
+      "advice": { "daily": "Développez votre conscience et votre vision.", "love": "Soyez attentif et réfléchi.", "work": "Appliquez votre savoir avec discernement.", "health": "Exercices mentaux et spirituels." },
+      "colors": ["Jaune", "Or"],
+      "stones": ["Citrine", "Topaze"]
+    },
+    {
+      "id": "rubedo",
+      "name": "Rubedo",
+      "translation": "Rougissement",
+      "keywords": ["accomplissement", "intégration", "union"],
+      "traits": { "positive": ["Harmonie", "Accomplissement", "Équilibre"], "negative": ["Arrogance", "Excès de confiance"] },
+      "description": "Unification de l’être, harmonie entre corps et esprit.",
+      "compatibility": ["Citrinitas", "Conjunctio"],
+      "advice": { "daily": "Intégrez vos expériences et vivez en harmonie.", "love": "Équilibrez amour et indépendance.", "work": "Cherchez l’intégration dans vos projets.", "health": "Maintenez équilibre physique et mental." },
+      "colors": ["Rouge", "Bordeaux"],
+      "stones": ["Rubis", "Grenat"]
+    },
+    {
+      "id": "coagulatio",
+      "name": "Coagulatio",
+      "translation": "Fixation",
+      "keywords": ["stabilité", "ancrage", "manifestation"],
+      "traits": { "positive": ["Stabilité", "Pragmatisme", "Ancrage"], "negative": ["Rigidité", "Inflexibilité"] },
+      "description": "Concrétisation dans la matière.",
+      "compatibility": ["Nigredo", "Sublimatio"],
+      "advice": { "daily": "Ancrez vos projets dans la réalité.", "love": "Soyez fiable et constant.", "work": "Réalisez vos idées avec méthode.", "health": "Pratiques de grounding et relaxation." },
+      "colors": ["Brun", "Terre"],
+      "stones": ["Hématite", "Jaspe"]
+    },
+    {
+      "id": "sublimatio",
+      "name": "Sublimatio",
+      "translation": "Élévation",
+      "keywords": ["élévation", "vision", "transcendance"],
+      "traits": { "positive": ["Spiritualité", "Vision", "Perspective"], "negative": ["Évasion", "Déconnexion du réel"] },
+      "description": "Prise de hauteur spirituelle.",
+      "compatibility": ["Coagulatio", "Conjunctio"],
+      "advice": { "daily": "Élevez votre esprit et adoptez une vision plus large.", "love": "Cherchez des connexions profondes.", "work": "Prenez du recul et planifiez avec sagesse.", "health": "Méditation et respiration profonde." },
+      "colors": ["Bleu clair", "Violet"],
+      "stones": ["Améthyste", "Lapis-lazuli"]
+    },
+    {
+      "id": "conjunctio",
+      "name": "Conjunctio",
+      "translation": "Union",
+      "keywords": ["fusion", "équilibre", "complétude"],
+      "traits": { "positive": ["Union", "Équilibre", "Complétude"], "negative": ["Fusion excessive", "Dépendance"] },
+      "description": "Réunion des opposés, pierre philosophale.",
+      "compatibility": ["Rubedo", "Sublimatio"],
+      "advice": { "daily": "Cherchez l’unité intérieure et l’équilibre entre vos contraires.", "love": "Vivez l’harmonie et la réciprocité.", "work": "Unifiez vos idées et vos actions.", "health": "Équilibrez corps, esprit et émotions." },
+      "colors": ["Pourpre", "Doré"],
+      "stones": ["Améthyste", "Rubis"]
+    }
+  ]

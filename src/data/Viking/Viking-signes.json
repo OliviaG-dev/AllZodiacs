@@ -1,0 +1,68 @@
+[
+    {
+      "id": "ours",
+      "name": "Ours",
+      "keywords": ["force", "protection", "courage"],
+      "traits": { "positive": ["Courageux", "Protecteur", "Déterminé"], "negative": ["Têtu", "Impulsif"] },
+      "description": "L’Ours symbolise la force, le courage et la protection. Il inspire la loyauté et la résilience face aux défis.",
+      "compatibility": ["Loup", "Aigle"],
+      "advice": { "daily": "Affrontez vos défis avec courage.", "love": "Soyez fidèle et protecteur.", "work": "Persévérez avec détermination.", "health": "Exercice physique et vitalité." },
+      "colors": ["Brun", "Rouge"],
+      "stones": ["Hématite", "Ambre"]
+    },
+    {
+      "id": "loup",
+      "name": "Loup",
+      "keywords": ["intelligence", "loyauté", "esprit de meute"],
+      "traits": { "positive": ["Loyal", "Intuitif", "Protecteur"], "negative": ["Méfiant", "Solitaire"] },
+      "description": "Le Loup symbolise l’intelligence, la loyauté et l’esprit de communauté. Il enseigne la coopération et la stratégie.",
+      "compatibility": ["Ours", "Aigle"],
+      "advice": { "daily": "Travaillez en équipe et suivez votre intuition.", "love": "Soyez fidèle et attentif.", "work": "Collaborez et partagez vos connaissances.", "health": "Équilibre entre action et repos." },
+      "colors": ["Gris", "Bleu"],
+      "stones": ["Onyx", "Lapis-lazuli"]
+    },
+    {
+      "id": "aigle",
+      "name": "Aigle",
+      "keywords": ["vision", "liberté", "spiritualité"],
+      "traits": { "positive": ["Visionnaire", "Libre", "Spirituel"], "negative": ["Distant", "Égoïste"] },
+      "description": "L’Aigle symbolise la vision et la liberté. Il guide vers l’élévation spirituelle et la perspective globale.",
+      "compatibility": ["Ours", "Loup"],
+      "advice": { "daily": "Prenez du recul et analysez les situations avec sagesse.", "love": "Soyez attentif mais indépendant.", "work": "Planifiez avec vision.", "health": "Méditation et respiration profonde." },
+      "colors": ["Bleu ciel", "Blanc"],
+      "stones": ["Saphir", "Améthyste"]
+    },
+    {
+      "id": "cerf",
+      "name": "Cerf",
+      "keywords": ["grâce", "sensibilité", "agilité"],
+      "traits": { "positive": ["Gracieux", "Réceptif", "Rapide"], "negative": ["Timide", "Émotif"] },
+      "description": "Le Cerf symbolise la grâce, la sensibilité et l’agilité. Il favorise l’écoute et la délicatesse.",
+      "compatibility": ["Loutre", "Aigle"],
+      "advice": { "daily": "Restez attentif à votre environnement et aux autres.", "love": "Montrez douceur et compréhension.", "work": "Agissez avec finesse et adaptabilité.", "health": "Pratiquez des activités douces et relaxantes." },
+      "colors": ["Vert", "Blanc"],
+      "stones": ["Jade", "Quartz"]
+    },
+    {
+      "id": "loutre",
+      "name": "Loutre",
+      "keywords": ["joie", "créativité", "jeu"],
+      "traits": { "positive": ["Joyeux", "Créatif", "Curieux"], "negative": ["Dispersé", "Inconstant"] },
+      "description": "La Loutre symbolise la joie et la créativité. Elle favorise le jeu et l’expression légère.",
+      "compatibility": ["Cerf", "Aigle"],
+      "advice": { "daily": "Exprimez votre créativité et amusez-vous.", "love": "Soyez joueur et tendre.", "work": "Faites preuve d’inventivité.", "health": "Activité ludique et détente." },
+      "colors": ["Bleu clair", "Jaune"],
+      "stones": ["Citrine", "Quartz rose"]
+    },
+    {
+      "id": "serpent",
+      "name": "Serpent",
+      "keywords": ["transformation", "guérison", "sagesse"],
+      "traits": { "positive": ["Intuitif", "Guérisseur", "Adaptable"], "negative": ["Méfiant", "Manipulateur"] },
+      "description": "Le Serpent symbolise la transformation et la guérison, favorisant l’adaptabilité et la sagesse.",
+      "compatibility": ["Ours", "Loutre"],
+      "advice": { "daily": "Acceptez le changement et la transformation.", "love": "Soyez patient et sincère.", "work": "Transformez les obstacles en opportunités.", "health": "Soins corporels et purification." },
+      "colors": ["Vert", "Marron"],
+      "stones": ["Jade", "Ambre"]
+    }
+  ]

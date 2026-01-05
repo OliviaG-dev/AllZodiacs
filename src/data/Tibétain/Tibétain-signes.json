@@ -1,0 +1,123 @@
+[
+    {
+      "id": "tigre",
+      "name": "Tigre",
+      "keywords": ["courage", "énergie", "initiative"],
+      "traits": { "positive": ["Courageux", "Énergique", "Leader"], "negative": ["Impulsif", "Têtu"] },
+      "description": "Le Tigre symbolise la force, le courage et l’initiative. Il apporte leadership et protection.",
+      "compatibility": ["Dragon", "Cheval"],
+      "advice": { "daily": "Agissez avec audace et confiance.", "love": "Soyez passionné et protecteur.", "work": "Dirigez avec énergie et détermination.", "health": "Activité physique régulière." },
+      "colors": ["Orange", "Rouge"],
+      "stones": ["Cornaline", "Jade"]
+    },
+    {
+      "id": "lièvre",
+      "name": "Lièvre",
+      "keywords": ["douceur", "rapidité", "sensibilité"],
+      "traits": { "positive": ["Rapide", "Prudent", "Intuitif"], "negative": ["Timide", "Inconstant"] },
+      "description": "Le Lièvre symbolise la sensibilité et la rapidité d’action. Il favorise l’agilité et la prudence.",
+      "compatibility": ["Dragon", "Mouton"],
+      "advice": { "daily": "Restez attentif et adaptable.", "love": "Montrez tendresse et attention.", "work": "Agissez avec finesse.", "health": "Repos et relaxation." },
+      "colors": ["Blanc", "Bleu clair"],
+      "stones": ["Quartz", "Perle"]
+    },
+    {
+      "id": "dragon",
+      "name": "Dragon",
+      "keywords": ["puissance", "sagesse", "charisme"],
+      "traits": { "positive": ["Charismatique", "Visionnaire", "Audacieux"], "negative": ["Orgueilleux", "Autoritaire"] },
+      "description": "Le Dragon symbolise la puissance et la sagesse. Il apporte énergie, charisme et protection spirituelle.",
+      "compatibility": ["Tigre", "Lièvre"],
+      "advice": { "daily": "Utilisez votre force avec sagesse.", "love": "Soyez passionné et inspirant.", "work": "Dirigez avec vision.", "health": "Équilibre entre activité et repos." },
+      "colors": ["Vert", "Or"],
+      "stones": ["Émeraude", "Jade"]
+    },
+    {
+      "id": "serpent",
+      "name": "Serpent",
+      "keywords": ["intelligence", "intuition", "mystère"],
+      "traits": { "positive": ["Intuitif", "Perspicace", "Stratégique"], "negative": ["Méfiant", "Secret"] },
+      "description": "Le Serpent symbolise l’intuition et la transformation. Il enseigne la prudence et la réflexion.",
+      "compatibility": ["Coq", "Buffle"],
+      "advice": { "daily": "Faites confiance à votre intuition.", "love": "Soyez réfléchi et sincère.", "work": "Planifiez et analysez les situations.", "health": "Méditation et équilibre mental." },
+      "colors": ["Vert foncé", "Bleu"],
+      "stones": ["Jade", "Onyx"]
+    },
+    {
+      "id": "cheval",
+      "name": "Cheval",
+      "keywords": ["liberté", "vitalité", "énergie"],
+      "traits": { "positive": ["Libre", "Énergique", "Audacieux"], "negative": ["Impulsif", "Têtu"] },
+      "description": "Le Cheval symbolise la vitalité et la liberté. Il inspire indépendance et action.",
+      "compatibility": ["Tigre", "Chèvre"],
+      "advice": { "daily": "Agissez avec énergie et indépendance.", "love": "Soyez passionné et loyal.", "work": "Prenez des initiatives audacieuses.", "health": "Activité physique régulière." },
+      "colors": ["Marron", "Rouge"],
+      "stones": ["Cornaline", "Quartz"]
+    },
+    {
+      "id": "chèvre",
+      "name": "Chèvre",
+      "keywords": ["créativité", "douceur", "harmonie"],
+      "traits": { "positive": ["Créatif", "Patient", "Sensible"], "negative": ["Indécis", "Timide"] },
+      "description": "La Chèvre symbolise la créativité et l’harmonie. Elle favorise douceur, équilibre et intuition.",
+      "compatibility": ["Cheval", "Lièvre"],
+      "advice": { "daily": "Exprimez votre créativité et votre douceur.", "love": "Soyez attentif et tendre.", "work": "Travaillez avec patience et harmonie.", "health": "Repos et relaxation." },
+      "colors": ["Vert clair", "Blanc"],
+      "stones": ["Perle", "Émeraude"]
+    },
+    {
+      "id": "singe",
+      "name": "Singe",
+      "keywords": ["intelligence", "ingéniosité", "humour"],
+      "traits": { "positive": ["Ingénieux", "Curieux", "Malin"], "negative": ["Inconstant", "Superficiel"] },
+      "description": "Le Singe symbolise l’intelligence et l’agilité mentale. Il favorise la créativité et l’humour.",
+      "compatibility": ["Serpent", "Coq"],
+      "advice": { "daily": "Soyez ingénieux et flexible.", "love": "Amusez-vous et soyez joueur.", "work": "Trouvez des solutions originales.", "health": "Exercices mentaux et détente." },
+      "colors": ["Jaune", "Orange"],
+      "stones": ["Citrine", "Topaze"]
+    },
+    {
+      "id": "coq",
+      "name": "Coq",
+      "keywords": ["fiabilité", "discipline", "précision"],
+      "traits": { "positive": ["Organisé", "Responsable", "Observateur"], "negative": ["Orgueilleux", "Critique"] },
+      "description": "Le Coq symbolise la discipline et la vigilance. Il enseigne organisation et rigueur.",
+      "compatibility": ["Serpent", "Singe"],
+      "advice": { "daily": "Soyez attentif aux détails.", "love": "Soyez fidèle et responsable.", "work": "Planifiez et respectez les règles.", "health": "Routine et discipline." },
+      "colors": ["Rouge", "Or"],
+      "stones": ["Jaspe", "Grenat"]
+    },
+    {
+      "id": "chien",
+      "name": "Chien",
+      "keywords": ["loyauté", "protection", "justice"],
+      "traits": { "positive": ["Loyal", "Protecteur", "Juste"], "negative": ["Méfiant", "Possessif"] },
+      "description": "Le Chien symbolise la loyauté et la protection. Il favorise la justice et la fidélité.",
+      "compatibility": ["Tigre", "Lapin"],
+      "advice": { "daily": "Agissez avec loyauté et protection.", "love": "Soyez fidèle et fiable.", "work": "Défendez ce qui est juste.", "health": "Repos et équilibre." },
+      "colors": ["Marron", "Gris"],
+      "stones": ["Hématite", "Quartz"]
+    },
+    {
+      "id": "cochon",
+      "name": "Cochon",
+      "keywords": ["abondance", "sincérité", "générosité"],
+      "traits": { "positive": ["Sincère", "Généreux", "Travailleur"], "negative": ["Naïf", "Possessif"] },
+      "description": "Le Cochon symbolise l’abondance et la générosité. Il favorise la bienveillance et le partage.",
+      "compatibility": ["Lapin", "Chèvre"],
+      "advice": { "daily": "Soyez généreux et sincère.", "love": "Partagez avec attention et cœur ouvert.", "work": "Travaillez avec diligence.", "health": "Repos et équilibre alimentaire." },
+      "colors": ["Rose", "Blanc"],
+      "stones": ["Quartz rose", "Perle"]
+    },
+    {
+      "id": "lapin",
+      "name": "Lapin",
+      "keywords": ["douceur", "intuition", "vitesse"],
+      "traits": { "positive": ["Rapide", "Sensible", "Prudent"], "negative": ["Timide", "Indécis"] },
+      "description": "Le Lapin symbolise la sensibilité et l’intuition. Il favorise la douceur et l’adaptabilité.",
+      "compatibility": ["Chien", "Chèvre"],
+      "advice": { "daily": "Soyez attentif et adaptable.", "love": "Montrez douceur et tendresse.", "work": "Agissez avec prudence.", "health": "Repos et méditation." },
+      "colors": ["Blanc", "Bleu clair"],
+      "stones": ["Perle", "Aigue-marine"]
+    }
+  ]
