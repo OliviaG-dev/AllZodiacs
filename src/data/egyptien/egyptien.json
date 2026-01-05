@@ -1,0 +1,57 @@
+[
+    {
+        "id": "egyptien",
+        "name": "Égyptien",
+        "variant": "Divinités sacrées",
+        "origin": "Égypte antique",
+        "type": "mythological_cycle",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Cycle de divinités se répétant selon l’ordre cosmique",
+          "note": "Chaque dieu représente une force universelle et spirituelle"
+        },
+        "meta": {
+          "cycleLength": 6,
+          "coreConcepts": ["maât", "destin", "équilibre", "renaissance"]
+        },
+        "signs": [
+          {
+            "id": "ra",
+            "name": "Râ",
+            "keywords": ["création", "autorité", "lumière"],
+            "description": "Dieu solaire, source de vie et d’ordre."
+          },
+          {
+            "id": "isis",
+            "name": "Isis",
+            "keywords": ["protection", "intuition", "magie"],
+            "description": "Mère divine et gardienne des secrets."
+          },
+          {
+            "id": "osiris",
+            "name": "Osiris",
+            "keywords": ["renaissance", "justice", "transformation"],
+            "description": "Maître de l’au-delà et du renouveau."
+          },
+          {
+            "id": "horus",
+            "name": "Horus",
+            "keywords": ["vision", "royauté", "protection"],
+            "description": "Œil vigilant et protecteur."
+          },
+          {
+            "id": "anubis",
+            "name": "Anubis",
+            "keywords": ["transition", "guidance", "mystère"],
+            "description": "Guide des âmes et gardien des passages."
+          },
+          {
+            "id": "thot",
+            "name": "Thot",
+            "keywords": ["savoir", "communication", "équilibre"],
+            "description": "Dieu de la sagesse et de l’écriture."
+          }
+        ]
+      }
+      
+]

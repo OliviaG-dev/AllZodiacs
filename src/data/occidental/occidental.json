@@ -1,0 +1,183 @@
+[
+    {
+        "id": "occidental",
+        "name": "Occidental",
+        "variant": "Zodiaque tropical",
+        "origin": "Grèce antique / Babylonie",
+        "type": "solar",
+        "calculation": {
+          "basedOn": ["day", "month"],
+          "note": "Zodiaque tropical basé sur les saisons"
+        },
+        "signs": [
+          {
+            "id": "aries",
+            "name": "Bélier",
+            "localizedNames": {
+              "fr": "Bélier",
+              "en": "Aries",
+              "native": "Κριός"
+            },
+            "symbol": "♈",
+            "period": { "from": { "day": 21, "month": 3 }, "to": { "day": 19, "month": 4 } },
+            "element": "Feu",
+            "keywords": ["initiative", "énergie", "courage"],
+            "description": "Le Bélier incarne l'élan vital, l'action et le commencement."
+          },
+          {
+            "id": "taurus",
+            "name": "Taureau",
+            "localizedNames": {
+              "fr": "Taureau",
+              "en": "Taurus",
+              "native": "Ταῦρος"
+            },
+            "symbol": "♉",
+            "period": { "from": { "day": 20, "month": 4 }, "to": { "day": 20, "month": 5 } },
+            "element": "Terre",
+            "keywords": ["stabilité", "patience", "sensualité"],
+            "description": "Le Taureau représente la persévérance, la matière et la sécurité."
+          },
+          {
+            "id": "gemini",
+            "name": "Gémeaux",
+            "localizedNames": {
+              "fr": "Gémeaux",
+              "en": "Gemini",
+              "native": "Δίδυμοι"
+            },
+            "symbol": "♊",
+            "period": { "from": { "day": 21, "month": 5 }, "to": { "day": 20, "month": 6 } },
+            "element": "Air",
+            "keywords": ["communication", "adaptabilité", "curiosité"],
+            "description": "Les Gémeaux symbolisent l’échange, l’intellect et la dualité."
+          },
+          {
+            "id": "cancer",
+            "name": "Cancer",
+            "localizedNames": {
+              "fr": "Cancer",
+              "en": "Cancer",
+              "native": "Καρκίνος"
+            },
+            "symbol": "♋",
+            "period": { "from": { "day": 21, "month": 6 }, "to": { "day": 22, "month": 7 } },
+            "element": "Eau",
+            "keywords": ["sensibilité", "protection", "famille"],
+            "description": "Le Cancer est lié aux émotions, à la mémoire et au foyer."
+          },
+          {
+            "id": "leo",
+            "name": "Lion",
+            "localizedNames": {
+              "fr": "Lion",
+              "en": "Leo",
+              "native": "Λέων"
+            },
+            "symbol": "♌",
+            "period": { "from": { "day": 23, "month": 7 }, "to": { "day": 22, "month": 8 } },
+            "element": "Feu",
+            "keywords": ["rayonnement", "créativité", "autorité"],
+            "description": "Le Lion représente la puissance créative et l’affirmation de soi."
+          },
+          {
+            "id": "virgo",
+            "name": "Vierge",
+            "localizedNames": {
+              "fr": "Vierge",
+              "en": "Virgo",
+              "native": "Παρθένος"
+            },
+            "symbol": "♍",
+            "period": { "from": { "day": 23, "month": 8 }, "to": { "day": 22, "month": 9 } },
+            "element": "Terre",
+            "keywords": ["analyse", "service", "précision"],
+            "description": "La Vierge incarne l’ordre, le discernement et l’utilité."
+          },
+          {
+            "id": "libra",
+            "name": "Balance",
+            "localizedNames": {
+              "fr": "Balance",
+              "en": "Libra",
+              "native": "Ζυγός"
+            },
+            "symbol": "♎",
+            "period": { "from": { "day": 23, "month": 9 }, "to": { "day": 22, "month": 10 } },
+            "element": "Air",
+            "keywords": ["harmonie", "justice", "relations"],
+            "description": "La Balance recherche l’équilibre et l’harmonie dans les relations."
+          },
+          {
+            "id": "scorpio",
+            "name": "Scorpion",
+            "localizedNames": {
+              "fr": "Scorpion",
+              "en": "Scorpio",
+              "native": "Σκορπιός"
+            },
+            "symbol": "♏",
+            "period": { "from": { "day": 23, "month": 10 }, "to": { "day": 21, "month": 11 } },
+            "element": "Eau",
+            "keywords": ["transformation", "intensité", "mystère"],
+            "description": "Le Scorpion symbolise la mort, la renaissance et la puissance intérieure."
+          },
+          {
+            "id": "sagittarius",
+            "name": "Sagittaire",
+            "localizedNames": {
+              "fr": "Sagittaire",
+              "en": "Sagittarius",
+              "native": "Τοξότης"
+            },
+            "symbol": "♐",
+            "period": { "from": { "day": 22, "month": 11 }, "to": { "day": 21, "month": 12 } },
+            "element": "Feu",
+            "keywords": ["quête", "liberté", "idéaux"],
+            "description": "Le Sagittaire est le signe de l’exploration et du sens."
+          },
+          {
+            "id": "capricorn",
+            "name": "Capricorne",
+            "localizedNames": {
+              "fr": "Capricorne",
+              "en": "Capricorn",
+              "native": "Αἰγόκερως"
+            },
+            "symbol": "♑",
+            "period": { "from": { "day": 22, "month": 12 }, "to": { "day": 19, "month": 1 } },
+            "element": "Terre",
+            "keywords": ["discipline", "ambition", "structure"],
+            "description": "Le Capricorne représente l’élévation par l’effort."
+          },
+          {
+            "id": "aquarius",
+            "name": "Verseau",
+            "localizedNames": {
+              "fr": "Verseau",
+              "en": "Aquarius",
+              "native": "Ὑδροχόος"
+            },
+            "symbol": "♒",
+            "period": { "from": { "day": 20, "month": 1 }, "to": { "day": 18, "month": 2 } },
+            "element": "Air",
+            "keywords": ["innovation", "liberté", "collectif"],
+            "description": "Le Verseau incarne le progrès et la vision future."
+          },
+          {
+            "id": "pisces",
+            "name": "Poissons",
+            "localizedNames": {
+              "fr": "Poissons",
+              "en": "Pisces",
+              "native": "Ἰχθύες"
+            },
+            "symbol": "♓",
+            "period": { "from": { "day": 19, "month": 2 }, "to": { "day": 20, "month": 3 } },
+            "element": "Eau",
+            "keywords": ["intuition", "spiritualité", "fusion"],
+            "description": "Les Poissons symbolisent la dissolution et l’unité."
+          }
+        ]
+      }
+]

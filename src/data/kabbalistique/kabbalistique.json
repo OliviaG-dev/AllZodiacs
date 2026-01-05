@@ -1,0 +1,597 @@
+[
+    {
+        "id": "kabbalistique",
+        "name": "Kabbalistique",
+        "variant": "72 Anges gardiens",
+        "origin": "Mystique hébraïque",
+        "type": "symbolic",
+        "calculation": {
+            "basedOn": ["dayOfYear"],
+            "rule": "Chaque ange correspond à un segment de 5 jours dans un cycle annuel de 360 jours",
+            "note": "Le moteur calcule l'ange à partir du jour de l'année (1–365)"
+        },
+        "meta": {
+            "cycleLength": 72,
+            "segmentLength": 5,
+            "startReference": "equinoxe_printemps"
+        },
+        "signs": [
+            {
+                "id": "vehuiah",
+                "name": "Vehuiah",
+                "angelNumber": 1,
+                "localizedNames": { "native": "והויה" },
+                "keywords": ["volonté", "initiative"],
+                "description": "Énergie du commencement et de l'élan créateur."
+            },
+            {
+                "id": "jeliel",
+                "name": "Jeliel",
+                "angelNumber": 2,
+                "localizedNames": { "native": "יאליל" },
+                "keywords": ["équilibre", "fidélité"],
+                "description": "Harmonie et paix dans les relations."
+            },
+            {
+                "id": "sitael",
+                "name": "Sitael",
+                "angelNumber": 3,
+                "localizedNames": { "native": "סטאל" },
+                "keywords": ["construction", "protection"],
+                "description": "Bâtisseur et protecteur contre l'adversité."
+            },
+            {
+                "id": "elemiah",
+                "name": "Elemiah",
+                "angelNumber": 4,
+                "localizedNames": { "native": "עלמיה" },
+                "keywords": ["succès", "voyage"],
+                "description": "Réussite dans les entreprises."
+            },
+            {
+                "id": "mahasiah",
+                "name": "Mahasiah",
+                "angelNumber": 5,
+                "localizedNames": { "native": "מהשיה" },
+                "keywords": ["harmonie", "apprentissage"],
+                "description": "Élévation morale et intellectuelle."
+            },
+            {
+                "id": "lelahel",
+                "name": "Lelahel",
+                "angelNumber": 6,
+                "localizedNames": { "native": "ללהאל" },
+                "keywords": ["rayonnement", "talent"],
+                "description": "Brillance et expression personnelle."
+            },
+            {
+                "id": "achaiah",
+                "name": "Achaiah",
+                "angelNumber": 7,
+                "localizedNames": { "native": "אחאיה" },
+                "keywords": ["patience", "compréhension"],
+                "description": "Compréhension progressive."
+            },
+            {
+                "id": "cahetel",
+                "name": "Cahetel",
+                "angelNumber": 8,
+                "localizedNames": { "native": "כהתאל" },
+                "keywords": ["abondance", "bénédiction"],
+                "description": "Fécondité et prospérité."
+            },
+            {
+                "id": "haziel",
+                "name": "Haziel",
+                "angelNumber": 9,
+                "localizedNames": { "native": "הזיאל" },
+                "keywords": ["pardon", "miséricorde"],
+                "description": "Clémence et réconciliation."
+            },
+            {
+                "id": "aladiah",
+                "name": "Aladiah",
+                "angelNumber": 10,
+                "localizedNames": { "native": "אלדיה" },
+                "keywords": ["guérison", "réparation"],
+                "description": "Rétablissement et régénération."
+            },
+            {
+                "id": "lauviah",
+                "name": "Lauviah",
+                "angelNumber": 11,
+                "localizedNames": { "native": "לאוויה" },
+                "keywords": ["intuition", "révélation"],
+                "description": "Compréhension des mystères."
+            },
+            {
+                "id": "hahaiah",
+                "name": "Hahaiah",
+                "angelNumber": 12,
+                "localizedNames": { "native": "ההעיה" },
+                "keywords": ["rêves", "secret"],
+                "description": "Protection des confidences."
+            },
+            {
+                "id": "iezalel",
+                "name": "Iezalel",
+                "angelNumber": 13,
+                "localizedNames": { "native": "יזלאל" },
+                "keywords": ["fidélité", "mémoire"],
+                "description": "Union durable et transmission."
+            },
+            {
+                "id": "mebahel",
+                "name": "Mebahel",
+                "angelNumber": 14,
+                "localizedNames": { "native": "מבהאל" },
+                "keywords": ["justice", "liberté"],
+                "description": "Défense des droits."
+            },
+            {
+                "id": "hariel",
+                "name": "Hariel",
+                "angelNumber": 15,
+                "localizedNames": { "native": "הריאל" },
+                "keywords": ["pureté", "clarté"],
+                "description": "Nettoyage spirituel."
+            },
+            {
+                "id": "hakamiah",
+                "name": "Hakamiah",
+                "angelNumber": 16,
+                "localizedNames": { "native": "הכמיה" },
+                "keywords": ["loyauté", "noblesse"],
+                "description": "Fidélité aux principes."
+            },
+            {
+                "id": "lauviah_2",
+                "name": "Lauviah",
+                "angelNumber": 17,
+                "localizedNames": { "native": "לאוויה" },
+                "keywords": ["victoire", "persévérance"],
+                "description": "Succès après l'épreuve."
+            },
+            {
+                "id": "caliel",
+                "name": "Caliel",
+                "angelNumber": 18,
+                "localizedNames": { "native": "כליאל" },
+                "keywords": ["justice", "vérité"],
+                "description": "Révélation de la vérité."
+            },
+            {
+                "id": "leuviah",
+                "name": "Leuviah",
+                "angelNumber": 19,
+                "localizedNames": { "native": "לוויה" },
+                "keywords": ["mémoire", "intelligence"],
+                "description": "Compréhension profonde."
+            },
+            {
+                "id": "pahaliah",
+                "name": "Pahaliah",
+                "angelNumber": 20,
+                "localizedNames": { "native": "פהליה" },
+                "keywords": ["vocation", "spiritualité"],
+                "description": "Mission de vie."
+            },
+            {
+                "id": "nelchael",
+                "name": "Nelchael",
+                "angelNumber": 21,
+                "localizedNames": { "native": "נלכאל" },
+                "keywords": ["science", "liberté"],
+                "description": "Libération des schémas."
+            },
+            {
+                "id": "yeiayel",
+                "name": "Yeiayel",
+                "angelNumber": 22,
+                "localizedNames": { "native": "ייאיאל" },
+                "keywords": ["voyage", "fortune"],
+                "description": "Succès à l'étranger."
+            },
+            {
+                "id": "melahel",
+                "name": "Melahel",
+                "angelNumber": 23,
+                "localizedNames": { "native": "מלהאל" },
+                "keywords": ["guérison", "nature"],
+                "description": "Protection naturelle."
+            },
+            {
+                "id": "haheuiah",
+                "name": "Haheuiah",
+                "angelNumber": 24,
+                "localizedNames": { "native": "ההויה" },
+                "keywords": ["refuge", "sécurité"],
+                "description": "Protection contre l'injustice."
+            },
+            {
+                "id": "nith_haiah",
+                "name": "Nith-Haiah",
+                "angelNumber": 25,
+                "localizedNames": { "native": "ניתהאיה" },
+                "keywords": ["sagesse", "magie"],
+                "description": "Connaissance spirituelle."
+            },
+            {
+                "id": "haaiah",
+                "name": "Haaiah",
+                "angelNumber": 26,
+                "localizedNames": { "native": "האהיה" },
+                "keywords": ["diplomatie", "discrétion"],
+                "description": "Stratégie et paix."
+            },
+            {
+                "id": "yerathel",
+                "name": "Yerathel",
+                "angelNumber": 27,
+                "localizedNames": { "native": "ירתאל" },
+                "keywords": ["créativité", "lumière"],
+                "description": "Diffusion du savoir."
+            },
+            {
+                "id": "seheiah",
+                "name": "Seheiah",
+                "angelNumber": 28,
+                "localizedNames": { "native": "שהאיה" },
+                "keywords": ["prudence", "longévité"],
+                "description": "Protection contre les accidents."
+            },
+            {
+                "id": "reiyel",
+                "name": "Reiyel",
+                "angelNumber": 29,
+                "localizedNames": { "native": "ראיאל" },
+                "keywords": ["libération", "élévation"],
+                "description": "Délivrance des oppressions."
+            },
+            {
+                "id": "omael",
+                "name": "Omael",
+                "angelNumber": 30,
+                "localizedNames": { "native": "אומאל" },
+                "keywords": ["fécondité", "patience"],
+                "description": "Expansion et croissance."
+            },
+            {
+                "id": "lecabel",
+                "name": "Lecabel",
+                "angelNumber": 31,
+                "localizedNames": { "native": "לכבאל" },
+                "keywords": ["logique", "talent"],
+                "description": "Précision intellectuelle."
+            },
+            {
+                "id": "vasariah",
+                "name": "Vasariah",
+                "angelNumber": 32,
+                "localizedNames": { "native": "וסריה" },
+                "keywords": ["clémence", "justice"],
+                "description": "Pardon et réconciliation."
+            },
+            {
+                "id": "yehuiah",
+                "name": "Yehuiah",
+                "angelNumber": 33,
+                "localizedNames": { "native": "יהויה" },
+                "keywords": ["hiérarchie", "discipline"],
+                "description": "Compréhension des lois et de l'ordre."
+            },
+            {
+                "id": "lehahiah",
+                "name": "Lehahiah",
+                "angelNumber": 34,
+                "localizedNames": { "native": "להחיה" },
+                "keywords": ["obéissance", "paix"],
+                "description": "Calme intérieur et loyauté."
+            },
+            {
+                "id": "chavakiah",
+                "name": "Chavakiah",
+                "angelNumber": 35,
+                "localizedNames": { "native": "חבקיה" },
+                "keywords": ["réconciliation", "famille"],
+                "description": "Paix dans les relations familiales."
+            },
+            {
+                "id": "menadel",
+                "name": "Menadel",
+                "angelNumber": 36,
+                "localizedNames": { "native": "מנדאל" },
+                "keywords": ["travail", "stabilité"],
+                "description": "Sécurité professionnelle."
+            },
+            {
+                "id": "aniel",
+                "name": "Aniel",
+                "angelNumber": 37,
+                "localizedNames": { "native": "עניאל" },
+                "keywords": ["courage", "victoire"],
+                "description": "Dépassement des obstacles."
+            },
+            {
+                "id": "haamiah",
+                "name": "Haamiah",
+                "angelNumber": 38,
+                "localizedNames": { "native": "חעמיה" },
+                "keywords": ["rituel", "vérité"],
+                "description": "Clarté spirituelle et authenticité."
+            },
+            {
+                "id": "rehael",
+                "name": "Rehael",
+                "angelNumber": 39,
+                "localizedNames": { "native": "ראהאל" },
+                "keywords": ["guérison", "respect"],
+                "description": "Harmonie entre générations."
+            },
+            {
+                "id": "ieiazel",
+                "name": "Ieiazel",
+                "angelNumber": 40,
+                "localizedNames": { "native": "ייאזל" },
+                "keywords": ["libération", "création"],
+                "description": "Libération émotionnelle."
+            },
+            {
+                "id": "hahahel",
+                "name": "Hahahel",
+                "angelNumber": 41,
+                "localizedNames": { "native": "ההחל" },
+                "keywords": ["mission", "spiritualité"],
+                "description": "Engagement spirituel."
+            },
+            {
+                "id": "mikael",
+                "name": "Mikael",
+                "angelNumber": 42,
+                "localizedNames": { "native": "מיכאל" },
+                "keywords": ["stratégie", "négociation"],
+                "description": "Ordre et diplomatie."
+            },
+            {
+                "id": "veuliah",
+                "name": "Veuliah",
+                "angelNumber": 43,
+                "localizedNames": { "native": "ווליה" },
+                "keywords": ["abondance", "élévation"],
+                "description": "Prospérité et réussite."
+            },
+            {
+                "id": "yelahiah",
+                "name": "Yelahiah",
+                "angelNumber": 44,
+                "localizedNames": { "native": "יליה" },
+                "keywords": ["combat", "justice"],
+                "description": "Victoire morale."
+            },
+            {
+                "id": "sealiah",
+                "name": "Sealiah",
+                "angelNumber": 45,
+                "localizedNames": { "native": "סאליה" },
+                "keywords": ["motivation", "renouveau"],
+                "description": "Relance des projets."
+            },
+            {
+                "id": "ariel",
+                "name": "Ariel",
+                "angelNumber": 46,
+                "localizedNames": { "native": "אריאל" },
+                "keywords": ["intuition", "révélation"],
+                "description": "Perception subtile."
+            },
+            {
+                "id": "asaliah",
+                "name": "Asaliah",
+                "angelNumber": 47,
+                "localizedNames": { "native": "אסליה" },
+                "keywords": ["contemplation", "vérité"],
+                "description": "Compréhension des lois universelles."
+            },
+            {
+                "id": "mihael",
+                "name": "Mihael",
+                "angelNumber": 48,
+                "localizedNames": { "native": "מיהאל" },
+                "keywords": ["union", "équilibre"],
+                "description": "Harmonie conjugale."
+            },
+            {
+                "id": "vehuel",
+                "name": "Vehuel",
+                "angelNumber": 49,
+                "localizedNames": { "native": "והואל" },
+                "keywords": ["élévation", "grandeur"],
+                "description": "Sagesse et renommée."
+            },
+            {
+                "id": "daniel",
+                "name": "Daniel",
+                "angelNumber": 50,
+                "localizedNames": { "native": "דניאל" },
+                "keywords": ["éloquence", "justice"],
+                "description": "Expression juste."
+            },
+            {
+                "id": "hahasiah",
+                "name": "Hahasiah",
+                "angelNumber": 51,
+                "localizedNames": { "native": "החשיה" },
+                "keywords": ["médecine", "savoir"],
+                "description": "Connaissance thérapeutique."
+            },
+            {
+                "id": "imamiah",
+                "name": "Imamiah",
+                "angelNumber": 52,
+                "localizedNames": { "native": "איממיה" },
+                "keywords": ["libération", "responsabilité"],
+                "description": "Affranchissement karmique."
+            },
+            {
+                "id": "nanael",
+                "name": "Nanael",
+                "angelNumber": 53,
+                "localizedNames": { "native": "ננאל" },
+                "keywords": ["intellect", "spiritualité"],
+                "description": "Sagesse élevée."
+            },
+            {
+                "id": "nithael",
+                "name": "Nithael",
+                "angelNumber": 54,
+                "localizedNames": { "native": "ניתאל" },
+                "keywords": ["jeunesse", "renouveau"],
+                "description": "Régénération."
+            },
+            {
+                "id": "mebahiah",
+                "name": "Mebahiah",
+                "angelNumber": 55,
+                "localizedNames": { "native": "מבהיה" },
+                "keywords": ["altruisme", "engagement"],
+                "description": "Dévouement humanitaire."
+            },
+            {
+                "id": "poyel",
+                "name": "Poyel",
+                "angelNumber": 56,
+                "localizedNames": { "native": "פואל" },
+                "keywords": ["fortune", "humilité"],
+                "description": "Succès discret."
+            },
+            {
+                "id": "nemamiah",
+                "name": "Nemamiah",
+                "angelNumber": 57,
+                "localizedNames": { "native": "נממיה" },
+                "keywords": ["stratégie", "libération"],
+                "description": "Victoire contre l'oppression."
+            },
+            {
+                "id": "yeialel",
+                "name": "Yeialel",
+                "angelNumber": 58,
+                "localizedNames": { "native": "יאלל" },
+                "keywords": ["guérison", "équilibre"],
+                "description": "Apaisement mental."
+            },
+            {
+                "id": "harahel",
+                "name": "Harahel",
+                "angelNumber": 59,
+                "localizedNames": { "native": "הרחל" },
+                "keywords": ["savoir", "fécondité"],
+                "description": "Transmission et croissance."
+            },
+            {
+                "id": "mizrael",
+                "name": "Mizrael",
+                "angelNumber": 60,
+                "localizedNames": { "native": "מזריאל" },
+                "keywords": ["réparation", "équilibre"],
+                "description": "Guérison psychique."
+            },
+            {
+                "id": "umabel",
+                "name": "Umabel",
+                "angelNumber": 61,
+                "localizedNames": { "native": "ומבל" },
+                "keywords": ["amitié", "affinité"],
+                "description": "Relations sincères."
+            },
+            {
+                "id": "iah_hel",
+                "name": "Iah-Hel",
+                "angelNumber": 62,
+                "localizedNames": { "native": "יההל" },
+                "keywords": ["sagesse", "solitude"],
+                "description": "Paix intérieure."
+            },
+            {
+                "id": "anauel",
+                "name": "Anauel",
+                "angelNumber": 63,
+                "localizedNames": { "native": "ענואל" },
+                "keywords": ["commerce", "logique"],
+                "description": "Succès matériel."
+            },
+            {
+                "id": "mehiel",
+                "name": "Mehiel",
+                "angelNumber": 64,
+                "localizedNames": { "native": "מהיאל" },
+                "keywords": ["inspiration", "création"],
+                "description": "Écriture et expression."
+            },
+            {
+                "id": "damabiah",
+                "name": "Damabiah",
+                "angelNumber": 65,
+                "localizedNames": { "native": "דמביה" },
+                "keywords": ["sagesse", "écologie"],
+                "description": "Respect de la nature."
+            },
+            {
+                "id": "manakel",
+                "name": "Manakel",
+                "angelNumber": 66,
+                "localizedNames": { "native": "מנקאל" },
+                "keywords": ["stabilité", "réparation"],
+                "description": "Correction des erreurs."
+            },
+            {
+                "id": "eyael",
+                "name": "Eyael",
+                "angelNumber": 67,
+                "localizedNames": { "native": "עיאל" },
+                "keywords": ["transformation", "renom"],
+                "description": "Changements positifs."
+            },
+            {
+                "id": "habuhiah",
+                "name": "Habuhiah",
+                "angelNumber": 68,
+                "localizedNames": { "native": "הבוחיה" },
+                "keywords": ["guérison", "agriculture"],
+                "description": "Santé et fertilité."
+            },
+            {
+                "id": "rochel",
+                "name": "Rochel",
+                "angelNumber": 69,
+                "localizedNames": { "native": "רוכל" },
+                "keywords": ["justice", "restitution"],
+                "description": "Rétablissement de l'ordre."
+            },
+            {
+                "id": "jabamiah",
+                "name": "Jabamiah",
+                "angelNumber": 70,
+                "localizedNames": { "native": "יבמיה" },
+                "keywords": ["création", "renaissance"],
+                "description": "Renouveau profond."
+            },
+            {
+                "id": "haiaiel",
+                "name": "Haiaiel",
+                "angelNumber": 71,
+                "localizedNames": { "native": "הייאיל" },
+                "keywords": ["stratégie", "courage"],
+                "description": "Protection dans les conflits."
+            },
+            {
+                "id": "mumiah",
+                "name": "Mumiah",
+                "angelNumber": 72,
+                "localizedNames": { "native": "מומיה" },
+                "keywords": ["accomplissement", "renaissance"],
+                "description": "Fin du cycle et nouveau départ."
+            }
+        ]
+    }
+]

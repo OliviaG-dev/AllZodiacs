@@ -1,0 +1,92 @@
+[
+    {
+      "id": "inuit",
+      "name": "Inuit",
+      "variant": "Animaux et forces naturelles",
+      "origin": "Culture inuit (Arctique)",
+      "type": "zodiac_cycle",
+      "calculation": {
+        "basedOn": ["dayOfYear", "saisons arctiques"],
+        "rule": "Cycle des animaux et forces naturelles selon les saisons et les périodes de chasse",
+        "note": "Chaque animal représente une qualité essentielle pour la survie et l’harmonie avec la nature."
+      },
+      "meta": {
+        "cycleLength": 12,
+        "coreConcepts": ["adaptation", "survie", "intelligence", "guidance spirituelle"]
+      },
+      "signs": [
+        {
+          "id": "polar_bear",
+          "name": "Ours Polaire",
+          "keywords": ["force", "courage", "protection"],
+          "description": "Symbole de puissance et protecteur des siens, il incarne la résilience dans l’Arctique."
+        },
+        {
+          "id": "raven",
+          "name": "Corbeau",
+          "keywords": ["sagesse", "magie", "intelligence"],
+          "description": "Animal mythique, porteur de connaissance et de ruse, guide dans les épreuves."
+        },
+        {
+          "id": "arctic_wolf",
+          "name": "Loup Arctique",
+          "keywords": ["chasseur", "loyauté", "esprit de groupe"],
+          "description": "Maître de la meute, il symbolise la coopération et la persévérance."
+        },
+        {
+          "id": "seal",
+          "name": "Phoque",
+          "keywords": ["abondance", "souplesse", "adaptation"],
+          "description": "Animal vital pour la survie, il représente la fluidité et la maîtrise des ressources."
+        },
+        {
+          "id": "caribou",
+          "name": "Caribou",
+          "keywords": ["endurance", "patience", "force"],
+          "description": "Voyageur infatigable, symbole de persévérance et de stabilité."
+        },
+        {
+          "id": "snowy_owl",
+          "name": "Harfang des neiges",
+          "keywords": ["clairvoyance", "silence", "observation"],
+          "description": "Gardien silencieux, il incarne la sagesse et l’attention aux détails."
+        },
+        {
+          "id": "walrus",
+          "name": "Morse",
+          "keywords": ["solidité", "protection", "force collective"],
+          "description": "Animal robuste et communautaire, il représente la survie et la sécurité."
+        },
+        {
+          "id": "salmon",
+          "name": "Saumon",
+          "keywords": ["voyage", "adaptation", "détermination"],
+          "description": "Explorateur des rivières et des mers, il incarne le mouvement et le courage."
+        },
+        {
+          "id": "orca",
+          "name": "Orque",
+          "keywords": ["puissance", "famille", "communication"],
+          "description": "Prédateur social et puissant, il symbolise l’intelligence collective et la protection."
+        },
+        {
+          "id": "arctic_fox",
+          "name": "Renard Arctique",
+          "keywords": ["malice", "astuce", "adaptabilité"],
+          "description": "Animal rusé et agile, il incarne l’ingéniosité et la capacité à surmonter les difficultés."
+        },
+        {
+          "id": "beluga",
+          "name": "Béluga",
+          "keywords": ["abondance", "communication", "harmonie"],
+          "description": "Chanteur des mers, symbole de sociabilité et d’équilibre avec son environnement."
+        },
+        {
+          "id": "lone_wolf",
+          "name": "Loup Solitaire",
+          "keywords": ["indépendance", "intuition", "réflexion"],
+          "description": "Explorateur solitaire, il incarne l’introspection et la force intérieure."
+        }
+      ]
+    }
+  ]

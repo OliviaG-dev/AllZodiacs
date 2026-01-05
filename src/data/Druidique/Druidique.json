@@ -1,0 +1,98 @@
+[
+    {
+      "id": "druidic",
+      "name": "Druidique",
+      "variant": "Arbres sacrés",
+      "origin": "Culture celtique / druidique",
+      "type": "mythological_cycle",
+      "calculation": {
+        "basedOn": ["dayOfYear", "lunarCycles"],
+        "rule": "Cycle basé sur les arbres sacrés associés à chaque période de l’année, reflétant des qualités spirituelles et naturelles.",
+        "note": "Chaque arbre représente un trait de caractère et un lien avec la nature et les cycles de la vie."
+      },
+      "meta": {
+        "cycleLength": 13,
+        "coreConcepts": ["nature", "introspection", "harmonie", "sagesse", "transformation"]
+      },
+      "signs": [
+        {
+          "id": "birch",
+          "name": "Bouleau",
+          "keywords": ["renouveau", "courage", "adaptation"],
+          "description": "Le bouleau symbolise le commencement et la purification, apportant énergie et motivation."
+        },
+        {
+          "id": "rowan",
+          "name": "Sorbier",
+          "keywords": ["intuition", "protection", "vision"],
+          "description": "Le sorbier est un arbre protecteur, favorisant la clairvoyance et la sagesse spirituelle."
+        },
+        {
+          "id": "ash",
+          "name": "Frêne",
+          "keywords": ["force", "équilibre", "résilience"],
+          "description": "Le frêne incarne la stabilité et la connexion entre le ciel et la terre."
+        },
+        {
+          "id": "alder",
+          "name": "Aulne",
+          "keywords": ["protection", "action", "transformation"],
+          "description": "L’aulne est symbole de courage et de transformation dans la vie et les relations."
+        },
+        {
+          "id": "willow",
+          "name": "Saule",
+          "keywords": ["intuition", "émotion", "flexibilité"],
+          "description": "Le saule favorise l’intuition, l’adaptation aux cycles émotionnels et la sensibilité."
+        },
+        {
+          "id": "hawthorn",
+          "name": "Aubépine",
+          "keywords": ["amour", "équilibre", "protection"],
+          "description": "L’aubépine est associée à l’amour, à l’harmonie et à la protection des cœurs."
+        },
+        {
+          "id": "oak",
+          "name": "Chêne",
+          "keywords": ["force", "sagesse", "stabilité"],
+          "description": "Le chêne symbolise la puissance et la sagesse, pilier de la communauté et de la tradition."
+        },
+        {
+          "id": "hawthorn2",
+          "name": "Aubépine Nocturne",
+          "keywords": ["mystère", "intuition", "protection"],
+          "description": "L’aubépine nocturne apporte guidance et protection dans les moments d’incertitude."
+        },
+        {
+          "id": "hazel",
+          "name": "Noisetier",
+          "keywords": ["sagesse", "créativité", "inspiration"],
+          "description": "Le noisetier favorise l’apprentissage, la créativité et la connaissance spirituelle."
+        },
+        {
+          "id": "vine",
+          "name": "Vigne",
+          "keywords": ["joie", "connexion", "énergie"],
+          "description": "La vigne symbolise la joie, la vitalité et la connexion sociale et spirituelle."
+        },
+        {
+          "id": "ivy",
+          "name": "Lierre",
+          "keywords": ["persévérance", "amitié", "protection"],
+          "description": "Le lierre représente la fidélité, l’endurance et la force de l’amitié."
+        },
+        {
+          "id": "reeds",
+          "name": "Roseau",
+          "keywords": ["souplesse", "adaptabilité", "harmonie"],
+          "description": "Le roseau enseigne la flexibilité, l’adaptation et l’équilibre dans les situations changeantes."
+        },
+        {
+          "id": "elder",
+          "name": "Sureau",
+          "keywords": ["mystère", "transformation", "renouveau"],
+          "description": "Le sureau est un arbre sacré lié à la magie et à la transformation spirituelle."
+        }
+      ]
+    }
+  ]

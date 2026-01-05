@@ -1,0 +1,98 @@
+[
+    {
+        "id": "celtique",
+        "name": "Celtique",
+        "variant": "Arbres sacrés",
+        "origin": "Traditions celtiques et druidiques",
+        "type": "arboreal_cycle",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Cycle de 13 arbres sacrés se répétant selon la roue de l’année",
+          "note": "Chaque arbre incarne une sagesse et une énergie naturelle"
+        },
+        "meta": {
+          "cycleLength": 13,
+          "coreConcepts": ["nature", "sagesse", "cycle", "équilibre"]
+        },
+        "signs": [
+          {
+            "id": "birch",
+            "name": "Bouleau",
+            "keywords": ["renouveau", "pureté", "initiative"],
+            "description": "Symbole de commencement et de renaissance."
+          },
+          {
+            "id": "rowan",
+            "name": "Sorbier",
+            "keywords": ["protection", "intuition", "vision"],
+            "description": "Arbre protecteur et visionnaire."
+          },
+          {
+            "id": "ash",
+            "name": "Frêne",
+            "keywords": ["connexion", "savoir", "équilibre"],
+            "description": "Pont entre les mondes."
+          },
+          {
+            "id": "alder",
+            "name": "Aulne",
+            "keywords": ["courage", "décision", "guidance"],
+            "description": "Force face à l’adversité."
+          },
+          {
+            "id": "willow",
+            "name": "Saule",
+            "keywords": ["intuition", "émotion", "adaptation"],
+            "description": "Lien avec les cycles lunaires."
+          },
+          {
+            "id": "hawthorn",
+            "name": "Aubépine",
+            "keywords": ["transformation", "seuil", "mystère"],
+            "description": "Passage entre les états."
+          },
+          {
+            "id": "oak",
+            "name": "Chêne",
+            "keywords": ["force", "stabilité", "noblesse"],
+            "description": "Roi des arbres, pilier du monde."
+          },
+          {
+            "id": "holly",
+            "name": "Houx",
+            "keywords": ["protection", "résilience", "persévérance"],
+            "description": "Force durant les périodes sombres."
+          },
+          {
+            "id": "hazel",
+            "name": "Noisetier",
+            "keywords": ["sagesse", "inspiration", "créativité"],
+            "description": "Source de connaissance."
+          },
+          {
+            "id": "vine",
+            "name": "Vigne",
+            "keywords": ["équilibre", "choix", "harmonie"],
+            "description": "Compréhension des opposés."
+          },
+          {
+            "id": "ivy",
+            "name": "Lierre",
+            "keywords": ["persévérance", "fidélité", "survie"],
+            "description": "Tenacité et attachement."
+          },
+          {
+            "id": "reed",
+            "name": "Roseau",
+            "keywords": ["vérité", "révélation", "communication"],
+            "description": "Voix intérieure et clarté."
+          },
+          {
+            "id": "elder",
+            "name": "Sureau",
+            "keywords": ["fin", "renouveau", "transformation"],
+            "description": "Mort symbolique et renaissance."
+          }
+        ]
+      }
+]

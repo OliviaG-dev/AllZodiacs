@@ -1,0 +1,215 @@
+[
+    {
+        "id": "maya",
+        "name": "Maya",
+        "variant": "Tzolk’in – calendrier sacré",
+        "origin": "Civilisation maya",
+        "type": "cycle",
+        "calculation": {
+          "basedOn": ["cycle"],
+          "note": "Cycle sacré de 20 signes (Nawales) et 13 tons"
+        },
+        "signs": [
+          {
+            "id": "imix",
+            "name": "Imix",
+            "localizedNames": {
+              "native": "Imix"
+            },
+            "cycleIndex": 0,
+            "keywords": ["origine", "eau", "naissance"],
+            "description": "Imix représente le commencement et la matrice de toute vie."
+          },
+          {
+            "id": "ik",
+            "name": "Ik’",
+            "localizedNames": {
+              "native": "Ik’"
+            },
+            "cycleIndex": 1,
+            "keywords": ["souffle", "air", "communication"],
+            "description": "Ik’ symbolise le vent, la respiration et l’esprit."
+          },
+          {
+            "id": "akbal",
+            "name": "Ak’b’al",
+            "localizedNames": {
+              "native": "Ak’b’al"
+            },
+            "cycleIndex": 2,
+            "keywords": ["nuit", "mystère", "intériorité"],
+            "description": "Ak’b’al est lié à l’obscurité et à l’introspection."
+          },
+          {
+            "id": "kan",
+            "name": "K’an",
+            "localizedNames": {
+              "native": "K’an"
+            },
+            "cycleIndex": 3,
+            "keywords": ["graine", "abondance", "croissance"],
+            "description": "K’an symbolise le potentiel et la prospérité."
+          },
+          {
+            "id": "chicchan",
+            "name": "Chikchan",
+            "localizedNames": {
+              "native": "Chikchan"
+            },
+            "cycleIndex": 4,
+            "keywords": ["énergie", "serpent", "force vitale"],
+            "description": "Chikchan incarne l’énergie vitale et l’instinct."
+          },
+          {
+            "id": "cimi",
+            "name": "Kimi",
+            "localizedNames": {
+              "native": "Kimi"
+            },
+            "cycleIndex": 5,
+            "keywords": ["mort", "transformation", "renouveau"],
+            "description": "Kimi représente la fin nécessaire et la renaissance."
+          },
+          {
+            "id": "manik",
+            "name": "Manik’",
+            "localizedNames": {
+              "native": "Manik’"
+            },
+            "cycleIndex": 6,
+            "keywords": ["guérison", "main", "protection"],
+            "description": "Manik’ est associé à la guérison et à l’aide."
+          },
+          {
+            "id": "lamat",
+            "name": "Lamat",
+            "localizedNames": {
+              "native": "Lamat"
+            },
+            "cycleIndex": 7,
+            "keywords": ["étoile", "harmonie", "création"],
+            "description": "Lamat symbolise la beauté et l’équilibre."
+          },
+          {
+            "id": "muluk",
+            "name": "Muluk",
+            "localizedNames": {
+              "native": "Muluk"
+            },
+            "cycleIndex": 8,
+            "keywords": ["eau", "offrande", "émotion"],
+            "description": "Muluk est lié aux flux émotionnels et aux rituels."
+          },
+          {
+            "id": "ok",
+            "name": "Ok",
+            "localizedNames": {
+              "native": "Ok"
+            },
+            "cycleIndex": 9,
+            "keywords": ["fidélité", "guide", "instinct"],
+            "description": "Ok représente la loyauté et la guidance."
+          },
+          {
+            "id": "chuen",
+            "name": "Chuwen",
+            "localizedNames": {
+              "native": "Chuwen"
+            },
+            "cycleIndex": 10,
+            "keywords": ["créativité", "jeu", "art"],
+            "description": "Chuwen est le signe de l’artiste et du créateur."
+          },
+          {
+            "id": "eb",
+            "name": "Eb’",
+            "localizedNames": {
+              "native": "Eb’"
+            },
+            "cycleIndex": 11,
+            "keywords": ["chemin", "destin", "libre arbitre"],
+            "description": "Eb’ symbolise la voie personnelle."
+          },
+          {
+            "id": "ben",
+            "name": "B’en",
+            "localizedNames": {
+              "native": "B’en"
+            },
+            "cycleIndex": 12,
+            "keywords": ["croissance", "autorité", "famille"],
+            "description": "B’en est lié à l’évolution et au leadership."
+          },
+          {
+            "id": "ix",
+            "name": "Ix",
+            "localizedNames": {
+              "native": "Ix"
+            },
+            "cycleIndex": 13,
+            "keywords": ["magie", "intuition", "féminin"],
+            "description": "Ix représente la sagesse mystique."
+          },
+          {
+            "id": "men",
+            "name": "Men",
+            "localizedNames": {
+              "native": "Men"
+            },
+            "cycleIndex": 14,
+            "keywords": ["vision", "aigle", "esprit"],
+            "description": "Men symbolise la clairvoyance."
+          },
+          {
+            "id": "cib",
+            "name": "K’ib’",
+            "localizedNames": {
+              "native": "K’ib’"
+            },
+            "cycleIndex": 15,
+            "keywords": ["sagesse", "pardon", "mémoire"],
+            "description": "K’ib’ est le signe de la connaissance ancestrale."
+          },
+          {
+            "id": "caban",
+            "name": "Kab’an",
+            "localizedNames": {
+              "native": "Kab’an"
+            },
+            "cycleIndex": 16,
+            "keywords": ["terre", "évolution", "mouvement"],
+            "description": "Kab’an représente la conscience de la Terre."
+          },
+          {
+            "id": "etznab",
+            "name": "Etz’nab’",
+            "localizedNames": {
+              "native": "Etz’nab’"
+            },
+            "cycleIndex": 17,
+            "keywords": ["vérité", "miroir", "clarté"],
+            "description": "Etz’nab’ symbolise la révélation."
+          },
+          {
+            "id": "cauac",
+            "name": "Kawak",
+            "localizedNames": {
+              "native": "Kawak"
+            },
+            "cycleIndex": 18,
+            "keywords": ["orage", "purification", "renouveau"],
+            "description": "Kawak représente la purification par le changement."
+          },
+          {
+            "id": "ahau",
+            "name": "Ajaw",
+            "localizedNames": {
+              "native": "Ajaw"
+            },
+            "cycleIndex": 19,
+            "keywords": ["soleil", "illumination", "accomplissement"],
+            "description": "Ajaw symbolise l’aboutissement et la lumière."
+          }
+        ]
+      }
+]

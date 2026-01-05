@@ -1,0 +1,92 @@
+[
+    {
+        "id": "tibetain",
+        "name": "Tibétain",
+        "variant": "Zodiaque tibétain",
+        "origin": "Tibet – tradition bouddhiste",
+        "type": "lunar_animal",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Cycle de 12 animaux se répétant annuellement",
+          "note": "Lecture symbolique karmique, distincte de l’astrologie chinoise"
+        },
+        "meta": {
+          "cycleLength": 12,
+          "philosophy": "Karma, compassion, éveil"
+        },
+        "signs": [
+          {
+            "id": "mouse",
+            "name": "Souris",
+            "keywords": ["ingéniosité", "adaptation", "vivacité"],
+            "description": "Esprit vif et capacité d’anticipation."
+          },
+          {
+            "id": "ox",
+            "name": "Buffle",
+            "keywords": ["patience", "travail", "endurance"],
+            "description": "Force tranquille et persévérance."
+          },
+          {
+            "id": "tiger",
+            "name": "Tigre",
+            "keywords": ["courage", "indépendance", "passion"],
+            "description": "Énergie combative et déterminée."
+          },
+          {
+            "id": "hare",
+            "name": "Lièvre",
+            "keywords": ["sensibilité", "intuition", "diplomatie"],
+            "description": "Douceur et finesse émotionnelle."
+          },
+          {
+            "id": "dragon",
+            "name": "Dragon",
+            "keywords": ["sagesse", "protection", "puissance"],
+            "description": "Gardien spirituel et force cosmique."
+          },
+          {
+            "id": "snake",
+            "name": "Serpent",
+            "keywords": ["transformation", "intuition", "mystère"],
+            "description": "Savoir caché et évolution intérieure."
+          },
+          {
+            "id": "horse",
+            "name": "Cheval",
+            "keywords": ["liberté", "mouvement", "énergie"],
+            "description": "Indépendance et dynamisme."
+          },
+          {
+            "id": "sheep",
+            "name": "Mouton",
+            "keywords": ["compassion", "créativité", "douceur"],
+            "description": "Sensibilité artistique et bienveillance."
+          },
+          {
+            "id": "monkey",
+            "name": "Singe",
+            "keywords": ["intelligence", "adaptation", "humour"],
+            "description": "Esprit malin et inventif."
+          },
+          {
+            "id": "bird",
+            "name": "Oiseau",
+            "keywords": ["vision", "communication", "élévation"],
+            "description": "Perspective spirituelle élevée."
+          },
+          {
+            "id": "dog",
+            "name": "Chien",
+            "keywords": ["loyauté", "protection", "fidélité"],
+            "description": "Gardien fidèle et juste."
+          },
+          {
+            "id": "boar",
+            "name": "Sanglier",
+            "keywords": ["courage", "détermination", "force"],
+            "description": "Puissance brute et honnêteté."
+          }
+        ]
+      }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "id": "africain_traditionnel",
+        "name": "Africain traditionnel",
+        "variant": "Objets et archétypes sacrés",
+        "origin": "Afrique de l’Ouest et centrale (traditions orales)",
+        "type": "symbolic_zodiac",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Cycle symbolique de 12 signes se répétant sur l’année",
+          "note": "Chaque signe représente un rôle social ou spirituel fondamental"
+        },
+        "meta": {
+          "cycleLength": 12,
+          "coreConcepts": ["communauté", "transmission", "équilibre", "rôle social"]
+        },
+        "signs": [
+          {
+            "id": "baobab",
+            "name": "Baobab",
+            "keywords": ["sagesse", "stabilité", "mémoire"],
+            "description": "Pilier de la communauté, gardien du savoir ancestral."
+          },
+          {
+            "id": "richesse",
+            "name": "Richesse",
+            "keywords": ["abondance", "ambition", "gestion"],
+            "description": "Rapport au matériel, à la prospérité et à la responsabilité."
+          },
+          {
+            "id": "famille",
+            "name": "Famille",
+            "keywords": ["protection", "solidarité", "lignée"],
+            "description": "Importance du clan, des racines et du soutien mutuel."
+          },
+          {
+            "id": "enfant",
+            "name": "Enfant",
+            "keywords": ["innocence", "potentiel", "avenir"],
+            "description": "Promesse du futur, apprentissage et curiosité."
+          },
+          {
+            "id": "ancetre",
+            "name": "Ancêtre",
+            "keywords": ["spiritualité", "guidance", "héritage"],
+            "description": "Lien profond avec le monde invisible et les anciens."
+          },
+          {
+            "id": "marche",
+            "name": "Marché",
+            "keywords": ["échange", "communication", "opportunité"],
+            "description": "Lieu de rencontre, de négociation et de mouvement."
+          },
+          {
+            "id": "masque",
+            "name": "Masque",
+            "keywords": ["mystère", "rituel", "transformation"],
+            "description": "Pont entre les mondes visible et invisible."
+          },
+          {
+            "id": "tambour",
+            "name": "Tambour",
+            "keywords": ["rythme", "expression", "appel"],
+            "description": "Voix de la communauté et battement de la vie."
+          },
+          {
+            "id": "chasseur",
+            "name": "Chasseur",
+            "keywords": ["stratégie", "courage", "survie"],
+            "description": "Maîtrise de l’environnement et protection du groupe."
+          },
+          {
+            "id": "voyageur",
+            "name": "Voyageur",
+            "keywords": ["aventure", "adaptation", "ouverture"],
+            "description": "Découverte, apprentissage et mobilité."
+          },
+          {
+            "id": "femme",
+            "name": "Femme",
+            "keywords": ["création", "intuition", "nourricier"],
+            "description": "Force créatrice, protection et transmission de la vie."
+          },
+          {
+            "id": "homme",
+            "name": "Homme",
+            "keywords": ["action", "responsabilité", "construction"],
+            "description": "Bâtisseur, acteur du changement et garant de l’équilibre."
+          }
+        ]
+      }
+    ]      

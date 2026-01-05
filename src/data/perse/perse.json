@@ -1,0 +1,103 @@
+[
+    {
+        "id": "perse",
+        "name": "Perse",
+        "variant": "Zodiaque persan",
+        "origin": "Perse antique (Iran)",
+        "type": "zodiac",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Découpage du cycle annuel en 12 segments égaux",
+          "note": "Le moteur associe la date de naissance à un segment zodiacal"
+        },
+        "meta": {
+          "cycleLength": 12
+        },
+        "signs": [
+          {
+            "id": "hamal",
+            "name": "Hamal",
+            "translation": "Le Bélier",
+            "keywords": ["élan", "courage", "initiative"],
+            "description": "Énergie du commencement et du leadership."
+          },
+          {
+            "id": "sur",
+            "name": "Sur",
+            "translation": "Le Taureau",
+            "keywords": ["stabilité", "force", "patience"],
+            "description": "Solidité, persévérance et attachement à la matière."
+          },
+          {
+            "id": "do_pikar",
+            "name": "Do-Pikar",
+            "translation": "Les Gémeaux",
+            "keywords": ["communication", "dualité", "intellect"],
+            "description": "Esprit vif, adaptabilité et curiosité."
+          },
+          {
+            "id": "saratane",
+            "name": "Saratane",
+            "translation": "Le Cancer",
+            "keywords": ["protection", "famille", "sensibilité"],
+            "description": "Lien aux origines et à la sphère émotionnelle."
+          },
+          {
+            "id": "asad",
+            "name": "Asad",
+            "translation": "Le Lion",
+            "keywords": ["royauté", "créativité", "rayonnement"],
+            "description": "Pouvoir personnel et expression solaire."
+          },
+          {
+            "id": "khoushe",
+            "name": "Khoushe",
+            "translation": "La Vierge",
+            "keywords": ["analyse", "discipline", "service"],
+            "description": "Recherche de perfection et ordre intérieur."
+          },
+          {
+            "id": "mizan",
+            "name": "Mizan",
+            "translation": "La Balance",
+            "keywords": ["justice", "harmonie", "équilibre"],
+            "description": "Sens de la loi et de l’harmonie cosmique."
+          },
+          {
+            "id": "kazhdum",
+            "name": "Kazhdum",
+            "translation": "Le Scorpion",
+            "keywords": ["transformation", "intensité", "mystère"],
+            "description": "Mort symbolique et renaissance."
+          },
+          {
+            "id": "kaman",
+            "name": "Kaman",
+            "translation": "Le Sagittaire",
+            "keywords": ["quête", "vérité", "voyage"],
+            "description": "Recherche du sens et expansion spirituelle."
+          },
+          {
+            "id": "jadi",
+            "name": "Jadi",
+            "translation": "Le Capricorne",
+            "keywords": ["rigueur", "ambition", "structure"],
+            "description": "Ascension par la discipline et l’endurance."
+          },
+          {
+            "id": "dalv",
+            "name": "Dalv",
+            "translation": "Le Verseau",
+            "keywords": ["innovation", "vision", "collectif"],
+            "description": "Esprit avant-gardiste et réformateur."
+          },
+          {
+            "id": "hout",
+            "name": "Hout",
+            "translation": "Les Poissons",
+            "keywords": ["intuition", "spiritualité", "compassion"],
+            "description": "Connexion au monde invisible et au sacré."
+          }
+        ]
+      }
+]

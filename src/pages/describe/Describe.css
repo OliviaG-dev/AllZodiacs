@@ -195,11 +195,537 @@
   font-weight: 600;
 }
 
+.describe-keywords {
+  margin: 1.5rem 0;
+}
+
+.describe-keywords-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.describe-keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.describe-keyword {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Occidental - Bleu */
+.describe-keyword-occidental {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.describe-keyword-occidental:hover {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Chinois - Rouge */
+.describe-keyword-chinois {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.describe-keyword-chinois:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Tibétain - Violet */
+.describe-keyword-tibetain {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.describe-keyword-tibetain:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: rgba(139, 92, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Kabbalistique - Or */
+.describe-keyword-kabbalistique {
+  background: rgba(212, 175, 55, 0.15);
+  color: #fcd34d;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.describe-keyword-kabbalistique:hover {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Perse - Cyan */
+.describe-keyword-perse {
+  background: rgba(34, 211, 238, 0.15);
+  color: #67e8f9;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+.describe-keyword-perse:hover {
+  background: rgba(34, 211, 238, 0.25);
+  border-color: rgba(34, 211, 238, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Maya - Vert */
+.describe-keyword-maya {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.describe-keyword-maya:hover {
+  background: rgba(34, 197, 94, 0.25);
+  border-color: rgba(34, 197, 94, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Aztèque - Orange */
+.describe-keyword-azteque {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fdba74;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.describe-keyword-azteque:hover {
+  background: rgba(249, 115, 22, 0.25);
+  border-color: rgba(249, 115, 22, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Druidique - Vert forêt */
+.describe-keyword-druidique {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.describe-keyword-druidique:hover {
+  background: rgba(34, 197, 94, 0.25);
+  border-color: rgba(34, 197, 94, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Amérindien - Rose */
+.describe-keyword-amerindien {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f9a8d4;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.describe-keyword-amerindien:hover {
+  background: rgba(236, 72, 153, 0.25);
+  border-color: rgba(236, 72, 153, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Africain - Jaune */
+.describe-keyword-africain {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde047;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.describe-keyword-africain:hover {
+  background: rgba(234, 179, 8, 0.25);
+  border-color: rgba(234, 179, 8, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Égyptien - Turquoise */
+.describe-keyword-egyptien {
+  background: rgba(20, 184, 166, 0.15);
+  color: #5eead4;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.describe-keyword-egyptien:hover {
+  background: rgba(20, 184, 166, 0.25);
+  border-color: rgba(20, 184, 166, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Inuit - Bleu glacial */
+.describe-keyword-inuit {
+  background: rgba(147, 197, 253, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+}
+
+.describe-keyword-inuit:hover {
+  background: rgba(147, 197, 253, 0.25);
+  border-color: rgba(147, 197, 253, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Védique - Rose foncé */
+.describe-keyword-vedique {
+  background: rgba(219, 39, 119, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(219, 39, 119, 0.3);
+}
+
+.describe-keyword-vedique:hover {
+  background: rgba(219, 39, 119, 0.25);
+  border-color: rgba(219, 39, 119, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Alchimique - Violet foncé */
+.describe-keyword-alchimique {
+  background: rgba(124, 58, 237, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.describe-keyword-alchimique:hover {
+  background: rgba(124, 58, 237, 0.25);
+  border-color: rgba(124, 58, 237, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Viking - Bleu foncé */
+.describe-keyword-viking {
+  background: rgba(37, 99, 235, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.describe-keyword-viking:hover {
+  background: rgba(37, 99, 235, 0.25);
+  border-color: rgba(37, 99, 235, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Celtique - Vert forêt */
+.describe-keyword-celtique {
+  background: rgba(5, 150, 105, 0.15);
+  color: #6ee7b7;
+  border: 1px solid rgba(5, 150, 105, 0.3);
+}
+
+.describe-keyword-celtique:hover {
+  background: rgba(5, 150, 105, 0.25);
+  border-color: rgba(5, 150, 105, 0.5);
+  transform: translateY(-2px);
+}
+
+.describe-system-section,
+.describe-sign-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.describe-section-title {
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Merriweather", "Lora", serif;
+  text-align: center;
+}
+
+.describe-system-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.describe-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+/* Occidental - Bleu */
+.describe-info-item-occidental {
+  border-left: 3px solid rgba(59, 130, 246, 0.5);
+}
+
+/* Chinois - Rouge */
+.describe-info-item-chinois {
+  border-left: 3px solid rgba(239, 68, 68, 0.5);
+}
+
+/* Tibétain - Violet */
+.describe-info-item-tibetain {
+  border-left: 3px solid rgba(139, 92, 246, 0.5);
+}
+
+/* Kabbalistique - Or */
+.describe-info-item-kabbalistique {
+  border-left: 3px solid rgba(212, 175, 55, 0.5);
+}
+
+/* Perse - Cyan */
+.describe-info-item-perse {
+  border-left: 3px solid rgba(34, 211, 238, 0.5);
+}
+
+/* Maya - Vert */
+.describe-info-item-maya {
+  border-left: 3px solid rgba(34, 197, 94, 0.5);
+}
+
+/* Aztèque - Orange */
+.describe-info-item-azteque {
+  border-left: 3px solid rgba(249, 115, 22, 0.5);
+}
+
+/* Druidique - Vert forêt */
+.describe-info-item-druidique {
+  border-left: 3px solid rgba(34, 197, 94, 0.5);
+}
+
+/* Amérindien - Rose */
+.describe-info-item-amerindien {
+  border-left: 3px solid rgba(236, 72, 153, 0.5);
+}
+
+/* Africain - Jaune */
+.describe-info-item-africain {
+  border-left: 3px solid rgba(234, 179, 8, 0.5);
+}
+
+/* Égyptien - Turquoise */
+.describe-info-item-egyptien {
+  border-left: 3px solid rgba(20, 184, 166, 0.5);
+}
+
+/* Inuit - Bleu glacial */
+.describe-info-item-inuit {
+  border-left: 3px solid rgba(147, 197, 253, 0.5);
+}
+
+/* Védique - Rose foncé */
+.describe-info-item-vedique {
+  border-left: 3px solid rgba(219, 39, 119, 0.5);
+}
+
+/* Alchimique - Violet foncé */
+.describe-info-item-alchimique {
+  border-left: 3px solid rgba(124, 58, 237, 0.5);
+}
+
+/* Viking - Bleu foncé */
+.describe-info-item-viking {
+  border-left: 3px solid rgba(37, 99, 235, 0.5);
+}
+
+/* Celtique - Vert forêt */
+.describe-info-item-celtique {
+  border-left: 3px solid rgba(5, 150, 105, 0.5);
+}
+
+.describe-info-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.describe-info-value {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.describe-all-signs {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.describe-all-signs-title {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.describe-all-signs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.describe-sign-item {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.describe-sign-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.describe-sign-item-active {
+  font-weight: 600;
+}
+
+/* Occidental - Bleu */
+.describe-sign-item-active-occidental {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Chinois - Rouge */
+.describe-sign-item-active-chinois {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+/* Tibétain - Violet */
+.describe-sign-item-active-tibetain {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+/* Kabbalistique - Or */
+.describe-sign-item-active-kabbalistique {
+  background: rgba(212, 175, 55, 0.2);
+  color: #fcd34d;
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+/* Perse - Cyan */
+.describe-sign-item-active-perse {
+  background: rgba(34, 211, 238, 0.2);
+  color: #67e8f9;
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+/* Maya - Vert */
+.describe-sign-item-active-maya {
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+/* Aztèque - Orange */
+.describe-sign-item-active-azteque {
+  background: rgba(249, 115, 22, 0.2);
+  color: #fdba74;
+  border-color: rgba(249, 115, 22, 0.5);
+}
+
+/* Druidique - Vert forêt */
+.describe-sign-item-active-druidique {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+/* Amérindien - Rose */
+.describe-sign-item-active-amerindien {
+  background: rgba(236, 72, 153, 0.2);
+  color: #f9a8d4;
+  border-color: rgba(236, 72, 153, 0.5);
+}
+
+/* Africain - Jaune */
+.describe-sign-item-active-africain {
+  background: rgba(234, 179, 8, 0.2);
+  color: #fde047;
+  border-color: rgba(234, 179, 8, 0.5);
+}
+
+/* Égyptien - Turquoise */
+.describe-sign-item-active-egyptien {
+  background: rgba(20, 184, 166, 0.2);
+  color: #5eead4;
+  border-color: rgba(20, 184, 166, 0.5);
+}
+
+/* Inuit - Bleu glacial */
+.describe-sign-item-active-inuit {
+  background: rgba(147, 197, 253, 0.2);
+  color: #93c5fd;
+  border-color: rgba(147, 197, 253, 0.5);
+}
+
+/* Védique - Rose foncé */
+.describe-sign-item-active-vedique {
+  background: rgba(219, 39, 119, 0.2);
+  color: #f472b6;
+  border-color: rgba(219, 39, 119, 0.5);
+}
+
+/* Alchimique - Violet foncé */
+.describe-sign-item-active-alchimique {
+  background: rgba(124, 58, 237, 0.2);
+  color: #c4b5fd;
+  border-color: rgba(124, 58, 237, 0.5);
+}
+
+/* Viking - Bleu foncé */
+.describe-sign-item-active-viking {
+  background: rgba(37, 99, 235, 0.2);
+  color: #93c5fd;
+  border-color: rgba(37, 99, 235, 0.5);
+}
+
+/* Celtique - Vert forêt */
+.describe-sign-item-active-celtique {
+  background: rgba(5, 150, 105, 0.2);
+  color: #6ee7b7;
+  border-color: rgba(5, 150, 105, 0.5);
+}
+
+.describe-description {
+  margin-top: 1.5rem;
+}
+
 .describe-text {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
-  margin-top: 2rem;
+  margin-top: 0;
+  text-align: justify;
 }
 
 .describe-back-button {
@@ -285,10 +811,75 @@
     margin-bottom: 1rem;
   }
 
+  .describe-keywords {
+    margin: 1.25rem 0;
+  }
+
+  .describe-keywords-label {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .describe-keyword {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .describe-system-section,
+  .describe-sign-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .describe-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .describe-system-info {
+    gap: 0.75rem;
+  }
+
+  .describe-info-item {
+    padding: 0.625rem;
+  }
+
+  .describe-info-label {
+    font-size: 0.7rem;
+  }
+
+  .describe-info-value {
+    font-size: 0.9rem;
+  }
+
+  .describe-all-signs {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .describe-all-signs-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .describe-all-signs-list {
+    gap: 0.4rem;
+  }
+
+  .describe-sign-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .describe-description {
+    margin-top: 1.25rem;
+  }
+
   .describe-text {
     font-size: 0.95rem;
     line-height: 1.5;
-    margin-top: 1.5rem;
+    margin-top: 0;
+    text-align: left;
   }
 
   .describe-birth-date {

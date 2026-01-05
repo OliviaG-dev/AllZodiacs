@@ -1,0 +1,92 @@
+[
+    {
+      "id": "vedic",
+      "name": "Védique",
+      "variant": "Planètes et Nakshatras",
+      "origin": "Inde antique",
+      "type": "mythological_cycle",
+      "calculation": {
+        "basedOn": ["moonSign", "nakshatra"],
+        "rule": "Le cycle suit les positions de la lune et des nakshatras, chaque signe reflétant des traits karmiques et spirituels.",
+        "note": "Chaque signe (Rāśi) est associé à un élément, une planète dominante et un archétype spirituel."
+      },
+      "meta": {
+        "cycleLength": 12,
+        "coreConcepts": ["karma", "dharma", "éléments", "évolution spirituelle"]
+      },
+      "signs": [
+        {
+          "id": "mesha",
+          "name": "Mesha",
+          "keywords": ["énergie", "initiative", "courage"],
+          "description": "Signe du Bélier, gouverné par Mars. Dynamique et audacieux, symbole de leadership et d’action."
+        },
+        {
+          "id": "vrishabha",
+          "name": "Vrishabha",
+          "keywords": ["stabilité", "patience", "sens pratique"],
+          "description": "Signe du Taureau, gouverné par Vénus. Représente la persévérance et l’appréciation de la beauté et des plaisirs."
+        },
+        {
+          "id": "mithuna",
+          "name": "Mithuna",
+          "keywords": ["communication", "adaptabilité", "curiosité"],
+          "description": "Signe des Gémeaux, gouverné par Mercure. Sociable et versatile, symbolise l’apprentissage et l’échange."
+        },
+        {
+          "id": "karka",
+          "name": "Karka",
+          "keywords": ["émotion", "protection", "intuition"],
+          "description": "Signe du Cancer, gouverné par la Lune. Sensible et empathique, il incarne la protection de la famille et du foyer."
+        },
+        {
+          "id": "simha",
+          "name": "Simha",
+          "keywords": ["leadership", "fierté", "créativité"],
+          "description": "Signe du Lion, gouverné par le Soleil. Charismatique et confiant, il symbolise la créativité et le courage."
+        },
+        {
+          "id": "kanya",
+          "name": "Kanya",
+          "keywords": ["analyse", "service", "organisation"],
+          "description": "Signe de la Vierge, gouverné par Mercure. Pragmatique et méthodique, orienté vers le détail et l’aide aux autres."
+        },
+        {
+          "id": "tula",
+          "name": "Tula",
+          "keywords": ["équilibre", "harmonie", "diplomatie"],
+          "description": "Signe de la Balance, gouverné par Vénus. Représente l’équilibre, la justice et la recherche de beauté et de paix."
+        },
+        {
+          "id": "vrischika",
+          "name": "Vrischika",
+          "keywords": ["intensité", "transformation", "mystère"],
+          "description": "Signe du Scorpion, gouverné par Mars et Ketu. Passionné et profond, symbolise la transformation et l’intuition."
+        },
+        {
+          "id": "dhanu",
+          "name": "Dhanu",
+          "keywords": ["aventure", "liberté", "optimisme"],
+          "description": "Signe du Sagittaire, gouverné par Jupiter. Énergique et enthousiaste, il représente l’exploration et la philosophie."
+        },
+        {
+          "id": "makara",
+          "name": "Makara",
+          "keywords": ["discipline", "ambition", "persévérance"],
+          "description": "Signe du Capricorne, gouverné par Saturne. Responsable et ambitieux, symbole de patience et de réalisations concrètes."
+        },
+        {
+          "id": "kumbha",
+          "name": "Kumbha",
+          "keywords": ["innovation", "humanité", "originalité"],
+          "description": "Signe du Verseau, gouverné par Saturne. Visionnaire et indépendant, il incarne l’innovation et l’altruisme."
+        },
+        {
+          "id": "meena",
+          "name": "Meena",
+          "keywords": ["intuition", "compassion", "spiritualité"],
+          "description": "Signe des Poissons, gouverné par Jupiter. Sensible et empathique, symbolise la spiritualité et l’imagination."
+        }
+      ]
+    }
+  ]

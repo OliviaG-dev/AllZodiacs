@@ -1,0 +1,161 @@
+[
+    {
+        "id": "azteque",
+        "name": "Aztèque",
+        "variant": "Tonalpohualli",
+        "origin": "Civilisation aztèque (Mésoamérique)",
+        "type": "sacred_calendar",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Cycle sacré de 20 signes se répétant continuellement",
+          "note": "Le moteur associe la date de naissance à un index cyclique"
+        },
+        "meta": {
+          "cycleLength": 20,
+          "calendarLength": 260,
+          "logic": "Le Tonalpohualli combine 20 signes et 13 nombres"
+        },
+        "signs": [
+          {
+            "id": "cipactli",
+            "name": "Cipactli (Crocodile)",
+            "translation": "Crocodile",
+            "keywords": ["création", "origine", "initiative"],
+            "description": "Force primordiale, commencement de toute chose."
+          },
+          {
+            "id": "ehecatl",
+            "name": "Ehecatl (Vent)",
+            "translation": "Vent",
+            "keywords": ["mouvement", "communication", "souffle"],
+            "description": "Énergie du changement et de la parole."
+          },
+          {
+            "id": "calli",
+            "name": "Calli (Maison)",
+            "translation": "Maison",
+            "keywords": ["stabilité", "protection", "foyer"],
+            "description": "Sécurité et enracinement."
+          },
+          {
+            "id": "cuetzpalin",
+            "name": "Cuetzpalin (Lézard)",
+            "translation": "Lézard",
+            "keywords": ["adaptation", "vitalité", "souplesse"],
+            "description": "Capacité d’évolution rapide."
+          },
+          {
+            "id": "coatl",
+            "name": "Coatl (Serpent)",
+            "translation": "Serpent",
+            "keywords": ["sagesse", "énergie", "transformation"],
+            "description": "Force vitale et connaissance sacrée."
+          },
+          {
+            "id": "miquiztli",
+            "name": "Miquiztli (Mort)",
+            "translation": "Mort",
+            "keywords": ["transition", "renaissance", "mystère"],
+            "description": "Fin nécessaire et renouveau."
+          },
+          {
+            "id": "mazatl",
+            "name": "Mazatl (Cerf)",
+            "translation": "Cerf",
+            "keywords": ["sensibilité", "grâce", "intuition"],
+            "description": "Connexion à la nature."
+          },
+          {
+            "id": "tochtli",
+            "name": "Tochtli (Lapin)",
+            "translation": "Lapin",
+            "keywords": ["fertilité", "abondance", "excès"],
+            "description": "Joie de vivre et créativité."
+          },
+          {
+            "id": "atl",
+            "name": "Atl (Eau)",
+            "translation": "Eau",
+            "keywords": ["émotion", "purification", "flux"],
+            "description": "Profondeur émotionnelle."
+          },
+          {
+            "id": "itzcuintli",
+            "name": "Itzcuintli (Chien)",
+            "translation": "Chien",
+            "keywords": ["loyauté", "guidance", "protection"],
+            "description": "Guide des âmes."
+          },
+          {
+            "id": "ozomatli",
+            "name": "Ozomatli (Singe)",
+            "translation": "Singe",
+            "keywords": ["jeu", "créativité", "expression"],
+            "description": "Art, humour et spontanéité."
+          },
+          {
+            "id": "malinalli",
+            "name": "Malinalli (Herbe)",
+            "translation": "Herbe",
+            "keywords": ["résilience", "souplesse", "croissance"],
+            "description": "Force discrète et endurance."
+          },
+          {
+            "id": "acatl",
+            "name": "Acatl (Roseau)",
+            "translation": "Roseau",
+            "keywords": ["droiture", "canal", "structure"],
+            "description": "Colonne spirituelle."
+          },
+          {
+            "id": "ocelotl",
+            "name": "Ocelotl (Jaguar)",
+            "translation": "Jaguar",
+            "keywords": ["puissance", "nuit", "intuition"],
+            "description": "Force chamanique."
+          },
+          {
+            "id": "cuauhtli",
+            "name": "Cuauhtli (Aigle)",
+            "translation": "Aigle",
+            "keywords": ["vision", "élévation", "courage"],
+            "description": "Clarté et perspective supérieure."
+          },
+          {
+            "id": "cozcacuauhtli",
+            "name": "Cozcacuauhtli (Vautour)",
+            "translation": "Vautour",
+            "keywords": ["purification", "cycle", "mort"],
+            "description": "Transformation et nettoyage."
+          },
+          {
+            "id": "ollin",
+            "name": "Ollin (Mouvement)",
+            "translation": "Mouvement",
+            "keywords": ["changement", "évolution", "séisme"],
+            "description": "Transformation radicale."
+          },
+          {
+            "id": "tecpatl",
+            "name": "Tecpatl (Silex)",
+            "translation": "Silex",
+            "keywords": ["vérité", "tranchant", "décision"],
+            "description": "Clarté brutale."
+          },
+          {
+            "id": "quiahuitl",
+            "name": "Quiahuitl (Pluie)",
+            "translation": "Pluie",
+            "keywords": ["fertilité", "bénédiction", "renouveau"],
+            "description": "Abondance divine."
+          },
+          {
+            "id": "xochitl",
+            "name": "Xochitl (Fleur)",
+            "translation": "Fleur",
+            "keywords": ["beauté", "art", "harmonie"],
+            "description": "Accomplissement et joie."
+          }
+        ]
+      }
+]

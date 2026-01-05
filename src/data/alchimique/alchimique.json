@@ -1,0 +1,70 @@
+[
+    {
+        "id": "alchimique",
+        "name": "Alchimique",
+        "variant": "Œuvre alchimique",
+        "origin": "Alchimie hermétique (Égypte, Grèce, Moyen Âge)",
+        "type": "initiatic_cycle",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Cycle initiatique en 7 phases se répétant tout au long de l’année",
+          "note": "Le signe représente une phase dominante de transformation intérieure"
+        },
+        "meta": {
+          "cycleLength": 7,
+          "symbolism": "Transformation de la matière et de l’âme",
+          "goal": "Œuvre au Rouge – accomplissement"
+        },
+        "signs": [
+          {
+            "id": "nigredo",
+            "name": "Nigredo",
+            "translation": "Noircissement",
+            "keywords": ["chaos", "dissolution", "ombre"],
+            "description": "Phase de déconstruction, mort symbolique et confusion nécessaire."
+          },
+          {
+            "id": "albedo",
+            "name": "Albedo",
+            "translation": "Blanchiment",
+            "keywords": ["purification", "clarification", "renaissance"],
+            "description": "Nettoyage intérieur et retour à l’essentiel."
+          },
+          {
+            "id": "citrinitas",
+            "name": "Citrinitas",
+            "translation": "Jaunissement",
+            "keywords": ["éveil", "conscience", "lumière"],
+            "description": "Émergence de la connaissance et de la lucidité."
+          },
+          {
+            "id": "rubedo",
+            "name": "Rubedo",
+            "translation": "Rougissement",
+            "keywords": ["accomplissement", "intégration", "union"],
+            "description": "Unification de l’être, harmonie entre corps et esprit."
+          },
+          {
+            "id": "coagulatio",
+            "name": "Coagulatio",
+            "translation": "Fixation",
+            "keywords": ["stabilité", "ancrage", "manifestation"],
+            "description": "Concrétisation dans la matière."
+          },
+          {
+            "id": "sublimatio",
+            "name": "Sublimatio",
+            "translation": "Élévation",
+            "keywords": ["élévation", "vision", "transcendance"],
+            "description": "Prise de hauteur spirituelle."
+          },
+          {
+            "id": "conjunctio",
+            "name": "Conjunctio",
+            "translation": "Union",
+            "keywords": ["fusion", "équilibre", "complétude"],
+            "description": "Réunion des opposés, pierre philosophale."
+          }
+        ]
+      }
+]

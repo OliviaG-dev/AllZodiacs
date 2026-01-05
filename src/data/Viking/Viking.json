@@ -1,0 +1,63 @@
+[
+    {
+        "id": "viking",
+        "name": "Viking",
+        "variant": "Cycles mythiques nordiques",
+        "origin": "Scandinavie ancienne",
+        "type": "mythic_cycle",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Cycle mythologique en 6 périodes se répétant annuellement",
+          "note": "Chaque période reflète un archétype du destin nordique"
+        },
+        "meta": {
+          "cycleLength": 6,
+          "cosmology": "Yggdrasil et les cycles du Ragnarök",
+          "coreValues": ["honneur", "destin", "bravoure"]
+        },
+        "signs": [
+          {
+            "id": "creation",
+            "name": "Création (Bjorn)",
+            "norseName": "Ginnungagap",
+            "keywords": ["naissance", "potentiel", "chaos"],
+            "description": "Vide primordial d'où émerge toute chose."
+          },
+          {
+            "id": "ascension",
+            "name": "Ascension (Jormungand)",
+            "norseName": "Asgard",
+            "keywords": ["ambition", "honneur", "pouvoir"],
+            "description": "Montée vers la gloire et reconnaissance."
+          },
+          {
+            "id": "prosperity",
+            "name": "Prospérité (Thor)",
+            "norseName": "Midgard",
+            "keywords": ["stabilité", "travail", "communauté"],
+            "description": "Temps de construction et d'enracinement."
+          },
+          {
+            "id": "conflict",
+            "name": "Conflit (Fenrir)",
+            "norseName": "Jötunheim",
+            "keywords": ["épreuve", "combat", "résilience"],
+            "description": "Affrontement des forces opposées."
+          },
+          {
+            "id": "decline",
+            "name": "Déclin (Odin)",
+            "norseName": "Niflheim",
+            "keywords": ["perte", "introspection", "fin"],
+            "description": "Retrait, réflexion et fin de cycle."
+          },
+          {
+            "id": "rebirth",
+            "name": "Renaissance (Loki)",
+            "norseName": "Ragnarök",
+            "keywords": ["renouveau", "destin", "transformation"],
+            "description": "Fin et renaissance, nouveau monde."
+          }
+        ]
+      }
+]

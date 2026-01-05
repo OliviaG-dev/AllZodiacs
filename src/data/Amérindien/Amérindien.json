@@ -1,0 +1,92 @@
+[
+    {
+        "id": "amerindien",
+        "name": "Amérindien",
+        "variant": "Totems spirituels",
+        "origin": "Peuples autochtones d’Amérique du Nord",
+        "type": "totemic_cycle",
+        "calculation": {
+          "basedOn": ["dayOfYear"],
+          "rule": "Cycle de totems se répétant selon le rythme naturel",
+          "note": "Chaque totem représente une force animale et spirituelle"
+        },
+        "meta": {
+          "cycleLength": 12,
+          "coreValues": ["nature", "esprit", "équilibre", "respect"]
+        },
+        "signs": [
+          {
+            "id": "otter",
+            "name": "Loutre",
+            "keywords": ["joie", "créativité", "intuition"],
+            "description": "Esprit libre, inventif et joueur."
+          },
+          {
+            "id": "wolf",
+            "name": "Loup",
+            "keywords": ["loyauté", "instinct", "liberté"],
+            "description": "Guide naturel, protecteur de la meute."
+          },
+          {
+            "id": "falcon",
+            "name": "Faucon",
+            "keywords": ["vision", "rapidité", "leadership"],
+            "description": "Clarté mentale et esprit de décision."
+          },
+          {
+            "id": "beaver",
+            "name": "Castor",
+            "keywords": ["travail", "persévérance", "structure"],
+            "description": "Bâtisseur patient et méthodique."
+          },
+          {
+            "id": "deer",
+            "name": "Cerf",
+            "keywords": ["sensibilité", "douceur", "intuition"],
+            "description": "Cœur ouvert et empathie."
+          },
+          {
+            "id": "woodpecker",
+            "name": "Pic-vert",
+            "keywords": ["protection", "rythme", "famille"],
+            "description": "Gardien du foyer."
+          },
+          {
+            "id": "salmon",
+            "name": "Saumon",
+            "keywords": ["détermination", "sagesse", "intuition"],
+            "description": "Force intérieure et persévérance."
+          },
+          {
+            "id": "bear",
+            "name": "Ours",
+            "keywords": ["puissance", "introspection", "guérison"],
+            "description": "Force tranquille et régénération."
+          },
+          {
+            "id": "raven",
+            "name": "Corbeau",
+            "keywords": ["mystère", "transformation", "magie"],
+            "description": "Messager entre les mondes."
+          },
+          {
+            "id": "snake",
+            "name": "Serpent",
+            "keywords": ["mutation", "éveil", "énergie"],
+            "description": "Renouveau et transformation."
+          },
+          {
+            "id": "owl",
+            "name": "Chouette",
+            "keywords": ["sagesse", "vision nocturne", "vérité"],
+            "description": "Clarté intérieure."
+          },
+          {
+            "id": "goose",
+            "name": "Oie",
+            "keywords": ["ambition", "persévérance", "vision"],
+            "description": "Poursuite des objectifs élevés."
+          }
+        ]
+      }
+]

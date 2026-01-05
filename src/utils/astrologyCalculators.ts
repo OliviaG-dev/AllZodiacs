@@ -399,178 +399,65 @@ export function calculateAztecZodiac(date: BirthDate): ZodiacSign {
 }
 
 /**
- * Calcule le signe astrologique druidique (21 arbres du calendrier druidique)
- * Système authentique basé sur le calendrier des arbres druidique
+ * Calcule le signe astrologique druidique (13 arbres sacrés)
+ * Système authentique basé sur le calendrier celtique traditionnel
  */
 export function calculateDruidicZodiac(date: BirthDate): ZodiacSign {
   const { day, month } = date;
 
-  // Calendrier druidique complet avec 21 arbres
-  // Certains arbres ont deux périodes dans l'année
+  // Calendrier druidique traditionnel avec 13 arbres
+  // Basé sur l'année lunaire (13 mois lunaires)
 
-  // Pommier (23 déc - 1 jan et 25 juin - 4 juil)
-  if (
-    (month === 12 && day >= 23) ||
-    (month === 1 && day <= 1) ||
-    (month === 6 && day >= 25) ||
-    (month === 7 && day <= 4)
-  ) {
-    return { name: "Pommier", system: "Druidique" };
-  }
-
-  // Sapin (2-11 jan et 5-14 juil)
-  if (
-    (month === 1 && day >= 2 && day <= 11) ||
-    (month === 7 && day >= 5 && day <= 14)
-  ) {
-    return { name: "Sapin", system: "Druidique" };
-  }
-
-  // Orme (12-24 jan et 15-25 juil)
-  if (
-    (month === 1 && day >= 12 && day <= 24) ||
-    (month === 7 && day >= 15 && day <= 25)
-  ) {
-    return { name: "Orme", system: "Druidique" };
-  }
-
-  // Cyprès (25 jan - 3 fév et 26 juil - 4 août)
-  if (
-    (month === 1 && day >= 25) ||
-    (month === 2 && day <= 3) ||
-    (month === 7 && day >= 26) ||
-    (month === 8 && day <= 4)
-  ) {
-    return { name: "Cyprès", system: "Druidique" };
-  }
-
-  // Peuplier (4-8 fév, 5-13 août, 1-14 mai)
-  if (
-    (month === 2 && day >= 4 && day <= 8) ||
-    (month === 8 && day >= 5 && day <= 13) ||
-    (month === 5 && day >= 1 && day <= 14)
-  ) {
-    return { name: "Peuplier", system: "Druidique" };
-  }
-
-  // Cèdre (9-18 fév et 14-23 août)
-  if (
-    (month === 2 && day >= 9 && day <= 18) ||
-    (month === 8 && day >= 14 && day <= 23)
-  ) {
-    return { name: "Cèdre", system: "Druidique" };
-  }
-
-  // Pin (19-28 fév et 24 août - 2 sept)
-  if (
-    (month === 2 && day >= 19 && day <= 28) ||
-    (month === 8 && day >= 24) ||
-    (month === 9 && day <= 2)
-  ) {
-    return { name: "Pin", system: "Druidique" };
-  }
-
-  // Saule pleureur (1-10 mars et 3-12 sept)
-  if (
-    (month === 3 && day >= 1 && day <= 10) ||
-    (month === 9 && day >= 3 && day <= 12)
-  ) {
-    return { name: "Saule pleureur", system: "Druidique" };
-  }
-
-  // Tilleul (11-20 mars et 13-22 sept)
-  if (
-    (month === 3 && day >= 11 && day <= 20) ||
-    (month === 9 && day >= 13 && day <= 22)
-  ) {
-    return { name: "Tilleul", system: "Druidique" };
-  }
-
-  // Chêne (21 mars - équinoxe de printemps)
-  if (month === 3 && day === 21) {
-    return { name: "Chêne", system: "Druidique" };
-  }
-
-  // Noisetier (22-31 mars et 24 sept - 3 oct)
-  if (
-    (month === 3 && day >= 22 && day <= 31) ||
-    (month === 9 && day >= 24) ||
-    (month === 10 && day <= 3)
-  ) {
-    return { name: "Noisetier", system: "Druidique" };
-  }
-
-  // Sorbier (1-10 avr et 4-13 oct)
-  if (
-    (month === 4 && day >= 1 && day <= 10) ||
-    (month === 10 && day >= 4 && day <= 13)
-  ) {
-    return { name: "Sorbier", system: "Druidique" };
-  }
-
-  // Érable (11-20 avr et 14-23 oct)
-  if (
-    (month === 4 && day >= 11 && day <= 20) ||
-    (month === 10 && day >= 14 && day <= 23)
-  ) {
-    return { name: "Érable", system: "Druidique" };
-  }
-
-  // Noyer (21-30 avr et 24 oct - 2 nov)
-  if (
-    (month === 4 && day >= 21 && day <= 30) ||
-    (month === 10 && day >= 24) ||
-    (month === 11 && day <= 2)
-  ) {
-    return { name: "Noyer", system: "Druidique" };
-  }
-
-  // Châtaignier (15-24 mai et 12-21 nov)
-  if (
-    (month === 5 && day >= 15 && day <= 24) ||
-    (month === 11 && day >= 12 && day <= 21)
-  ) {
-    return { name: "Châtaignier", system: "Druidique" };
-  }
-
-  // Frêne (25 mai - 3 juin et 22 nov - 1 déc)
-  if (
-    (month === 5 && day >= 25 && day <= 31) ||
-    (month === 6 && day <= 3) ||
-    (month === 11 && day >= 22) ||
-    (month === 12 && day <= 1)
-  ) {
-    return { name: "Frêne", system: "Druidique" };
-  }
-
-  // Charme (4-13 juin et 2-11 déc)
-  if (
-    (month === 6 && day >= 4 && day <= 13) ||
-    (month === 12 && day >= 2 && day <= 11)
-  ) {
-    return { name: "Charme", system: "Druidique" };
-  }
-
-  // Figuier (14-23 juin et 12-21 déc)
-  if (
-    (month === 6 && day >= 14 && day <= 23) ||
-    (month === 12 && day >= 12 && day <= 21)
-  ) {
-    return { name: "Figuier", system: "Druidique" };
-  }
-
-  // Bouleau (24 juin - solstice d'été)
-  if (month === 6 && day === 24) {
+  // Bouleau (24 déc - 20 jan)
+  if ((month === 12 && day >= 24) || (month === 1 && day <= 20)) {
     return { name: "Bouleau", system: "Druidique" };
   }
-
-  // Olivier (23 sept - équinoxe d'automne)
-  if (month === 9 && day === 23) {
-    return { name: "Olivier", system: "Druidique" };
+  // Sorbier (21 jan - 17 fév)
+  if ((month === 1 && day >= 21) || (month === 2 && day <= 17)) {
+    return { name: "Sorbier", system: "Druidique" };
   }
-
-  // Par défaut (dates non couvertes par les arbres spéciaux)
-  return { name: "Chêne", system: "Druidique" };
+  // Frêne (18 fév - 17 mars)
+  if ((month === 2 && day >= 18) || (month === 3 && day <= 17)) {
+    return { name: "Frêne", system: "Druidique" };
+  }
+  // Aulne (18 mars - 14 avr)
+  if ((month === 3 && day >= 18) || (month === 4 && day <= 14)) {
+    return { name: "Aulne", system: "Druidique" };
+  }
+  // Saule (15 avr - 12 mai)
+  if ((month === 4 && day >= 15) || (month === 5 && day <= 12)) {
+    return { name: "Saule", system: "Druidique" };
+  }
+  // Aubépine (13 mai - 9 juin)
+  if ((month === 5 && day >= 13) || (month === 6 && day <= 9)) {
+    return { name: "Aubépine", system: "Druidique" };
+  }
+  // Chêne (10 juin - 7 juil)
+  if ((month === 6 && day >= 10) || (month === 7 && day <= 7)) {
+    return { name: "Chêne", system: "Druidique" };
+  }
+  // Aubépine Nocturne (8 juil - 4 août)
+  if ((month === 7 && day >= 8) || (month === 8 && day <= 4)) {
+    return { name: "Aubépine Nocturne", system: "Druidique" };
+  }
+  // Noisetier (5 août - 1 sept)
+  if ((month === 8 && day >= 5) || (month === 9 && day <= 1)) {
+    return { name: "Noisetier", system: "Druidique" };
+  }
+  // Vigne (2 sept - 29 sept)
+  if ((month === 9 && day >= 2) || (month === 9 && day <= 29)) {
+    return { name: "Vigne", system: "Druidique" };
+  }
+  // Lierre (30 sept - 27 oct)
+  if ((month === 9 && day >= 30) || (month === 10 && day <= 27)) {
+    return { name: "Lierre", system: "Druidique" };
+  }
+  // Roseau (28 oct - 24 nov)
+  if ((month === 10 && day >= 28) || (month === 11 && day <= 24)) {
+    return { name: "Roseau", system: "Druidique" };
+  }
+  // Sureau (25 nov - 23 déc)
+  return { name: "Sureau", system: "Druidique" };
 }
 
 /**
@@ -590,10 +477,17 @@ export function calculateNativeAmericanZodiac(date: BirthDate): ZodiacSign {
 export function calculateAfricanZodiac(date: BirthDate): ZodiacSign {
   const signs = [
     "Baobab",
-    "La Distance",
-    "Le Marché",
-    "La Famille",
-    "L'Enfant de la Terre",
+    "Richesse",
+    "Famille",
+    "Enfant",
+    "Ancêtre",
+    "Marché",
+    "Masque",
+    "Tambour",
+    "Chasseur",
+    "Voyageur",
+    "Femme",
+    "Homme",
   ];
   return {
     name: signs[getDayOfYear(date) % signs.length],
@@ -620,51 +514,62 @@ export function calculateEgyptianZodiac(date: BirthDate): ZodiacSign {
 export function calculateInuitZodiac(date: BirthDate): ZodiacSign {
   const { day, month } = date;
 
-  // Polar Bear (22 déc - 19 jan)
+  // Ours Polaire (22 déc - 19 jan)
   if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
     return { name: "Ours Polaire", system: "Inuit" };
   }
-  // Raven (20 jan - 18 fév)
+
+  // Corbeau (20 jan - 18 fév)
   if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
     return { name: "Corbeau", system: "Inuit" };
   }
-  // Arctic Wolf (19 fév - 20 mars)
+
+  // Loup Arctique (19 fév - 20 mars)
   if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
     return { name: "Loup Arctique", system: "Inuit" };
   }
-  // Seal (21 mars - 19 avr)
+
+  // Phoque (21 mars - 19 avr)
   if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
     return { name: "Phoque", system: "Inuit" };
   }
+
   // Caribou (20 avr - 20 mai)
   if ((month === 4 && day >= 20) || (month === 5 && day <= 20)) {
     return { name: "Caribou", system: "Inuit" };
   }
-  // Snowy Owl (21 mai - 20 juin)
+
+  // Harfang des neiges (21 mai - 20 juin)
   if ((month === 5 && day >= 21) || (month === 6 && day <= 20)) {
     return { name: "Harfang des neiges", system: "Inuit" };
   }
-  // Walrus (21 juin - 22 juil)
+
+  // Morse (21 juin - 22 juil)
   if ((month === 6 && day >= 21) || (month === 7 && day <= 22)) {
     return { name: "Morse", system: "Inuit" };
   }
-  // Salmon (23 juil - 22 août)
+
+  // Saumon (23 juil - 22 août)
   if ((month === 7 && day >= 23) || (month === 8 && day <= 22)) {
     return { name: "Saumon", system: "Inuit" };
   }
-  // Orca (23 août - 22 sept)
+
+  // Orque (23 août - 22 sept)
   if ((month === 8 && day >= 23) || (month === 9 && day <= 22)) {
     return { name: "Orque", system: "Inuit" };
   }
-  // Snowy Owl (23 sept - 22 oct) - Note: il y a deux périodes pour Snowy Owl, je garde la première occurrence
+
+  // Renard Arctique (23 sept - 22 oct)
   if ((month === 9 && day >= 23) || (month === 10 && day <= 22)) {
-    return { name: "Harfang des neiges", system: "Inuit" };
+    return { name: "Renard Arctique", system: "Inuit" };
   }
-  // Beluga Whale (23 oct - 21 nov)
+
+  // Béluga (23 oct - 21 nov)
   if ((month === 10 && day >= 23) || (month === 11 && day <= 21)) {
     return { name: "Béluga", system: "Inuit" };
   }
-  // Lone Wolf (22 nov - 21 déc)
+
+  // Loup Solitaire (22 nov - 21 déc)
   return { name: "Loup Solitaire", system: "Inuit" };
 }
 

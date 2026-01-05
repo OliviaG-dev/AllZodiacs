@@ -1,0 +1,118 @@
+[
+ {
+    "id": "chinois",
+    "name": "Chinois",
+    "variant": "Zodiaque chinois traditionnel",
+    "origin": "Chine antique",
+    "type": "cycle",
+    "calculation": {
+      "basedOn": ["year"],
+      "note": "Cycle de 12 animaux et 5 éléments sur 60 ans"
+    },
+    "elements": [
+      "Bois",
+      "Feu",
+      "Terre",
+      "Métal",
+      "Eau"
+    ],
+    "signs": [
+      {
+        "id": "rat",
+        "name": "Rat",
+        "symbol": "鼠",
+        "cycleIndex": 0,
+        "keywords": ["intelligence", "adaptabilité", "stratégie"],
+        "description": "Le Rat symbolise la vivacité d’esprit et la débrouillardise."
+      },
+      {
+        "id": "ox",
+        "name": "Bœuf",
+        "symbol": "牛",
+        "cycleIndex": 1,
+        "keywords": ["travail", "fiabilité", "persévérance"],
+        "description": "Le Bœuf représente la patience et l’effort constant."
+      },
+      {
+        "id": "tiger",
+        "name": "Tigre",
+        "symbol": "虎",
+        "cycleIndex": 2,
+        "keywords": ["courage", "indépendance", "audace"],
+        "description": "Le Tigre incarne la bravoure et l’énergie brute."
+      },
+      {
+        "id": "rabbit",
+        "name": "Lapin",
+        "symbol": "兔",
+        "cycleIndex": 3,
+        "keywords": ["douceur", "diplomatie", "sensibilité"],
+        "description": "Le Lapin est associé à la prudence et à l’élégance."
+      },
+      {
+        "id": "dragon",
+        "name": "Dragon",
+        "symbol": "龍",
+        "cycleIndex": 4,
+        "keywords": ["puissance", "charisme", "chance"],
+        "description": "Le Dragon symbolise la force céleste et l’autorité."
+      },
+      {
+        "id": "snake",
+        "name": "Serpent",
+        "symbol": "蛇",
+        "cycleIndex": 5,
+        "keywords": ["sagesse", "mystère", "intuition"],
+        "description": "Le Serpent représente la connaissance et la transformation."
+      },
+      {
+        "id": "horse",
+        "name": "Cheval",
+        "symbol": "馬",
+        "cycleIndex": 6,
+        "keywords": ["liberté", "mouvement", "énergie"],
+        "description": "Le Cheval incarne l’indépendance et l’enthousiasme."
+      },
+      {
+        "id": "goat",
+        "name": "Chèvre",
+        "symbol": "羊",
+        "cycleIndex": 7,
+        "keywords": ["créativité", "sensibilité", "harmonie"],
+        "description": "La Chèvre symbolise l’art et l’empathie."
+      },
+      {
+        "id": "monkey",
+        "name": "Singe",
+        "symbol": "猴",
+        "cycleIndex": 8,
+        "keywords": ["ingéniosité", "humour", "adaptation"],
+        "description": "Le Singe représente l’intelligence vive et la ruse."
+      },
+      {
+        "id": "rooster",
+        "name": "Coq",
+        "symbol": "雞",
+        "cycleIndex": 9,
+        "keywords": ["organisation", "franchise", "confiance"],
+        "description": "Le Coq incarne la vigilance et la discipline."
+      },
+      {
+        "id": "dog",
+        "name": "Chien",
+        "symbol": "狗",
+        "cycleIndex": 10,
+        "keywords": ["loyauté", "justice", "protection"],
+        "description": "Le Chien symbolise la fidélité et le sens moral."
+      },
+      {
+        "id": "pig",
+        "name": "Cochon",
+        "symbol": "豬",
+        "cycleIndex": 11,
+        "keywords": ["générosité", "plaisir", "sincérité"],
+        "description": "Le Cochon représente l’abondance et la bienveillance."
+      }
+    ]
+  }
+]
