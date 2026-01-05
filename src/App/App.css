@@ -1,5 +1,17 @@
 .app {
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.app * {
+  box-sizing: border-box;
+}
+
+.app,
+.app > * {
+  max-width: 100vw;
 }
 

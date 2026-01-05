@@ -39,9 +39,6 @@ export default function Home() {
 
       <footer className="home-footer">
         <p>AllZodiacs - Un moteur universel de correspondance astrologique</p>
-        <p className="home-footer-note">
-          Connecte les traditions anciennes aux technologies modernes
-        </p>
       </footer>
     </div>
   );

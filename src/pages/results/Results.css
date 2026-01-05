@@ -92,9 +92,29 @@
 }
 
 @media (max-width: 768px) {
+  .results-page-main {
+    padding: 1.5rem 1rem;
+  }
+
   .results-back-button {
     margin: 1.5rem auto;
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-page-main {
+    padding: 1rem 0.75rem;
+  }
+
+  .results-back-button {
+    margin: 1.25rem auto;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    width: calc(100% - 2rem);
+    max-width: 300px;
+    white-space: normal;
+    line-height: 1.4;
   }
 }

@@ -55,16 +55,127 @@
 
 .describe-system {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.9rem;
   border-radius: 12px;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
   margin-bottom: 1.5rem;
+}
+
+/* Occidental - Bleu */
+.describe-system-occidental {
+  background: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Chinois - Rouge */
+.describe-system-chinois {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Tibétain - Violet */
+.describe-system-tibetain {
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Kabbalistique - Or */
+.describe-system-kabbalistique {
+  background: rgba(212, 175, 55, 0.15);
+  color: #fcd34d;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Perse - Cyan */
+.describe-system-perse {
+  background: rgba(34, 211, 238, 0.15);
+  color: #67e8f9;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
+/* Maya - Vert */
+.describe-system-maya {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Aztèque - Orange */
+.describe-system-azteque {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fdba74;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Druidique - Vert forêt */
+.describe-system-druidique {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Amérindien - Rose */
+.describe-system-amerindien {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f9a8d4;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* Africain - Jaune */
+.describe-system-africain {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde047;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+/* Égyptien - Turquoise */
+.describe-system-egyptien {
+  background: rgba(20, 184, 166, 0.15);
+  color: #5eead4;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+/* Inuit - Bleu glacial */
+.describe-system-inuit {
+  background: rgba(147, 197, 253, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+}
+
+/* Védique - Rose foncé */
+.describe-system-vedique {
+  background: rgba(219, 39, 119, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(219, 39, 119, 0.3);
+}
+
+/* Alchimique - Violet foncé */
+.describe-system-alchimique {
+  background: rgba(124, 58, 237, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+/* Viking - Bleu foncé */
+.describe-system-viking {
+  background: rgba(37, 99, 235, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+/* Celtique - Vert forêt */
+.describe-system-celtique {
+  background: rgba(5, 150, 105, 0.15);
+  color: #6ee7b7;
+  border: 1px solid rgba(5, 150, 105, 0.3);
 }
 
 .describe-date-range {
@@ -114,11 +225,89 @@
 }
 
 @media (max-width: 768px) {
+  .describe-page-main {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+
+  .describe-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .describe-title {
+    font-size: 2.5rem;
+  }
+
   .describe-card {
     padding: 2rem 1.5rem;
   }
 
   .describe-title {
     font-size: 2rem;
+  }
+
+  .describe-text {
+    font-size: 1rem;
+  }
+
+  .describe-birth-date {
+    font-size: 0.95rem;
+  }
+
+  .describe-date-range {
+    font-size: 1rem;
+  }
+
+  .describe-back-button {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .describe-page-main {
+    padding: 1rem 0.75rem;
+  }
+
+  .describe-card {
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+  }
+
+  .describe-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .describe-system {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .describe-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+  }
+
+  .describe-birth-date {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+
+  .describe-date-range {
+    font-size: 0.95rem;
+    margin: 0.75rem 0;
+  }
+
+  .describe-back-button {
+    margin: 1.5rem auto;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    width: calc(100% - 2rem);
+    max-width: 300px;
+    white-space: normal;
+    line-height: 1.4;
   }
 }

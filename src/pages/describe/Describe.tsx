@@ -33,12 +33,39 @@ export default function Describe() {
     });
   };
 
+  // Mapper le nom du système à la clé CSS
+  const getSystemKey = (systemName: string): string => {
+    const systemMap: Record<string, string> = {
+      Occidental: "occidental",
+      Chinois: "chinois",
+      Tibétain: "tibetain",
+      Kabbalistique: "kabbalistique",
+      Perse: "perse",
+      Maya: "maya",
+      Aztèque: "azteque",
+      Druidique: "druidique",
+      Amérindien: "amerindien",
+      Africain: "africain",
+      Égyptien: "egyptien",
+      Inuit: "inuit",
+      Védique: "vedique",
+      Alchimique: "alchimique",
+      Viking: "viking",
+      Celtique: "celtique",
+    };
+    return systemMap[systemName] || "occidental";
+  };
+
+  const systemKey = getSystemKey(sign.system);
+
   return (
     <div className="describe-page">
       <main className="describe-page-main">
         <div className="describe-card">
           <h1 className="describe-title">{sign.name}</h1>
-          <p className="describe-system">{sign.system}</p>
+          <p className={`describe-system describe-system-${systemKey}`}>
+            {sign.system}
+          </p>
           {sign.dateRange && (
             <p className="describe-date-range">{sign.dateRange}</p>
           )}
