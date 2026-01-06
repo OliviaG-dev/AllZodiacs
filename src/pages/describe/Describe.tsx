@@ -6,8 +6,11 @@ import {
   getZodiacKeywords,
   getZodiacSystemInfo,
   getAllZodiacSigns,
+  getZodiacDateRange,
+  getZodiacSignDetails,
   type ZodiacSystemInfo,
   type ZodiacSignInfo,
+  type ZodiacSignDetails,
 } from "../../utils/zodiacDescriptions";
 import "./Describe.css";
 
@@ -26,6 +29,8 @@ export default function Describe() {
   const [keywords, setKeywords] = useState<string[] | null>(null);
   const [systemInfo, setSystemInfo] = useState<ZodiacSystemInfo | null>(null);
   const [allSigns, setAllSigns] = useState<ZodiacSignInfo[] | null>(null);
+  const [dateRange, setDateRange] = useState<string | null>(null);
+  const [signDetails, setSignDetails] = useState<ZodiacSignDetails | null>(null);
 
   // Mapper le nom du système à la clé CSS
   const getSystemKeyFromName = (systemName: string): string => {
@@ -77,6 +82,8 @@ export default function Describe() {
       // Charger la description depuis les JSON
       const loadedDescription = getZodiacDescription(keyToUse, sign.name);
       const loadedKeywords = getZodiacKeywords(keyToUse, sign.name);
+      const loadedDateRange = getZodiacDateRange(keyToUse, sign.name);
+      const loadedSignDetails = getZodiacSignDetails(keyToUse, sign.name);
 
       if (loadedDescription) {
         setDescription(loadedDescription);
@@ -86,6 +93,22 @@ export default function Describe() {
 
       if (loadedKeywords) {
         setKeywords(loadedKeywords);
+      }
+
+      if (loadedDateRange) {
+        setDateRange(loadedDateRange);
+      }
+
+      if (loadedSignDetails) {
+        setSignDetails(loadedSignDetails);
+        // Utiliser la description détaillée si disponible
+        if (loadedSignDetails.description) {
+          setDescription(loadedSignDetails.description);
+        }
+        // Utiliser les dates détaillées si disponibles
+        if (loadedSignDetails.dates) {
+          setDateRange(`${loadedSignDetails.dates.start} - ${loadedSignDetails.dates.end}`);
+        }
       }
     } else if (sign.description) {
       setDescription(sign.description);
@@ -372,11 +395,44 @@ export default function Describe() {
               Votre signe : {sign.name}
             </h2>
 
-            {keywords && keywords.length > 0 && (
+            {/* Informations de base */}
+            {signDetails && (
+              <div className="describe-sign-basic-info">
+                {signDetails.dates && (
+                  <div className={`describe-info-item describe-info-item-${cssSystemKey}`}>
+                    <span className="describe-info-label">Période :</span>
+                    <span className="describe-info-value">
+                      {signDetails.dates.start} - {signDetails.dates.end}
+                    </span>
+                  </div>
+                )}
+                {signDetails.element && (
+                  <div className={`describe-info-item describe-info-item-${cssSystemKey}`}>
+                    <span className="describe-info-label">Élément :</span>
+                    <span className="describe-info-value">{signDetails.element}</span>
+                  </div>
+                )}
+                {signDetails.planet && (
+                  <div className={`describe-info-item describe-info-item-${cssSystemKey}`}>
+                    <span className="describe-info-label">Planète :</span>
+                    <span className="describe-info-value">{signDetails.planet}</span>
+                  </div>
+                )}
+                {signDetails.symbol && (
+                  <div className={`describe-info-item describe-info-item-${cssSystemKey}`}>
+                    <span className="describe-info-label">Symbole :</span>
+                    <span className="describe-info-value">{signDetails.symbol}</span>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Mots-clés */}
+            {(keywords && keywords.length > 0) || (signDetails?.keywords && signDetails.keywords.length > 0) ? (
               <div className="describe-keywords">
                 <p className="describe-keywords-label">Mots-clés :</p>
                 <div className="describe-keywords-list">
-                  {keywords.map((keyword, index) => (
+                  {(signDetails?.keywords || keywords || []).map((keyword, index) => (
                     <span
                       key={index}
                       className={`describe-keyword describe-keyword-${cssSystemKey}`}
@@ -386,13 +442,140 @@ export default function Describe() {
                   ))}
                 </div>
               </div>
+            ) : null}
+
+            {/* Traits */}
+            {signDetails?.traits && (
+              <div className="describe-traits">
+                <p className="describe-keywords-label">Traits de personnalité :</p>
+                <div className="describe-traits-container">
+                  {signDetails.traits.positive && signDetails.traits.positive.length > 0 && (
+                    <div className="describe-traits-positive">
+                      <span className="describe-traits-label">Positifs :</span>
+                      <div className="describe-traits-list">
+                        {signDetails.traits.positive.map((trait, index) => (
+                          <span
+                            key={index}
+                            className={`describe-trait describe-trait-positive describe-keyword-${cssSystemKey}`}
+                          >
+                            {trait}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {signDetails.traits.negative && signDetails.traits.negative.length > 0 && (
+                    <div className="describe-traits-negative">
+                      <span className="describe-traits-label">À améliorer :</span>
+                      <div className="describe-traits-list">
+                        {signDetails.traits.negative.map((trait, index) => (
+                          <span
+                            key={index}
+                            className="describe-trait describe-trait-negative"
+                          >
+                            {trait}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             )}
 
+            {/* Description */}
             {description && (
               <div className="describe-description">
                 <p className="describe-text">{description}</p>
               </div>
             )}
+
+            {/* Compatibilité */}
+            {signDetails?.compatibility && signDetails.compatibility.length > 0 && (
+              <div className="describe-compatibility">
+                <p className="describe-keywords-label">Compatibilité :</p>
+                <div className="describe-keywords-list">
+                  {signDetails.compatibility.map((comp, index) => (
+                    <span
+                      key={index}
+                      className={`describe-keyword describe-keyword-${cssSystemKey}`}
+                    >
+                      {comp}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Conseils */}
+            {signDetails?.advice && (
+              <div className="describe-advice">
+                <p className="describe-keywords-label">Conseils :</p>
+                <div className="describe-advice-list">
+                  {signDetails.advice.daily && (
+                    <div className={`describe-info-item describe-info-item-${cssSystemKey}`}>
+                      <span className="describe-info-label">Quotidien :</span>
+                      <span className="describe-info-value">{signDetails.advice.daily}</span>
+                    </div>
+                  )}
+                  {signDetails.advice.love && (
+                    <div className={`describe-info-item describe-info-item-${cssSystemKey}`}>
+                      <span className="describe-info-label">Amour :</span>
+                      <span className="describe-info-value">{signDetails.advice.love}</span>
+                    </div>
+                  )}
+                  {signDetails.advice.work && (
+                    <div className={`describe-info-item describe-info-item-${cssSystemKey}`}>
+                      <span className="describe-info-label">Travail :</span>
+                      <span className="describe-info-value">{signDetails.advice.work}</span>
+                    </div>
+                  )}
+                  {signDetails.advice.health && (
+                    <div className={`describe-info-item describe-info-item-${cssSystemKey}`}>
+                      <span className="describe-info-label">Santé :</span>
+                      <span className="describe-info-value">{signDetails.advice.health}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Couleurs et Pierres */}
+            {(signDetails?.colors && signDetails.colors.length > 0) ||
+            (signDetails?.stones && signDetails.stones.length > 0) ? (
+              <div className="describe-colors-stones">
+                {signDetails.colors && signDetails.colors.length > 0 && (
+                  <div className="describe-colors">
+                    <p className="describe-keywords-label">Couleurs :</p>
+                    <div className="describe-keywords-list">
+                      {signDetails.colors.map((color, index) => (
+                        <span
+                          key={index}
+                          className={`describe-keyword describe-keyword-${cssSystemKey}`}
+                        >
+                          {color}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {signDetails.stones && signDetails.stones.length > 0 && (
+                  <div className="describe-stones">
+                    <p className="describe-keywords-label">Pierres :</p>
+                    <div className="describe-keywords-list">
+                      {signDetails.stones.map((stone, index) => (
+                        <span
+                          key={index}
+                          className={`describe-keyword describe-keyword-${cssSystemKey}`}
+                        >
+                          {stone}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : null}
           </section>
         </div>
       </main>
