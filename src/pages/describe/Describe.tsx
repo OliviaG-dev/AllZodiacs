@@ -6,7 +6,6 @@ import {
   getZodiacKeywords,
   getZodiacSystemInfo,
   getAllZodiacSigns,
-  getZodiacDateRange,
   getZodiacSignDetails,
   type ZodiacSystemInfo,
   type ZodiacSignInfo,
@@ -29,7 +28,6 @@ export default function Describe() {
   const [keywords, setKeywords] = useState<string[] | null>(null);
   const [systemInfo, setSystemInfo] = useState<ZodiacSystemInfo | null>(null);
   const [allSigns, setAllSigns] = useState<ZodiacSignInfo[] | null>(null);
-  const [dateRange, setDateRange] = useState<string | null>(null);
   const [signDetails, setSignDetails] = useState<ZodiacSignDetails | null>(null);
 
   // Mapper le nom du système à la clé CSS
@@ -82,7 +80,6 @@ export default function Describe() {
       // Charger la description depuis les JSON
       const loadedDescription = getZodiacDescription(keyToUse, sign.name);
       const loadedKeywords = getZodiacKeywords(keyToUse, sign.name);
-      const loadedDateRange = getZodiacDateRange(keyToUse, sign.name);
       const loadedSignDetails = getZodiacSignDetails(keyToUse, sign.name);
 
       if (loadedDescription) {
@@ -95,19 +92,11 @@ export default function Describe() {
         setKeywords(loadedKeywords);
       }
 
-      if (loadedDateRange) {
-        setDateRange(loadedDateRange);
-      }
-
       if (loadedSignDetails) {
         setSignDetails(loadedSignDetails);
         // Utiliser la description détaillée si disponible
         if (loadedSignDetails.description) {
           setDescription(loadedSignDetails.description);
-        }
-        // Utiliser les dates détaillées si disponibles
-        if (loadedSignDetails.dates) {
-          setDateRange(`${loadedSignDetails.dates.start} - ${loadedSignDetails.dates.end}`);
         }
       }
     } else if (sign.description) {
