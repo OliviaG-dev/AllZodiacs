@@ -4,7 +4,7 @@
       "name": "Védique",
       "variant": "Planètes et Nakshatras",
       "origin": "Inde antique",
-      "type": "mythological_cycle",
+      "type": "mythique",
       "calculation": {
         "basedOn": ["moonSign", "nakshatra"],
         "rule": "Le cycle suit les positions de la lune et des nakshatras, chaque signe reflétant des traits karmiques et spirituels.",

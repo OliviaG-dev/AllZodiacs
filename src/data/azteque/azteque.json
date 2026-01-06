@@ -4,7 +4,7 @@
         "name": "Aztèque",
         "variant": "Tonalpohualli",
         "origin": "Civilisation aztèque (Mésoamérique)",
-        "type": "sacred_calendar",
+        "type": "calendrier",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Cycle sacré de 20 signes se répétant continuellement",

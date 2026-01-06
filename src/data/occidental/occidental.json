@@ -4,7 +4,7 @@
         "name": "Occidental",
         "variant": "Zodiaque tropical",
         "origin": "Grèce antique / Babylonie",
-        "type": "solar",
+        "type": "solaire",
         "calculation": {
           "basedOn": ["day", "month"],
           "note": "Zodiaque tropical basé sur les saisons"

@@ -4,7 +4,7 @@
         "name": "Alchimique",
         "variant": "Œuvre alchimique",
         "origin": "Alchimie hermétique (Égypte, Grèce, Moyen Âge)",
-        "type": "initiatic_cycle",
+        "type": "alchimie",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Cycle initiatique en 7 phases se répétant tout au long de l’année",

@@ -4,7 +4,7 @@
         "name": "Viking",
         "variant": "Cycles mythiques nordiques",
         "origin": "Scandinavie ancienne",
-        "type": "mythic_cycle",
+        "type": "mythique",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Cycle mythologique en 6 périodes se répétant annuellement",

@@ -92,7 +92,7 @@
       "symbol": "Balance",
       "traits": { "positive": ["Équilibré", "Diplomate", "Sociable"], "negative": ["Indécis", "Superficiel", "Manipulateur"] },
       "description": "Tula est la Balance, gouvernée par Vénus. Il symbolise l’équilibre, la diplomatie et l’harmonie. Les natifs sont sociables mais parfois indécis.",
-      "compatibility": ["Kanya", "Vrishchika"],
+      "compatibility": ["Kanya", "Vrischika"],
       "advice": { "daily": "Cherchez l’harmonie dans vos interactions.", "love": "Soyez juste et attentif.", "work": "Favorisez la coopération.", "health": "Yoga et méditation pour équilibre mental." },
       "colors": ["Rose", "Bleu clair"],
       "stones": ["Diamant", "Saphir"]

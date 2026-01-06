@@ -277,6 +277,73 @@ export default function Describe() {
                         cssSystemKey === "azteque" ||
                         sign?.system === "Aztèque";
 
+                      // Pour Védique : vérifier le mapping des noms
+                      const cssSystemKeyForVedic =
+                        cssSystemKey === "vedique" ||
+                        sign?.system === "Védique";
+
+                      // Pour Alchimique : vérifier le mapping des noms
+                      const cssSystemKeyForAlchemical =
+                        cssSystemKey === "alchimique" ||
+                        sign?.system === "Alchimique";
+
+                      // Pour Perse : vérifier le mapping des noms
+                      const cssSystemKeyForPersian =
+                        cssSystemKey === "perse" ||
+                        sign?.system === "Perse";
+
+                      // Mapping Védique pour la sélection
+                      const getVedicMapping = (
+                        name: string
+                      ): string | null => {
+                        if (!cssSystemKeyForVedic) return null;
+                        const normalized = normalizeSignName(name);
+                        const vedicMap: Record<string, string> = {
+                          vrishchika: "vrischika",
+                        };
+                        return vedicMap[normalized] || null;
+                      };
+
+                      // Mapping Alchimique pour la sélection
+                      const getAlchemicalMapping = (
+                        name: string
+                      ): string | null => {
+                        if (!cssSystemKeyForAlchemical) return null;
+                        const normalized = normalizeSignName(name);
+                        const alchemicalMap: Record<string, string> = {
+                          calcination: "nigredo",
+                          dissolution: "nigredo",
+                          separation: "albedo",
+                          séparation: "albedo",
+                          conjonction: "albedo",
+                          fermentation: "rubedo",
+                          distillation: "rubedo",
+                          coagulation: "coagulatio",
+                        };
+                        return alchemicalMap[normalized] || null;
+                      };
+
+                      // Mapping Perse pour la sélection
+                      const getPersianMapping = (
+                        name: string
+                      ): string | null => {
+                        if (!cssSystemKeyForPersian) return null;
+                        const normalized = normalizeSignName(name);
+                        const persianMap: Record<string, string> = {
+                          sawr: "sur",
+                          jawza: "do-pikar",
+                          jawzā: "do-pikar",
+                          saratan: "saratane",
+                          sonbola: "khoushe",
+                          aqrab: "kazhdum",
+                          qaws: "kaman",
+                          dalw: "dalv",
+                          hūt: "hout",
+                          hut: "hout",
+                        };
+                        return persianMap[normalized] || null;
+                      };
+
                       // Mapping Viking pour la sélection
                       const getVikingMapping = (
                         name: string
@@ -298,18 +365,36 @@ export default function Describe() {
                       };
 
                       const vikingMappedName = getVikingMapping(sign.name);
+                      const vedicMappedName = getVedicMapping(sign.name);
+                      const alchemicalMappedName = getAlchemicalMapping(sign.name);
+                      const persianMappedName = getPersianMapping(sign.name);
                       const itemNameWithoutParens = normalizedItemName.replace(
                         /\s*\([^)]*\)/g,
                         ""
                       );
 
+                      // Pour Védique, Alchimique et Perse : utiliser le nom mappé si disponible
+                      const signNameToCompare = vedicMappedName
+                        ? normalizeSignName(vedicMappedName)
+                        : alchemicalMappedName
+                        ? normalizeSignName(alchemicalMappedName)
+                        : persianMappedName
+                        ? normalizeSignName(persianMappedName)
+                        : normalizedSignName;
+
                       // Correspondance exacte ou partielle
                       let isActive =
+                        normalizedItemName === signNameToCompare ||
+                        normalizedItemName.startsWith(signNameToCompare) ||
+                        signNameToCompare.startsWith(normalizedItemName) ||
                         normalizedItemName === normalizedSignName ||
                         normalizedItemName.startsWith(normalizedSignName) ||
                         normalizedSignName.startsWith(normalizedItemName) ||
                         (normalizedItemId !== null &&
-                          (normalizedItemId === normalizedSignName ||
+                          (normalizedItemId === signNameToCompare ||
+                            normalizedItemId.startsWith(signNameToCompare) ||
+                            signNameToCompare.startsWith(normalizedItemId) ||
+                            normalizedItemId === normalizedSignName ||
                             normalizedItemId.startsWith(normalizedSignName) ||
                             normalizedSignName.startsWith(normalizedItemId))) ||
                         // Pour Aztèque : vérifier aussi la translation
@@ -456,7 +541,7 @@ export default function Describe() {
                         {signDetails.traits.positive.map((trait, index) => (
                           <span
                             key={index}
-                            className={`describe-trait describe-trait-positive describe-keyword-${cssSystemKey}`}
+                            className="describe-trait describe-trait-positive"
                           >
                             {trait}
                           </span>
@@ -466,7 +551,7 @@ export default function Describe() {
                   )}
                   {signDetails.traits.negative && signDetails.traits.negative.length > 0 && (
                     <div className="describe-traits-negative">
-                      <span className="describe-traits-label">À améliorer :</span>
+                      <span className="describe-traits-label">Négatif :</span>
                       <div className="describe-traits-list">
                         {signDetails.traits.negative.map((trait, index) => (
                           <span

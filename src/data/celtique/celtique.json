@@ -4,7 +4,7 @@
         "name": "Celtique",
         "variant": "Arbres sacrés",
         "origin": "Traditions celtiques et druidiques",
-        "type": "arboreal_cycle",
+        "type": "arbres",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Cycle de 13 arbres sacrés se répétant selon la roue de l’année",

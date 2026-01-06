@@ -26,11 +26,22 @@
       "name": "Serpent",
       "keywords": ["transformation", "sagesse", "passion"],
       "traits": { "positive": ["Intuitif", "Perspicace", "Énergique"], "negative": ["Secret", "Méfiant"] },
-      "description": "Le Serpent incarne la transformation, la sagesse et l’énergie vitale. Il guide vers la connaissance intérieure.",
+      "description": "Le Serpent incarne la transformation, la sagesse et l'énergie vitale. Il guide vers la connaissance intérieure.",
       "compatibility": ["Crocodile", "Maison"],
       "advice": { "daily": "Écoutez votre intuition et transformez vos expériences.", "love": "Soyez profond et sincère.", "work": "Agissez avec stratégie et lucidité.", "health": "Pratiquez méditation et respiration." },
       "colors": ["Rouge", "Vert"],
       "stones": ["Jade", "Obsidienne"]
+    },
+    {
+      "id": "mort",
+      "name": "Mort",
+      "keywords": ["transition", "renaissance", "mystère"],
+      "traits": { "positive": ["Transformatif", "Profond", "Résilient"], "negative": ["Mélancolique", "Rigide"] },
+      "description": "La Mort symbolise la fin nécessaire et le renouveau. Elle guide vers la transformation et la renaissance.",
+      "compatibility": ["Serpent", "Scorpion"],
+      "advice": { "daily": "Acceptez les fins et les nouveaux commencements.", "love": "Soyez profond et authentique.", "work": "Transformez vos projets avec sagesse.", "health": "Repos et régénération." },
+      "colors": ["Noir", "Violet"],
+      "stones": ["Obsidienne", "Améthyste"]
     },
     {
       "id": "pluie",
@@ -209,15 +220,70 @@
       "stones": ["Ambre", "Cornaline"]
     },
     {
-      "id": "singes",
-      "name": "Singes",
+      "id": "singe",
+      "name": "Singe",
       "keywords": ["jeu", "agilité", "esprit"],
       "traits": { "positive": ["Curieux", "Malin", "Souple"], "negative": ["Inconstant", "Imprudent"] },
-      "description": "Les Singes favorisent l’agilité et la vivacité d’esprit, symbolisant la curiosité et le jeu.",
+      "description": "Le Singe favorise l'agilité et la vivacité d'esprit, symbolisant la curiosité et le jeu.",
       "compatibility": ["Coyote", "Plume"],
-      "advice": { "daily": "Soyez souple et créatif.", "love": "Amusez-vous et partagez.", "work": "Utilisez votre esprit inventif.", "health": "Exercices d’agilité." },
+      "advice": { "daily": "Soyez souple et créatif.", "love": "Amusez-vous et partagez.", "work": "Utilisez votre esprit inventif.", "health": "Exercices d'agilité." },
       "colors": ["Jaune", "Orange"],
       "stones": ["Citrine", "Topaze"]
+    },
+    {
+      "id": "herbe",
+      "name": "Herbe",
+      "keywords": ["résilience", "souplesse", "croissance"],
+      "traits": { "positive": ["Résilient", "Souple", "Persévérant"], "negative": ["Fragile", "Indécis"] },
+      "description": "L'Herbe symbolise la résilience et la souplesse, capable de croître et de s'adapter dans toutes conditions.",
+      "compatibility": ["Pluie", "Terre"],
+      "advice": { "daily": "Soyez résilient et adaptez-vous aux situations.", "love": "Soyez souple et patient.", "work": "Persévérez malgré les obstacles.", "health": "Exercices doux et régénération." },
+      "colors": ["Vert", "Beige"],
+      "stones": ["Jade", "Malachite"]
+    },
+    {
+      "id": "roseau",
+      "name": "Roseau",
+      "keywords": ["droiture", "canal", "structure"],
+      "traits": { "positive": ["Droit", "Structuré", "Guidant"], "negative": ["Rigide", "Inflexible"] },
+      "description": "Le Roseau symbolise la droiture et la structure, servant de canal et de guide spirituel.",
+      "compatibility": ["Vent", "Aigle"],
+      "advice": { "daily": "Maintenez votre droiture et structure.", "love": "Soyez guidant et fiable.", "work": "Organisez et structurez vos projets.", "health": "Discipline et équilibre." },
+      "colors": ["Beige", "Blanc"],
+      "stones": ["Quartz", "Jade"]
+    },
+    {
+      "id": "mouvement",
+      "name": "Mouvement",
+      "keywords": ["changement", "évolution", "séisme"],
+      "traits": { "positive": ["Évolutif", "Dynamique", "Transformateur"], "negative": ["Instable", "Imprévisible"] },
+      "description": "Le Mouvement symbolise le changement et l'évolution, favorisant les transformations radicales et nécessaires.",
+      "compatibility": ["Vent", "Serpent"],
+      "advice": { "daily": "Acceptez et embrassez le changement.", "love": "Soyez dynamique et évolutif.", "work": "Adaptez-vous aux transformations.", "health": "Activité physique et mouvement." },
+      "colors": ["Orange", "Rouge"],
+      "stones": ["Cornaline", "Grenat"]
+    },
+    {
+      "id": "silex",
+      "name": "Silex",
+      "keywords": ["vérité", "tranchant", "décision"],
+      "traits": { "positive": ["Décisif", "Véridique", "Clair"], "negative": ["Brutal", "Intransigeant"] },
+      "description": "Le Silex symbolise la vérité et la décision, apportant clarté brutale et tranchante.",
+      "compatibility": ["Aigle", "Jaguar"],
+      "advice": { "daily": "Soyez clair et décisif dans vos actions.", "love": "Exprimez la vérité avec respect.", "work": "Prenez des décisions tranchantes.", "health": "Clarté mentale et détermination." },
+      "colors": ["Gris", "Noir"],
+      "stones": ["Obsidienne", "Onyx"]
+    },
+    {
+      "id": "fleur",
+      "name": "Fleur",
+      "keywords": ["beauté", "art", "harmonie"],
+      "traits": { "positive": ["Créatif", "Harmonieux", "Beau"], "negative": ["Superficiel", "Fragile"] },
+      "description": "La Fleur symbolise la beauté et l'harmonie, favorisant l'art et l'accomplissement joyeux.",
+      "compatibility": ["Pluie", "Vent"],
+      "advice": { "daily": "Cherchez la beauté et l'harmonie.", "love": "Soyez créatif et attentionné.", "work": "Favorisez l'art et la créativité.", "health": "Équilibre et beauté intérieure." },
+      "colors": ["Rose", "Blanc"],
+      "stones": ["Quartz rose", "Perle"]
     },
     {
       "id": "chien",

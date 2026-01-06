@@ -4,7 +4,7 @@
         "name": "Égyptien",
         "variant": "Divinités sacrées",
         "origin": "Égypte antique",
-        "type": "mythological_cycle",
+        "type": "mythique",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Cycle de divinités se répétant selon l’ordre cosmique",

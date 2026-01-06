@@ -1,68 +1,86 @@
 [
-    {
-      "id": "ours",
-      "name": "Ours",
-      "keywords": ["force", "protection", "courage"],
-      "traits": { "positive": ["Courageux", "Protecteur", "Déterminé"], "negative": ["Têtu", "Impulsif"] },
-      "description": "L’Ours symbolise la force, le courage et la protection. Il inspire la loyauté et la résilience face aux défis.",
-      "compatibility": ["Loup", "Aigle"],
-      "advice": { "daily": "Affrontez vos défis avec courage.", "love": "Soyez fidèle et protecteur.", "work": "Persévérez avec détermination.", "health": "Exercice physique et vitalité." },
-      "colors": ["Brun", "Rouge"],
-      "stones": ["Hématite", "Ambre"]
-    },
-    {
-      "id": "loup",
-      "name": "Loup",
-      "keywords": ["intelligence", "loyauté", "esprit de meute"],
-      "traits": { "positive": ["Loyal", "Intuitif", "Protecteur"], "negative": ["Méfiant", "Solitaire"] },
-      "description": "Le Loup symbolise l’intelligence, la loyauté et l’esprit de communauté. Il enseigne la coopération et la stratégie.",
-      "compatibility": ["Ours", "Aigle"],
-      "advice": { "daily": "Travaillez en équipe et suivez votre intuition.", "love": "Soyez fidèle et attentif.", "work": "Collaborez et partagez vos connaissances.", "health": "Équilibre entre action et repos." },
-      "colors": ["Gris", "Bleu"],
-      "stones": ["Onyx", "Lapis-lazuli"]
-    },
-    {
-      "id": "aigle",
-      "name": "Aigle",
-      "keywords": ["vision", "liberté", "spiritualité"],
-      "traits": { "positive": ["Visionnaire", "Libre", "Spirituel"], "negative": ["Distant", "Égoïste"] },
-      "description": "L’Aigle symbolise la vision et la liberté. Il guide vers l’élévation spirituelle et la perspective globale.",
-      "compatibility": ["Ours", "Loup"],
-      "advice": { "daily": "Prenez du recul et analysez les situations avec sagesse.", "love": "Soyez attentif mais indépendant.", "work": "Planifiez avec vision.", "health": "Méditation et respiration profonde." },
-      "colors": ["Bleu ciel", "Blanc"],
-      "stones": ["Saphir", "Améthyste"]
-    },
-    {
-      "id": "cerf",
-      "name": "Cerf",
-      "keywords": ["grâce", "sensibilité", "agilité"],
-      "traits": { "positive": ["Gracieux", "Réceptif", "Rapide"], "negative": ["Timide", "Émotif"] },
-      "description": "Le Cerf symbolise la grâce, la sensibilité et l’agilité. Il favorise l’écoute et la délicatesse.",
-      "compatibility": ["Loutre", "Aigle"],
-      "advice": { "daily": "Restez attentif à votre environnement et aux autres.", "love": "Montrez douceur et compréhension.", "work": "Agissez avec finesse et adaptabilité.", "health": "Pratiquez des activités douces et relaxantes." },
-      "colors": ["Vert", "Blanc"],
-      "stones": ["Jade", "Quartz"]
-    },
-    {
-      "id": "loutre",
-      "name": "Loutre",
-      "keywords": ["joie", "créativité", "jeu"],
-      "traits": { "positive": ["Joyeux", "Créatif", "Curieux"], "negative": ["Dispersé", "Inconstant"] },
-      "description": "La Loutre symbolise la joie et la créativité. Elle favorise le jeu et l’expression légère.",
-      "compatibility": ["Cerf", "Aigle"],
-      "advice": { "daily": "Exprimez votre créativité et amusez-vous.", "love": "Soyez joueur et tendre.", "work": "Faites preuve d’inventivité.", "health": "Activité ludique et détente." },
-      "colors": ["Bleu clair", "Jaune"],
-      "stones": ["Citrine", "Quartz rose"]
-    },
-    {
-      "id": "serpent",
-      "name": "Serpent",
-      "keywords": ["transformation", "guérison", "sagesse"],
-      "traits": { "positive": ["Intuitif", "Guérisseur", "Adaptable"], "negative": ["Méfiant", "Manipulateur"] },
-      "description": "Le Serpent symbolise la transformation et la guérison, favorisant l’adaptabilité et la sagesse.",
-      "compatibility": ["Ours", "Loutre"],
-      "advice": { "daily": "Acceptez le changement et la transformation.", "love": "Soyez patient et sincère.", "work": "Transformez les obstacles en opportunités.", "health": "Soins corporels et purification." },
-      "colors": ["Vert", "Marron"],
-      "stones": ["Jade", "Ambre"]
-    }
-  ]
+  {
+    "id": "creation",
+    "name": "Création (Bjorn)",
+    "dates": { "start": "1 janvier", "end": "28 février" },
+    "element": "Terre / Chaos",
+    "planet": null,
+    "symbol": "Ginnungagap",
+    "traits": { "positive": ["Créatif", "Courageux", "Déterminé"], "negative": ["Chaotique", "Impulsif", "Têtu"] },
+    "description": "Création (Bjorn) symbolise le vide primordial d'où émerge toute chose. Les natifs sont créatifs, courageux et déterminés, mais parfois chaotiques ou impulsifs. Vide primordial d'où émerge toute chose.",
+    "compatibility": ["Ascension (Jormungand)", "Renaissance (Loki)"],
+    "advice": { "daily": "Créez et initiez de nouveaux projets.", "love": "Soyez courageux et protecteur.", "work": "Prenez des initiatives audacieuses.", "health": "Exercice physique et vitalité." },
+    "colors": ["Brun", "Rouge"],
+    "stones": ["Hématite", "Ambre"]
+  },
+  {
+    "id": "ascension",
+    "name": "Ascension (Jormungand)",
+    "dates": { "start": "1 mars", "end": "30 avril" },
+    "element": "Eau / Ambition",
+    "planet": null,
+    "symbol": "Asgard",
+    "traits": { "positive": ["Ambitieux", "Honnorable", "Puissant"], "negative": ["Méfiant", "Manipulateur", "Secret"] },
+    "description": "Ascension (Jormungand) symbolise la montée vers la gloire et la reconnaissance. Les natifs sont ambitieux, honorables et puissants, mais parfois méfiants ou manipulateurs. Montée vers la gloire et reconnaissance.",
+    "compatibility": ["Création (Bjorn)", "Prospérité (Thor)"],
+    "advice": { "daily": "Poursuivez vos ambitions avec honneur.", "love": "Soyez loyal et ambitieux.", "work": "Montez vers le succès avec stratégie.", "health": "Équilibre entre ambition et repos." },
+    "colors": ["Bleu foncé", "Argent"],
+    "stones": ["Saphir", "Onyx"]
+  },
+  {
+    "id": "prosperity",
+    "name": "Prospérité (Thor)",
+    "dates": { "start": "1 mai", "end": "30 juin" },
+    "element": "Feu / Stabilité",
+    "planet": null,
+    "symbol": "Midgard",
+    "traits": { "positive": ["Stable", "Travailleur", "Communautaire"], "negative": ["Rigide", "Trop conservateur", "Lent"] },
+    "description": "Prospérité (Thor) symbolise la stabilité, le travail et la communauté. Les natifs sont stables, travailleurs et communautaires, mais parfois rigides ou trop conservateurs. Temps de construction et d'enracinement.",
+    "compatibility": ["Ascension (Jormungand)", "Conflit (Fenrir)"],
+    "advice": { "daily": "Construisez et enracinez vos projets.", "love": "Soyez stable et fiable.", "work": "Travaillez avec persévérance et méthode.", "health": "Activité physique régulière et alimentation saine." },
+    "colors": ["Or", "Rouge"],
+    "stones": ["Rubis", "Topaze"]
+  },
+  {
+    "id": "conflict",
+    "name": "Conflit (Fenrir)",
+    "dates": { "start": "1 juillet", "end": "31 août" },
+    "element": "Feu / Combat",
+    "planet": null,
+    "symbol": "Jötunheim",
+    "traits": { "positive": ["Courageux", "Résilient", "Combattant"], "negative": ["Agressif", "Impulsif", "Destructeur"] },
+    "description": "Conflit (Fenrir) symbolise l'épreuve, le combat et la résilience. Les natifs sont courageux, résilients et combattants, mais parfois agressifs ou impulsifs. Affrontement des forces opposées.",
+    "compatibility": ["Prospérité (Thor)", "Déclin (Odin)"],
+    "advice": { "daily": "Affrontez vos défis avec courage.", "love": "Soyez loyal et protecteur.", "work": "Luttez pour vos objectifs avec détermination.", "health": "Exercice physique intense et gestion du stress." },
+    "colors": ["Rouge foncé", "Noir"],
+    "stones": ["Grenat", "Obsidienne"]
+  },
+  {
+    "id": "decline",
+    "name": "Déclin (Odin)",
+    "dates": { "start": "1 septembre", "end": "31 octobre" },
+    "element": "Air / Introspection",
+    "planet": null,
+    "symbol": "Niflheim",
+    "traits": { "positive": ["Sage", "Introspectif", "Visionnaire"], "negative": ["Distant", "Mélancolique", "Isolé"] },
+    "description": "Déclin (Odin) symbolise la perte, l'introspection et la fin. Les natifs sont sages, introspectifs et visionnaires, mais parfois distants ou mélancoliques. Retrait, réflexion et fin de cycle.",
+    "compatibility": ["Conflit (Fenrir)", "Renaissance (Loki)"],
+    "advice": { "daily": "Réfléchissez et méditez sur votre destin.", "love": "Soyez sage et attentif.", "work": "Planifiez avec sagesse et vision.", "health": "Méditation et repos mental." },
+    "colors": ["Bleu nuit", "Argent"],
+    "stones": ["Saphir", "Quartz"]
+  },
+  {
+    "id": "rebirth",
+    "name": "Renaissance (Loki)",
+    "dates": { "start": "1 novembre", "end": "31 décembre" },
+    "element": "Feu / Transformation",
+    "planet": null,
+    "symbol": "Ragnarök",
+    "traits": { "positive": ["Transformatif", "Créatif", "Adaptable"], "negative": ["Imprévisible", "Chaotique", "Manipulateur"] },
+    "description": "Renaissance (Loki) symbolise le renouveau, le destin et la transformation. Les natifs sont transformatifs, créatifs et adaptables, mais parfois imprévisibles ou chaotiques. Fin et renaissance, nouveau monde.",
+    "compatibility": ["Déclin (Odin)", "Création (Bjorn)"],
+    "advice": { "daily": "Acceptez la transformation et le renouveau.", "love": "Soyez créatif et adaptatif.", "work": "Transformez les obstacles en opportunités.", "health": "Renouveau et régénération." },
+    "colors": ["Violet", "Or"],
+    "stones": ["Améthyste", "Topaze"]
+  }
+]

@@ -497,15 +497,22 @@ export function calculateAfricanZodiac(date: BirthDate): ZodiacSign {
 
 /**
  * Calcule le signe astrologique égyptien
+ * Basé sur les 6 divinités principales authentiques : Râ, Isis, Osiris, Horus, Anubis, Thot
+ * Cycle de 6 divinités réparties sur l'année (≈ 60 jours chacune)
  */
 export function calculateEgyptianZodiac(date: BirthDate): ZodiacSign {
-  const { month } = date;
-  if (month <= 2) return { name: "Anubis", system: "Égyptien" };
-  if (month <= 4) return { name: "Isis", system: "Égyptien" };
-  if (month <= 6) return { name: "Thot", system: "Égyptien" };
-  if (month <= 8) return { name: "Sekhmet", system: "Égyptien" };
-  if (month <= 10) return { name: "Serket", system: "Égyptien" };
-  return { name: "Osiris", system: "Égyptien" };
+  const signs = [
+    "Râ",
+    "Isis",
+    "Osiris",
+    "Horus",
+    "Anubis",
+    "Thot",
+  ];
+  return {
+    name: signs[getDayOfYear(date) % signs.length],
+    system: "Égyptien",
+  };
 }
 
 /**

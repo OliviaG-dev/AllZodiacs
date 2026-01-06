@@ -4,7 +4,7 @@
       "name": "Inuit",
       "variant": "Animaux et forces naturelles",
       "origin": "Culture inuit (Arctique)",
-      "type": "zodiac_cycle",
+      "type": "zodiaque",
       "calculation": {
         "basedOn": ["dayOfYear", "saisons arctiques"],
         "rule": "Cycle des animaux et forces naturelles selon les saisons et les périodes de chasse",

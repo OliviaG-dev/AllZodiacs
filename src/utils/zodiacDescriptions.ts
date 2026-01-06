@@ -209,13 +209,14 @@ export function getZodiacDescription(
     // Mapping Alchimique : noms calculés -> noms dans JSON
     if (key === "alchimique") {
       const alchemicalMap: Record<string, string> = {
-        calcination: "nigredo",
-        dissolution: "nigredo",
-        séparation: "albedo",
-        conjonction: "albedo",
-        fermentation: "rubedo",
-        distillation: "rubedo",
-        coagulation: "coagulatio",
+        calcination: "Nigredo",
+        dissolution: "Nigredo",
+        separation: "Albedo",
+        séparation: "Albedo",
+        conjonction: "Albedo",
+        fermentation: "Rubedo",
+        distillation: "Rubedo",
+        coagulation: "Coagulatio",
       };
       return alchemicalMap[normalized] || null;
     }
@@ -226,15 +227,16 @@ export function getZodiacDescription(
       const firstWord = normalized.split(/\s+/)[0];
 
       const vikingMap: Record<string, string> = {
-        bjorn: "création",
-        ours: "création",
-        "bjorn ours": "création",
-        jormungand: "ascension",
-        thor: "prospérité",
-        fenrir: "conflit",
-        odin: "déclin",
-        loki: "renaissance",
-        ragnarök: "renaissance",
+        bjorn: "Création (Bjorn)",
+        ours: "Création (Bjorn)",
+        "bjorn ours": "Création (Bjorn)",
+        "bjorn (ours)": "Création (Bjorn)",
+        jormungand: "Ascension (Jormungand)",
+        thor: "Prospérité (Thor)",
+        fenrir: "Conflit (Fenrir)",
+        odin: "Déclin (Odin)",
+        loki: "Renaissance (Loki)",
+        ragnarök: "Renaissance (Loki)",
       };
 
       // Chercher d'abord avec le nom complet, puis avec le premier mot
@@ -389,13 +391,14 @@ export function getZodiacKeywords(
     // Mapping Alchimique : noms calculés -> noms dans JSON
     if (key === "alchimique") {
       const alchemicalMap: Record<string, string> = {
-        calcination: "nigredo",
-        dissolution: "nigredo",
-        séparation: "albedo",
-        conjonction: "albedo",
-        fermentation: "rubedo",
-        distillation: "rubedo",
-        coagulation: "coagulatio",
+        calcination: "Nigredo",
+        dissolution: "Nigredo",
+        separation: "Albedo",
+        séparation: "Albedo",
+        conjonction: "Albedo",
+        fermentation: "Rubedo",
+        distillation: "Rubedo",
+        coagulation: "Coagulatio",
       };
       return alchemicalMap[normalized] || null;
     }
@@ -406,15 +409,16 @@ export function getZodiacKeywords(
       const firstWord = normalized.split(/\s+/)[0];
 
       const vikingMap: Record<string, string> = {
-        bjorn: "création",
-        ours: "création",
-        "bjorn ours": "création",
-        jormungand: "ascension",
-        thor: "prospérité",
-        fenrir: "conflit",
-        odin: "déclin",
-        loki: "renaissance",
-        ragnarök: "renaissance",
+        bjorn: "Création (Bjorn)",
+        ours: "Création (Bjorn)",
+        "bjorn ours": "Création (Bjorn)",
+        "bjorn (ours)": "Création (Bjorn)",
+        jormungand: "Ascension (Jormungand)",
+        thor: "Prospérité (Thor)",
+        fenrir: "Conflit (Fenrir)",
+        odin: "Déclin (Odin)",
+        loki: "Renaissance (Loki)",
+        ragnarök: "Renaissance (Loki)",
       };
 
       // Chercher d'abord avec le nom complet, puis avec le premier mot
@@ -719,13 +723,14 @@ export function getZodiacDateRange(
     // Mapping Alchimique : noms calculés -> noms dans JSON
     if (key === "alchimique") {
       const alchemicalMap: Record<string, string> = {
-        calcination: "nigredo",
-        dissolution: "nigredo",
-        séparation: "albedo",
-        conjonction: "albedo",
-        fermentation: "rubedo",
-        distillation: "rubedo",
-        coagulation: "coagulatio",
+        calcination: "Nigredo",
+        dissolution: "Nigredo",
+        separation: "Albedo",
+        séparation: "Albedo",
+        conjonction: "Albedo",
+        fermentation: "Rubedo",
+        distillation: "Rubedo",
+        coagulation: "Coagulatio",
       };
       return alchemicalMap[normalized] || null;
     }
@@ -902,7 +907,7 @@ export function getZodiacSignDetails(
       .replace(/[\u0300-\u036f]/g, ""); // Enlever les diacritiques
   };
 
-  // Pour le système chinois : convertir "Rat (Bois)" en "Rat de Bois"
+  // Pour le système chinois : convertir "Rat (Bois)" en "Rat de Bois" ou "Rat d'Eau" si l'élément commence par une voyelle
   let searchSignName = signName;
   if (systemKey === "chinois") {
     // Essayer plusieurs formats possibles : "Rat (Bois)", "Rat(Bois)", etc.
@@ -910,7 +915,9 @@ export function getZodiacSignDetails(
     if (chineseMatch) {
       const animal = chineseMatch[1].trim();
       const element = chineseMatch[2].trim();
-      searchSignName = `${animal} de ${element}`;
+      // Utiliser "d'" si l'élément commence par une voyelle (Eau)
+      const preposition = /^[aeiouAEIOU]/.test(element) ? "d'" : "de ";
+      searchSignName = `${animal} ${preposition}${element}`;
     } else {
       // Si pas de parenthèses, peut-être que c'est déjà au format "Rat de Bois"
       // ou juste "Rat" - dans ce cas, on garde tel quel
@@ -923,26 +930,29 @@ export function getZodiacSignDetails(
   const getSystemMapping = (key: string, signName: string): string | null => {
     const normalized = normalizeName(signName);
 
-    // Mapping Chinois : "Rat (Bois)" -> "Rat de Bois"
+    // Mapping Chinois : "Rat (Bois)" -> "Rat de Bois" ou "Rat d'Eau" si l'élément commence par une voyelle
     if (key === "chinois") {
       const chineseMatch = signName.match(/^(.+?)\s*\((.+?)\)$/);
       if (chineseMatch) {
         const animal = chineseMatch[1].trim();
         const element = chineseMatch[2].trim();
-        return `${animal} de ${element}`;
+        // Utiliser "d'" si l'élément commence par une voyelle (Eau)
+        const preposition = /^[aeiouAEIOU]/.test(element) ? "d'" : "de ";
+        return `${animal} ${preposition}${element}`;
       }
     }
 
     // Mapping Alchimique : noms calculés -> noms dans JSON
     if (key === "alchimique") {
       const alchemicalMap: Record<string, string> = {
-        calcination: "nigredo",
-        dissolution: "nigredo",
-        séparation: "albedo",
-        conjonction: "albedo",
-        fermentation: "rubedo",
-        distillation: "rubedo",
-        coagulation: "coagulatio",
+        calcination: "Nigredo",
+        dissolution: "Nigredo",
+        separation: "Albedo",
+        séparation: "Albedo",
+        conjonction: "Albedo",
+        fermentation: "Rubedo",
+        distillation: "Rubedo",
+        coagulation: "Coagulatio",
       };
       return alchemicalMap[normalized] || null;
     }
@@ -951,17 +961,42 @@ export function getZodiacSignDetails(
     if (key === "viking") {
       const firstWord = normalized.split(/\s+/)[0];
       const vikingMap: Record<string, string> = {
-        bjorn: "ours",
-        ours: "ours",
-        "bjorn ours": "ours",
-        jormungand: "serpent",
-        thor: "marteau",
-        fenrir: "loup",
-        odin: "corbeau",
-        loki: "feu",
-        ragnarök: "feu",
+        bjorn: "Création (Bjorn)",
+        ours: "Création (Bjorn)",
+        "bjorn ours": "Création (Bjorn)",
+        "bjorn (ours)": "Création (Bjorn)",
+        jormungand: "Ascension (Jormungand)",
+        thor: "Prospérité (Thor)",
+        fenrir: "Conflit (Fenrir)",
+        odin: "Déclin (Odin)",
+        loki: "Renaissance (Loki)",
+        ragnarök: "Renaissance (Loki)",
       };
       return vikingMap[normalized] || vikingMap[firstWord] || null;
+    }
+
+    // Mapping Perse : noms calculés -> noms dans JSON
+    if (key === "perse") {
+      const perseMap: Record<string, string> = {
+        sawr: "Sur",
+        jawza: "Do-Pikar",
+        saratan: "Saratane",
+        sonbola: "Khoushe",
+        mizan: "Mizan",
+        aqrab: "Kazhdum",
+        qaws: "Kaman",
+        dalw: "Dalv",
+        hut: "Hout",
+      };
+      return perseMap[normalized] || null;
+    }
+
+    // Mapping Védique : noms calculés -> noms dans JSON
+    if (key === "vedique" || key === "védique") {
+      const vedicMap: Record<string, string> = {
+        vrishchika: "Vrischika",
+      };
+      return vedicMap[normalized] || null;
     }
 
     return null;

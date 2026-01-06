@@ -4,7 +4,7 @@
         "name": "Amérindien",
         "variant": "Totems spirituels",
         "origin": "Peuples autochtones d’Amérique du Nord",
-        "type": "totemic_cycle",
+        "type": "totem",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Cycle de totems se répétant selon le rythme naturel",

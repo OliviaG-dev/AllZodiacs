@@ -4,7 +4,7 @@
         "name": "Africain traditionnel",
         "variant": "Objets et archétypes sacrés",
         "origin": "Afrique de l’Ouest et centrale (traditions orales)",
-        "type": "symbolic_zodiac",
+        "type": "symbolique",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Cycle symbolique de 12 signes se répétant sur l’année",

@@ -4,7 +4,7 @@
         "name": "Tibétain",
         "variant": "Zodiaque tibétain",
         "origin": "Tibet – tradition bouddhiste",
-        "type": "lunar_animal",
+        "type": "lunaire",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Cycle de 12 animaux se répétant annuellement",

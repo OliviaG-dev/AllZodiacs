@@ -4,7 +4,7 @@
         "name": "Kabbalistique",
         "variant": "72 Anges gardiens",
         "origin": "Mystique hébraïque",
-        "type": "symbolic",
+        "type": "symbolique",
         "calculation": {
             "basedOn": ["dayOfYear"],
             "rule": "Chaque ange correspond à un segment de 5 jours dans un cycle annuel de 360 jours",

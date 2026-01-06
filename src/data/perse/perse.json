@@ -4,7 +4,7 @@
         "name": "Perse",
         "variant": "Zodiaque persan",
         "origin": "Perse antique (Iran)",
-        "type": "zodiac",
+        "type": "zodiaque",
         "calculation": {
           "basedOn": ["dayOfYear"],
           "rule": "Découpage du cycle annuel en 12 segments égaux",
